@@ -11,59 +11,74 @@ Text Domain: meyar
 Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
 */
 
-/* Basic reset and styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/* Basic reset and styles-----------------------------------------------------------------------------------------------Basic reset and styles */
+
+/* variable ---------------------------------------------------------------------------- */
+@font-face { 
+  font-family: dena;
+  src: url(./assets/fonts/Dana-Thin.ttf);
 }
 
+/* @font-face {
+  font-family: dena;
+  src: url(./assets/fonts/Dana-Bold.ttf);
+} */
+
+a{
+  text-decoration: none;
+}
+
+:root {
+  --Midnight: #000000;
+  --Merlot: ;
+  --Maroon: ;
+  --Zodiac: #1B3281;
+  --Tory:  ;
+  --PastelBlue: #3d56a6 ;
+  --White: #FFFFFF ;
+  --LightMerlot: #70798B;
+}
+
+.base{
+    font-family: dena;
+}
+
+.buttonTroy{
+    border-radius: 20px;
+    padding-inline: 16px;
+    
+}
+
+
+
+/* variable ---------------------------------------------------------------------------- */
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    color: #333;
     direction: rtl;
 }
 
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-
 /* Responsive design */
 @media (max-width: 768px) {
-    .site-branding {
-        flex-direction: column;
-        text-align: center;
-    }
-    
-    .main-navigation ul {
-        flex-direction: column;
-        gap: 10px;
-    }
+
 }
 
+/* Basic reset and styles-----------------------------------------------------------------------------------------------Basic reset and styles */
 
 
 /* Custom Navbar Styles ---------------------------------------------------------------------------------------------- Custom Navbar Styles  */
 .site-header {
     background: #fff;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
     position: sticky;
     top: 0;
     z-index: 1000;
 }
 
 .header-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-    display: flex;
-    justify-content: space-between;
     align-items: center;
-    min-height: 80px;
+    padding-block: 12px;
+}
+
+.header-container-btn{
+    width: auto;
 }
 
 .header-branding {
@@ -71,7 +86,12 @@ body {
     align-items: center;
     gap: 15px;
 }
-
+.header-homeIcon{
+    margin-left: 20px;
+}
+.header-homeIcon img{
+    height: 34px;
+}
 .site-logo img {
     max-height: 60px;
     width: auto;
@@ -97,6 +117,8 @@ body {
 /* Main Navigation */
 .main-navigation {
     position: relative;
+    display: flex;
+    justify-content: center;
 }
 
 .nav-menu {

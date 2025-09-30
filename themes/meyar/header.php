@@ -15,51 +15,65 @@
 
 <!-- Custom Navigation -->
 <header class="site-header">
-    <div class="header-container">
-        <div class="header-branding">
-            <?php if (has_custom_logo()) : ?>
-                <div class="site-logo">
-                    <?php the_custom_logo(); ?>
+    <div class="">
+        <div class="container">
+            <div class="row header-container">
+                <div class="col-md-2 header-branding">
+                    <?php if (has_custom_logo()) : ?>
+                        <div class="site-logo">
+                            <?php the_custom_logo(); ?>
+                        </div>
+                    <?php endif; ?>
+                    
+                    <div class="site-titles">
+                        <?php if (is_front_page() && is_home()) : ?>
+                            <h1 class="site-title">
+                                <a href="<?php echo esc_url(home_url('/')); ?>" rel="home">
+                                    <?php bloginfo('name'); ?>
+                                </a>
+                            </h1>
+                        <?php else : ?>
+                            <p class="site-title">
+                                <a href="<?php echo esc_url(home_url('/')); ?>" rel="home">
+                                    <?php bloginfo('name'); ?>
+                                </a>
+                            </p>
+                        <?php endif; ?>
+                        <p class="site-description"><?php bloginfo('description'); ?></p>
+                    </div>
                 </div>
-            <?php endif; ?>
-            
-            <div class="site-titles">
-                <?php if (is_front_page() && is_home()) : ?>
-                    <h1 class="site-title">
-                        <a href="<?php echo esc_url(home_url('/')); ?>" rel="home">
-                            <?php bloginfo('name'); ?>
+
+                <nav class="col-md-8 main-navigation" id="main-navigation">
+                    <button class="menu-toggle" id="menu-toggle" aria-expanded="false" aria-controls="primary-menu">
+                        <span class="menu-toggle-bar"></span>
+                        <span class="menu-toggle-bar"></span>
+                        <span class="menu-toggle-bar"></span>
+                        <span class="screen-reader-text">Menu</span>
+                    </button>
+                    
+                    <div class="header-homeIcon">
+                        <a href="/">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/homeIcon.png" alt="Meyar">
                         </a>
-                    </h1>
-                <?php else : ?>
-                    <p class="site-title">
-                        <a href="<?php echo esc_url(home_url('/')); ?>" rel="home">
-                            <?php bloginfo('name'); ?>
-                        </a>
-                    </p>
-                <?php endif; ?>
-                <p class="site-description"><?php bloginfo('description'); ?></p>
+                    </div>
+
+                    <?php
+                    wp_nav_menu(array(
+                        'theme_location' => 'primary',
+                        'menu_id'        => 'primary-menu',
+                        'menu_class'     => 'nav-menu base',
+                        'container'      => false,
+                        'fallback_cb'    => 'wp_page_menu',
+                        'depth'          => 3
+                    ));
+                    ?>
+                </nav>
+
+                <div class="col-md-2 d-flex justify-content-end">
+                    <button class="col-md-2 header-container-btn buttonTroy base" >تماس با ما</button>
+                </div>
             </div>
         </div>
-
-        <nav class="main-navigation" id="main-navigation">
-            <button class="menu-toggle" id="menu-toggle" aria-expanded="false" aria-controls="primary-menu">
-                <span class="menu-toggle-bar"></span>
-                <span class="menu-toggle-bar"></span>
-                <span class="menu-toggle-bar"></span>
-                <span class="screen-reader-text">Menu</span>
-            </button>
-            
-            <?php
-            wp_nav_menu(array(
-                'theme_location' => 'primary',
-                'menu_id'        => 'primary-menu',
-                'menu_class'     => 'nav-menu',
-                'container'      => false,
-                'fallback_cb'    => 'wp_page_menu',
-                'depth'          => 3
-            ));
-            ?>
-        </nav>
     </div>
 </header>
 
