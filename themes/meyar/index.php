@@ -20,7 +20,41 @@
 
   
   <section class="whySection" >
-     
+     <h1>چرا معیار</h1>
+     <div class="container">
+        <div class="whyCards-container">
+            <div class="whyCard">
+                <div class="whyCard-icon">👥</div>
+                <div class="whyCard-content">
+                    <h3 class="whyCard-title base">پشتیبانی حرفه ای و تخصصی</h3>
+                </div>
+            </div>
+            <div class="whyCard">
+                <div class="whyCard-icon">👥</div>
+                <div class="whyCard-content">
+                    <h3 class="whyCard-title base">پشتیبانی حرفه ای و تخصصی</h3>
+                </div>
+            </div>
+            <div class="whyCard">
+                <div class="whyCard-icon">👥</div>
+                <div class="whyCard-content">
+                    <h3 class="whyCard-title base">پشتیبانی حرفه ای و تخصصی</h3>
+                </div>
+            </div>
+            <div class="whyCard">
+                <div class="whyCard-icon">👥</div>
+                <div class="whyCard-content">
+                    <h3 class="whyCard-title base">پشتیبانی حرفه ای و تخصصی</h3>
+                </div>
+            </div>
+            <div class="whyCard">
+                <div class="whyCard-icon">👥</div>
+                <div class="whyCard-content">
+                    <h3 class="whyCard-title base">پشتیبانی حرفه ای و تخصصی</h3>
+                </div>
+            </div>
+        </div> 
+      </div>     
   </section>
 
   <section class="serviseSection" >
