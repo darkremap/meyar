@@ -16,7 +16,12 @@ Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-com
 /* variable ---------------------------------------------------------------------------- */
 @font-face { 
   font-family: dena;
-  src: url(./assets/fonts/Dana-Thin.ttf);
+  src: url(./assets/fonts/Dana-DemiBold.ttf),
+       url(./assets/fonts/Dana-Hairline.ttf),
+       url(./assets/fonts/Dana-Heavy.ttf),
+       url(./assets/fonts/Dana-Light.ttf),
+       url(./assets/fonts/Dana-Medium.ttf),
+       url(./assets/fonts/Dana-Regular.ttf);
 }
 
 /* @font-face {
@@ -31,24 +36,36 @@ a{
 :root {
   --Midnight: #000000;
   --Merlot: ;
-  --Maroon: ;
+  --Maroon: #FDB913;
   --Zodiac: #1B3281;
-  --Tory:  ;
-  --PastelBlue: #3d56a6 ;
+  --Tory: #3d56a6;
+  --PastelBlue:  ;
   --White: #FFFFFF ;
   --LightMerlot: #70798B;
 }
 
 .base{
-    font-family: dena;
+    font-family: dena , sans-serif;
 }
 
 .buttonTroy{
-    border-radius: 20px;
-    padding-inline: 16px;
-    
+    border-radius: 25px;
+    padding: 8px 25px;
+    color: var(--White);
+    border: 1px solid var(--White);
+    background:  linear-gradient(90deg,rgb(220, 217, 217) 0%, var(--Zodiac) 50%, var(--Zodiac) 100%);
 }
 
+.meyar-yello-btn{
+    background : var(--Maroon) !important;
+    color: var(--Zodiac) !important;
+    border: none;
+}
+.meyar-white-btn{
+    background : var(--White) !important;
+    color: var(--Zodiac) !important;
+    border: none;
+}
 
 
 /* variable ---------------------------------------------------------------------------- */
@@ -66,7 +83,7 @@ body {
 
 /* Custom Navbar Styles ---------------------------------------------------------------------------------------------- Custom Navbar Styles  */
 .site-header {
-    background: #fff;
+    background: transparent;
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -77,41 +94,21 @@ body {
     padding-block: 12px;
 }
 
-.header-container-btn{
-    width: auto;
-}
-
 .header-branding {
     display: flex;
     align-items: center;
     gap: 15px;
 }
 .header-homeIcon{
-    margin-left: 20px;
+    margin-block: auto;
+    margin-left: 60px;
 }
 .header-homeIcon img{
-    height: 34px;
+    height: 24px;
 }
 .site-logo img {
-    max-height: 60px;
-    width: auto;
-}
-
-.site-title {
-    margin: 0;
-    font-size: 1.5rem;
-    font-weight: bold;
-}
-
-.site-title a {
-    text-decoration: none;
-    color: #333;
-}
-
-.site-description {
-    margin: 0;
-    font-size: 0.9rem;
-    color: #666;
+    max-height: 70px;
+    width: 150px;
 }
 
 /* Main Navigation */
@@ -126,7 +123,7 @@ body {
     list-style: none;
     margin: 0;
     padding: 0;
-    gap: 30px;
+    gap: 50px;
 }
 
 .nav-menu li {
@@ -135,16 +132,16 @@ body {
 
 .nav-menu a {
     text-decoration: none;
-    color: #333;
+    color: var(--White);
     font-weight: 500;
     padding: 10px 0;
     transition: color 0.3s ease;
     display: block;
 }
 
-.nav-menu a:hover {
+/* .nav-menu a:hover {
     color: #007cba;
-}
+} */
 
 /* Dropdown Menu */
 .nav-menu .sub-menu,
@@ -352,4 +349,46 @@ body {
     0% { opacity: 1; }
     50% { opacity: 0.5; }
     100% { opacity: 1; }
+}
+
+
+/* heroSection -------------------------------------------------------------------------------------------------------heroSection */
+
+.heroSection{
+    background-color: var(--Tory);
+    margin-top: -110px;
+    padding-top: 140px;
+    padding-bottom: 160px;
+}
+
+.heroSection-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.heroSection-content h1{
+    font-size: 60px;
+    text-align: start;
+    font-weight: bold;
+    color: var(--White);
+}
+
+.heroSection-content-btns{
+    margin-top: 40px;
+}
+
+.whySection{
+    background-color: var(--White);
+    height: 400px;
+    margin-top: -85px;
+    border-radius: 50px;
+    z-index: 10000;
+    position: relative;
+}
+
+.serviseSection{
+    margin-top: -50px;
+    height: 400px;
+    background-color: #007cba;
 }

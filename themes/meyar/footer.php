@@ -3,6 +3,12 @@
 
     <footer id="colophon" class="site-footer">
         <div class="container">
+            <hr>
+            <hr>
+            <hr>
+            <hr>
+            <hr>
+            hr
             <?php if (is_active_sidebar('footer-widgets')) : ?>
                 <div class="footer-widgets">
                     <?php dynamic_sidebar('footer-widgets'); ?>
