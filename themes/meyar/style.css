@@ -11,35 +11,384 @@ Text Domain: meyar
 Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
 */
 
-/* Basic reset and styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/* Basic reset and styles-----------------------------------------------------------------------------------------------Basic reset and styles */
+
+/* variable ---------------------------------------------------------------------------- */
+@font-face { 
+  font-family: dena;
+  src: url(./assets/fonts/Dana-DemiBold.ttf),
+       url(./assets/fonts/Dana-Hairline.ttf),
+       url(./assets/fonts/Dana-Heavy.ttf),
+       url(./assets/fonts/Dana-Light.ttf),
+       url(./assets/fonts/Dana-Medium.ttf),
+       url(./assets/fonts/Dana-Regular.ttf);
 }
 
+/* @font-face {
+  font-family: dena;
+  src: url(./assets/fonts/Dana-Bold.ttf);
+} */
+
+a{
+  text-decoration: none;
+}
+
+:root {
+  --Midnight: #000000;
+  --Merlot: ;
+  --Maroon: #FDB913;
+  --Zodiac: #1B3281;
+  --Tory: #3d56a6;
+  --PastelBlue:  ;
+  --White: #FFFFFF ;
+  --LightMerlot: #70798B;
+}
+
+.base{
+    font-family: dena , sans-serif;
+}
+
+.buttonTroy{
+    border-radius: 25px;
+    padding: 8px 25px;
+    color: var(--White);
+    border: 1px solid var(--White);
+    background:  linear-gradient(90deg,rgb(220, 217, 217) 0%, var(--Zodiac) 50%, var(--Zodiac) 100%);
+}
+
+.meyar-yello-btn{
+    background : var(--Maroon) !important;
+    color: var(--Zodiac) !important;
+    border: none;
+}
+.meyar-white-btn{
+    background : var(--White) !important;
+    color: var(--Zodiac) !important;
+    border: none;
+}
+
+
+/* variable ---------------------------------------------------------------------------- */
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    color: #333;
+    direction: rtl;
 }
-
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
 
 /* Responsive design */
 @media (max-width: 768px) {
-    .site-branding {
-        flex-direction: column;
-        text-align: center;
+
+}
+
+/* Basic reset and styles-----------------------------------------------------------------------------------------------Basic reset and styles */
+
+
+/* Custom Navbar Styles ---------------------------------------------------------------------------------------------- Custom Navbar Styles  */
+.site-header {
+    background: transparent;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-container {
+    align-items: center;
+    padding-block: 12px;
+}
+
+.header-branding {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.header-homeIcon{
+    margin-block: auto;
+    margin-left: 60px;
+}
+.header-homeIcon img{
+    height: 24px;
+}
+.site-logo img {
+    max-height: 70px;
+    width: 150px;
+}
+
+/* Main Navigation */
+.main-navigation {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 50px;
+}
+
+.nav-menu li {
+    position: relative;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: var(--White);
+    font-weight: 500;
+    padding: 10px 0;
+    transition: color 0.3s ease;
+    display: block;
+}
+
+/* .nav-menu a:hover {
+    color: #007cba;
+} */
+
+/* Dropdown Menu */
+.nav-menu .sub-menu,
+.nav-menu .children {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #fff;
+    min-width: 200px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    border-radius: 5px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+    list-style: none;
+    padding: 10px 0;
+    z-index: 1000;
+}
+
+.nav-menu .sub-menu li,
+.nav-menu .children li {
+    margin: 0;
+}
+
+.nav-menu .sub-menu a,
+.nav-menu .children a {
+    padding: 10px 20px;
+    white-space: nowrap;
+}
+
+.nav-menu li:hover > .sub-menu,
+.nav-menu li:hover > .children {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+/* Mobile Menu Toggle */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.menu-toggle-bar {
+    width: 25px;
+    height: 3px;
+    background: #333;
+    transition: all 0.3s ease;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .header-container {
+        flex-wrap: wrap;
+        padding: 0 15px;
     }
     
-    .main-navigation ul {
-        flex-direction: column;
-        gap: 10px;
+    .menu-toggle {
+        display: flex;
     }
+    
+    .nav-menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: #fff;
+        flex-direction: column;
+        gap: 0;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        padding: 20px 0;
+    }
+    
+    .nav-menu.active {
+        display: flex;
+    }
+    
+    .nav-menu li {
+        width: 100%;
+    }
+    
+    .nav-menu a {
+        padding: 15px 20px;
+        border-bottom: 1px solid #f0f0f0;
+    }
+    
+    .nav-menu .sub-menu,
+    .nav-menu .children {
+        position: static;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        box-shadow: none;
+        background: #f9f9f9;
+        display: none;
+        padding: 0;
+    }
+    
+    .nav-menu .sub-menu.active,
+    .nav-menu .children.active {
+        display: block;
+    }
+    
+    .nav-menu .sub-menu a,
+    .nav-menu .children a {
+        padding-left: 40px;
+        font-size: 0.9em;
+    }
+    
+    /* Animated hamburger icon */
+    .menu-toggle.active .menu-toggle-bar:nth-child(1) {
+        transform: rotate(45deg) translate(6px, 6px);
+    }
+    
+    .menu-toggle.active .menu-toggle-bar:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .menu-toggle.active .menu-toggle-bar:nth-child(3) {
+        transform: rotate(-45deg) translate(6px, -6px);
+    }
+}
+
+/* Desktop dropdown arrow */
+.nav-menu .menu-item-has-children > a::after {
+    content: '▾';
+    margin-left: 5px;
+    font-size: 0.8em;
+}
+
+/* Mobile dropdown toggle */
+.mobile-dropdown-toggle {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 50px;
+    height: 50px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2em;
+    color: #666;
+}
+
+@media (min-width: 769px) {
+    .mobile-dropdown-toggle {
+        display: none;
+    }
+}
+
+/* Improved mobile styles */
+@media (max-width: 768px) {
+    .site-header {
+        position: relative;
+    }
+    
+    .header-container {
+        min-height: 70px;
+    }
+    
+    .site-logo img {
+        max-height: 50px;
+    }
+    
+    .site-title {
+        font-size: 1.3rem;
+    }
+    
+    .site-description {
+        display: none; /* Hide description on mobile */
+    }
+    
+    /* Prevent body scroll when menu is open */
+    body.menu-open {
+        overflow: hidden;
+    }
+    
+    .nav-menu {
+        max-height: calc(100vh - 70px);
+        overflow-y: auto;
+    }
+}
+
+/* Focus styles for accessibility */
+.menu-toggle:focus,
+.mobile-dropdown-toggle:focus,
+.nav-menu a:focus {
+    outline: 2px solid #007cba;
+    outline-offset: 2px;
+}
+
+/* Loading state */
+.menu-toggle.loading .menu-toggle-bar {
+    animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+    0% { opacity: 1; }
+    50% { opacity: 0.5; }
+    100% { opacity: 1; }
+}
+
+
+/* heroSection -------------------------------------------------------------------------------------------------------heroSection */
+
+.heroSection{
+    background-color: var(--Tory);
+    margin-top: -110px;
+    padding-top: 140px;
+    padding-bottom: 160px;
+}
+
+.heroSection-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.heroSection-content h1{
+    font-size: 60px;
+    text-align: start;
+    font-weight: bold;
+    color: var(--White);
+}
+
+.heroSection-content-btns{
+    margin-top: 40px;
+}
+
+.whySection{
+    background-color: var(--White);
+    height: 400px;
+    margin-top: -85px;
+    border-radius: 50px;
+    z-index: 10000;
+    position: relative;
+}
+
+.serviseSection{
+    margin-top: -50px;
+    height: 400px;
+    background-color: #007cba;
 }

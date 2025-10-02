@@ -11,51 +11,57 @@
     <?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?>>
-<?php wp_body_open(); ?>
+<body>
 
-<header id="masthead" class="site-header">
-    <div class="container">
-        <div class="site-branding">
-            <?php if (has_custom_logo()) : ?>
-                <div class="site-logo">
-                    <?php the_custom_logo(); ?>
+<!-- Custom Navigation -->
+<header class="site-header">
+    <div class="">
+        <div class="container">
+            <div class="row header-container">
+                <div class="col-md-2 header-branding">
+                    <div class="site-logo">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/LogoLight.png" alt="Mwyar">
+                    </div>    
                 </div>
-            <?php endif; ?>
-            
-            <div class="site-title-wrap">
-                <?php if (is_front_page() && is_home()) : ?>
-                    <h1 class="site-title">
-                        <a href="<?php echo esc_url(home_url('/')); ?>" rel="home">
-                            <?php bloginfo('name'); ?>
+
+                <nav class="col-md-8 main-navigation" id="main-navigation">
+                    <button class="menu-toggle" id="menu-toggle" aria-expanded="false" aria-controls="primary-menu">
+                        <span class="menu-toggle-bar"></span>
+                        <span class="menu-toggle-bar"></span>
+                        <span class="menu-toggle-bar"></span>
+                        <span class="screen-reader-text">Menu</span>
+                    </button>
+                    
+                    <div class="header-homeIcon">
+                        <a href="/">
+                            <svg fill="#ffffffff" width="24px" height="24px" viewBox="0 0 36 46" version="1.1"  preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <title>home-line</title>
+                                <path class="clr-i-outline clr-i-outline-path-1" d="M33.71,17.29l-15-15a1,1,0,0,0-1.41,0l-15,15a1,1,0,0,0,1.41,1.41L18,4.41,32.29,18.71a1,1,0,0,0,1.41-1.41Z"></path><path class="clr-i-outline clr-i-outline-path-2" d="M28,32h-5V22H13V32H8V18L6,20V32a2,2,0,0,0,2,2h7V24h6V34h7a2,2,0,0,0,2-2V19.76l-2-2Z"></path>
+                                <rect x="0" y="0" width="36" height="36" fill-opacity="0"/>
+                            </svg>
                         </a>
-                    </h1>
-                <?php else : ?>
-                    <p class="site-title">
-                        <a href="<?php echo esc_url(home_url('/')); ?>" rel="home">
-                            <?php bloginfo('name'); ?>
-                        </a>
-                    </p>
-                <?php endif; ?>
-                
-                <p class="site-description"><?php bloginfo('description'); ?></p>
+                    </div>
+
+                    <?php
+                    wp_nav_menu(array(
+                        'theme_location' => 'primary',
+                        'menu_id'        => 'primary-menu',
+                        'menu_class'     => 'nav-menu base',
+                        'container'      => false,
+                        'fallback_cb'    => 'wp_page_menu',
+                        'depth'          => 3
+                    ));
+                    ?>
+                </nav>
+
+                <div class="col-md-2 d-flex justify-content-end">
+                    <button class="buttonTroy base" >تماس با ما</button>
+                </div>
             </div>
         </div>
-
-        <nav id="site-navigation" class="main-navigation">
-            <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
-                <?php esc_html_e('Menu', 'my-custom-theme'); ?>
-            </button>
-            <?php
-            wp_nav_menu(array(
-                'theme_location' => 'primary',
-                'menu_id'        => 'primary-menu',
-                'container'      => false,
-            ));
-            ?>
-        </nav>
     </div>
 </header>
 
+
 <div id="content" class="site-content">
-    <div class="container">
+    <div>
