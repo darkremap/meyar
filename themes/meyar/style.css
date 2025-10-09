@@ -15,19 +15,49 @@ Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-com
 
 /* variable ---------------------------------------------------------------------------- */
 @font-face { 
-  font-family: dena;
-  src: url(./assets/fonts/Dana-DemiBold.ttf),
-       url(./assets/fonts/Dana-Hairline.ttf),
-       url(./assets/fonts/Dana-Heavy.ttf),
-       url(./assets/fonts/Dana-Light.ttf),
-       url(./assets/fonts/Dana-Medium.ttf),
-       url(./assets/fonts/Dana-Regular.ttf);
+  font-family: Dana-Regular;
+  src: url(./assets/fonts/Dana-Regular.ttf);
+}
+@font-face { 
+  font-family: Dana-ExtraBold;
+  src: url(./assets/fonts/Dana-ExtraBold.ttf);
+}
+@font-face { 
+  font-family: Dana-Bold;
+  src: url(./assets/fonts/Dana-Bold.ttf);
+}
+@font-face { 
+  font-family: Dana-Black;
+  src: url(./assets/fonts/Dana-Black.ttf);
+}
+@font-face { 
+  font-family: Dana-DemiBold;
+  src: url(./assets/fonts/Dana-DemiBold.ttf);
+}
+@font-face { 
+  font-family: Dana-Medium;
+  src: url(./assets/fonts/Dana-Medium.ttf);
 }
 
-/* @font-face {
-  font-family: dena;
-  src: url(./assets/fonts/Dana-Bold.ttf);
-} */
+.Dana-Regular{
+    font-family: Dana-Regular , sans-serif;
+}
+.Dana-ExtraBold{
+    font-family: Dana-ExtraBold , sans-serif;
+}
+.Dana-Bold{
+    font-family: Dana-Bold , sans-serif;
+}
+.Dana-Black{
+    font-family: Dana-Black , sans-serif;
+}
+.Dana-DemiBold{
+    font-family: Dana-DemiBold , sans-serif;
+}
+.Dana-Medium{
+    font-family: Dana-Medium , sans-serif;
+}
+
 
 a{
   text-decoration: none;
@@ -35,17 +65,13 @@ a{
 
 :root {
   --Midnight: #000000;
-  --Merlot: ;
+  --Merlot: #000043;
   --Maroon: #FDB913;
   --Zodiac: #1B3281;
-  --Tory: #3d56a6;
-  --PastelBlue: #E4E4E4 ;
+  --Tory: #20C4F4;
+  --PastelBlue: #0073BA ;
   --White: #FFFFFF ;
-  --LightMerlot: #70798B;
-}
-
-.base{
-    font-family: dena , sans-serif;
+  --LightMerlot: #999999;
 }
 
 .buttonTroy{
@@ -53,7 +79,7 @@ a{
     padding: 8px 25px;
     color: var(--White);
     border: 1px solid var(--White);
-    background:  linear-gradient(90deg,rgb(220, 217, 217) 0%, var(--Zodiac) 50%, var(--Zodiac) 100%);
+    background:  linear-gradient(72deg,rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 100%);
 }
 
 .meyar-yello-btn{
@@ -355,7 +381,7 @@ body {
 /* heroSection -------------------------------------------------------------------------------------------------------heroSection */
 
 .heroSection{
-    background-color: var(--Tory);
+    background: var(--Tory)linear-gradient(10deg,rgba(0, 0, 67, 1) 0%, rgba(27, 50, 129, 1) 52%, rgba(32, 196, 244, 1) 100%);;
     margin-top: -110px;
     padding-top: 140px;
     padding-bottom: 160px;
@@ -380,7 +406,7 @@ body {
 
 /* whySection------------------------------------------------------------------WhySection */
 .whySection{
-    background-color: var(--PastelBlue);
+    background-color: var(--White);
     margin-top: -85px;
     border-radius: 50px;
     z-index: 10000;
@@ -390,13 +416,13 @@ body {
 .whySection h1{
     color: var(--Zodiac);
     text-align: center;
-    margin-bottom: 50px;
+    margin-bottom: 25px;
 }
 
 .whyCards-container{
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 25px;
+    /* display: grid; */
+    /* grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); */
+    /* gap: 25px; */
 }
 
 .whyCard-dot{
@@ -409,32 +435,41 @@ body {
 }
 
 .whyCard{
-    border-radius: 12px;
+    position: relative;
     overflow: hidden;
     height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+.boarder-why{
+    border-right: 1px solid var(--LightMerlot);
+    position: absolute;
+    top: 0;
+    height: 300px;
+    right: 4px;
+    z-index: 9000;
+}
 .whyCard-Icon{
-    height: 180px;
+    height: 201px;
     display: flex;
     justify-content: center;
+    padding-inline: 40px;
 }
 .whyCard-content{
-    padding: 25px;
+    /* padding: 25px; */
     flex-grow: 1;
     display: flex;
     flex-direction: column;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    margin-top: -120px;
+    /* margin-top: -120px; */
     /* From https://css.glass */
     background: rgba(255, 255, 255, 0.38);
     border-radius: 16px;
     backdrop-filter: blur(8.6px);
     -webkit-backdrop-filter: blur(8.6px);
     border: 1px solid rgba(255, 255, 255, 0.35);
-    height: 300px;
+    /* height: 300px; */
     border: 1px solid var(--White);
 }
 
@@ -444,25 +479,73 @@ body {
     font-weight: 600;
     color: var(--Zodiac);
     line-height: 1.4;
+    padding-inline: 15px;
+    margin-top: 30px;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+
+.whyCard-Icon img{
+    width: -webkit-fill-available;
+}
+
+.whyCard-image-h{
+    display: none;
+}
+
+
 
 .whyCard-content:hover {
     transform: translateY(-10px);
     /* box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15); */
 }
 
-.whyCard:hover .whyCard-dot {
-    background-color: var(--Maroon); /* Change to your desired hover color */
+.whyCard:hover .whyCard-image-h {
+    /* background-color: var(--Maroon); Change to your desired hover color */
+    display: flex;
+}
+.whyCard:hover .whyCard-image-f {
+    /* background-color: var(--Maroon); Change to your desired hover color */
+    display: none;
 }
 
 
 
 
 
-
+/* // serviseSection --------------------------------------------------------------------------------------------------------- // */
 
 .serviseSection{
+    padding-bottom: 50px;
     margin-top: -50px;
-    height: 400px;
-    background-color: #007cba;
+    padding-top: 120px;
+    background: linear-gradient(0deg,rgba(0, 115, 186, 1) 20%, rgba(32, 196, 244, 1) 81%);
+}
+.serviseSection h1{
+   text-align: center;
+   color: var(--White);
+}
+
+
+.serviseCard{
+    padding: 20px;
+}
+
+.serviseContent{
+    background: linear-gradient(0deg, rgba(27, 50, 129, 1) -38%, rgba(0, 115, 186, 1) 88%);
+    padding: 15px;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.serviseContent img{
+    padding: 20px 20px 34px 20px;
+    width: 170px;
+}
+.serviseContent h5{
+    color: var(--White);
 }

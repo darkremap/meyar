@@ -5,10 +5,10 @@
       <div class="container">
         <div class="row">
           <div class="col-md-4 heroSection-content">
-            <h1>توسعه انسانی تعالی سازمانی</h1>
+            <h1 class="Dana-ExtraBold">توسعه انسانی تعالی سازمانی</h1>
             <div class="heroSection-content-btns">
-                <a class="buttonTroy base meyar-yello-btn" href="#">همکاری با ما</a>
-                <a class="mx-5 buttonTroy base meyar-white-btn" href="#">همکاری با ما</a>
+                <a class="buttonTroy Dana-Bold meyar-yello-btn" href="#">درخواست دمو</a>
+                <a class="mx-3 buttonTroy Dana-Bold meyar-white-btn" href="#">دریافت کاتالوگ</a>
             </div>
           </div>
           <div class="col-md-8 d-flex justify-content-center">
@@ -20,70 +20,104 @@
 
   
   <section class="whySection" >
-     <h1>چرا معیار</h1>
+     <h1 class="Dana-Black">چرا معیار</h1>
      <div class="container">
-        <div class="whyCards-container">
-            <div class="whyCard">
-                <div class="whyCard-dot"></div>
+        <div class="row whyCards-container">
+            <div class="col-md-2 whyCard">
+                <!-- <div class="whyCard-dot"></div> -->
                 <div class="whyCard-content">
                     <div class="whyCard-Icon">
-                      <svg fill="#000000" width="150px" height="150px" viewBox="0 0 256 256" id="Flat" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M54.79785,119.48535A34.95033,34.95033,0,0,1,49.05078,128a34.95033,34.95033,0,0,1,5.74707,8.51465C60,147.24414,60,159.8291,60,172c0,25.93652,1.84424,32,20,32a12,12,0,0,1,0,24c-19.14453,0-32.19775-6.90234-38.79785-20.51465C36,196.75586,36,184.1709,36,172c0-25.93652-1.84424-32-20-32a12,12,0,0,1,0-24c18.15576,0,20-6.06348,20-32,0-12.1709,0-24.75586,5.20215-35.48535C47.80225,34.90234,60.85547,28,80,28a12,12,0,0,1,0,24c-18.15576,0-20,6.06348-20,32C60,96.1709,60,108.75586,54.79785,119.48535ZM240,116c-18.15576,0-20-6.06348-20-32,0-12.1709,0-24.75586-5.20215-35.48535C208.19775,34.90234,195.14453,28,176,28a12,12,0,0,0,0,24c18.15576,0,20,6.06348,20,32,0,12.1709,0,24.75586,5.20215,35.48535A34.95033,34.95033,0,0,0,206.94922,128a34.95033,34.95033,0,0,0-5.74707,8.51465C196,147.24414,196,159.8291,196,172c0,25.93652-1.84424,32-20,32a12,12,0,0,0,0,24c19.14453,0,32.19775-6.90234,38.79785-20.51465C220,196.75586,220,184.1709,220,172c0-25.93652,1.84424-32,20-32a12,12,0,0,0,0-24Z"/>
-                      </svg>
+                        <img class="whyCard-image-f" src="<?php echo get_template_directory_uri(); ?>/assets/images/lamps-network-off.png" alt="">
+                        <img class="whyCard-image-h" src="<?php echo get_template_directory_uri(); ?>/assets/images/lamps-network-on.png" alt="">
                     </div>
-                    <h3 class="whyCard-title base">حذف پراکندگی مراجعه به مراکز متعدد</h3>
+                    <h3 class="whyCard-title Dana-DemiBold">یکپارچگی خدمات</h3>
                 </div>
             </div>
-            <div class="whyCard">
-                <div class="whyCard-dot"></div>
+            <div class="col-md-2 whyCard">
+              <p class="boarder-why"></p>
+                <!-- <div class="whyCard-dot"></div> -->
                 <div class="whyCard-content">
                     <div class="whyCard-Icon">
-                      <svg fill="#000000" width="150px" height="150px" viewBox="0 0 256 256" id="Flat" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M54.79785,119.48535A34.95033,34.95033,0,0,1,49.05078,128a34.95033,34.95033,0,0,1,5.74707,8.51465C60,147.24414,60,159.8291,60,172c0,25.93652,1.84424,32,20,32a12,12,0,0,1,0,24c-19.14453,0-32.19775-6.90234-38.79785-20.51465C36,196.75586,36,184.1709,36,172c0-25.93652-1.84424-32-20-32a12,12,0,0,1,0-24c18.15576,0,20-6.06348,20-32,0-12.1709,0-24.75586,5.20215-35.48535C47.80225,34.90234,60.85547,28,80,28a12,12,0,0,1,0,24c-18.15576,0-20,6.06348-20,32C60,96.1709,60,108.75586,54.79785,119.48535ZM240,116c-18.15576,0-20-6.06348-20-32,0-12.1709,0-24.75586-5.20215-35.48535C208.19775,34.90234,195.14453,28,176,28a12,12,0,0,0,0,24c18.15576,0,20,6.06348,20,32,0,12.1709,0,24.75586,5.20215,35.48535A34.95033,34.95033,0,0,0,206.94922,128a34.95033,34.95033,0,0,0-5.74707,8.51465C196,147.24414,196,159.8291,196,172c0,25.93652-1.84424,32-20,32a12,12,0,0,0,0,24c19.14453,0,32.19775-6.90234,38.79785-20.51465C220,196.75586,220,184.1709,220,172c0-25.93652,1.84424-32,20-32a12,12,0,0,0,0-24Z"/>
-                      </svg>
+                        <img class="whyCard-image-f" src="<?php echo get_template_directory_uri(); ?>/assets/images/lamp-gear-off.png" alt="">
+                        <img class="whyCard-image-h" src="<?php echo get_template_directory_uri(); ?>/assets/images/lamp-gear-on.png" alt="">
                     </div>
-                    <h3 class="whyCard-title base">بهره گیری از دانش روز وتجربه های عملیاتی</h3>
+                    <h3 class="whyCard-title Dana-DemiBold">بهره گیری از دانش روز وتجربه های عملیاتی</h3>
                 </div>
             </div>
-            <div class="whyCard">
-                <div class="whyCard-dot"></div>
+            <div class="col-md-2 whyCard">
+              <p class="boarder-why"></p>
+                <!-- <div class="whyCard-dot"></div> -->
                 <div class="whyCard-content">
                     <div class="whyCard-Icon">
-                      <svg fill="#000000" width="150px" height="150px" viewBox="0 0 256 256" id="Flat" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M54.79785,119.48535A34.95033,34.95033,0,0,1,49.05078,128a34.95033,34.95033,0,0,1,5.74707,8.51465C60,147.24414,60,159.8291,60,172c0,25.93652,1.84424,32,20,32a12,12,0,0,1,0,24c-19.14453,0-32.19775-6.90234-38.79785-20.51465C36,196.75586,36,184.1709,36,172c0-25.93652-1.84424-32-20-32a12,12,0,0,1,0-24c18.15576,0,20-6.06348,20-32,0-12.1709,0-24.75586,5.20215-35.48535C47.80225,34.90234,60.85547,28,80,28a12,12,0,0,1,0,24c-18.15576,0-20,6.06348-20,32C60,96.1709,60,108.75586,54.79785,119.48535ZM240,116c-18.15576,0-20-6.06348-20-32,0-12.1709,0-24.75586-5.20215-35.48535C208.19775,34.90234,195.14453,28,176,28a12,12,0,0,0,0,24c18.15576,0,20,6.06348,20,32,0,12.1709,0,24.75586,5.20215,35.48535A34.95033,34.95033,0,0,0,206.94922,128a34.95033,34.95033,0,0,0-5.74707,8.51465C196,147.24414,196,159.8291,196,172c0,25.93652-1.84424,32-20,32a12,12,0,0,0,0,24c19.14453,0,32.19775-6.90234,38.79785-20.51465C220,196.75586,220,184.1709,220,172c0-25.93652,1.84424-32,20-32a12,12,0,0,0,0-24Z"/>
-                      </svg>
+                        <img class="whyCard-image-f" src="<?php echo get_template_directory_uri(); ?>/assets/images/lamp-puzzle-off.png" alt="">
+                        <img class="whyCard-image-h" src="<?php echo get_template_directory_uri(); ?>/assets/images/lamp-puzzle-on.png" alt="">
                     </div>
-                    <h3 class="whyCard-title base">طراحی راهکارهای سفارشی برای هر سازمان</h3>
+                    <h3 class="whyCard-title Dana-DemiBold">طراحی راهکارهای سفارشی برای هر سازمان</h3>
                 </div>
             </div>
-            <div class="whyCard">
-                <div class="whyCard-dot"></div>
+            <div class="col-md-2 whyCard">
+              <p class="boarder-why"></p>
+                <!-- <div class="whyCard-dot"></div> -->
                 <div class="whyCard-content">
                     <div class="whyCard-Icon">
-                      <svg fill="#000000" width="150px" height="150px" viewBox="0 0 256 256" id="Flat" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M54.79785,119.48535A34.95033,34.95033,0,0,1,49.05078,128a34.95033,34.95033,0,0,1,5.74707,8.51465C60,147.24414,60,159.8291,60,172c0,25.93652,1.84424,32,20,32a12,12,0,0,1,0,24c-19.14453,0-32.19775-6.90234-38.79785-20.51465C36,196.75586,36,184.1709,36,172c0-25.93652-1.84424-32-20-32a12,12,0,0,1,0-24c18.15576,0,20-6.06348,20-32,0-12.1709,0-24.75586,5.20215-35.48535C47.80225,34.90234,60.85547,28,80,28a12,12,0,0,1,0,24c-18.15576,0-20,6.06348-20,32C60,96.1709,60,108.75586,54.79785,119.48535ZM240,116c-18.15576,0-20-6.06348-20-32,0-12.1709,0-24.75586-5.20215-35.48535C208.19775,34.90234,195.14453,28,176,28a12,12,0,0,0,0,24c18.15576,0,20,6.06348,20,32,0,12.1709,0,24.75586,5.20215,35.48535A34.95033,34.95033,0,0,0,206.94922,128a34.95033,34.95033,0,0,0-5.74707,8.51465C196,147.24414,196,159.8291,196,172c0,25.93652-1.84424,32-20,32a12,12,0,0,0,0,24c19.14453,0,32.19775-6.90234,38.79785-20.51465C220,196.75586,220,184.1709,220,172c0-25.93652,1.84424-32,20-32a12,12,0,0,0,0-24Z"/>
-                      </svg>
+                        <img class="whyCard-image-f" src="<?php echo get_template_directory_uri(); ?>/assets/images/lamps-shield-off.png" alt="">
+                        <img class="whyCard-image-h" src="<?php echo get_template_directory_uri(); ?>/assets/images/lamps-shield-on.png" alt="">
                     </div>
-                    <h3 class="whyCard-title base">اعضای متکثر و کارگروههای تخصصی</h3>
+                    <h3 class="whyCard-title px-5 Dana-DemiBold">پشتیبانی مستمر و حرفه ای </h3>
                 </div>
             </div>
-            <div class="whyCard">
-                <div class="whyCard-dot"></div>
+            <div class="col-md-2 whyCard">
+              <p class="boarder-why"></p>
+                <!-- <div class="whyCard-dot"></div> -->
                 <div class="whyCard-content">
                     <div class="whyCard-Icon">
-                      <svg fill="#000000" width="150px" height="150px" viewBox="0 0 256 256" id="Flat" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M54.79785,119.48535A34.95033,34.95033,0,0,1,49.05078,128a34.95033,34.95033,0,0,1,5.74707,8.51465C60,147.24414,60,159.8291,60,172c0,25.93652,1.84424,32,20,32a12,12,0,0,1,0,24c-19.14453,0-32.19775-6.90234-38.79785-20.51465C36,196.75586,36,184.1709,36,172c0-25.93652-1.84424-32-20-32a12,12,0,0,1,0-24c18.15576,0,20-6.06348,20-32,0-12.1709,0-24.75586,5.20215-35.48535C47.80225,34.90234,60.85547,28,80,28a12,12,0,0,1,0,24c-18.15576,0-20,6.06348-20,32C60,96.1709,60,108.75586,54.79785,119.48535ZM240,116c-18.15576,0-20-6.06348-20-32,0-12.1709,0-24.75586-5.20215-35.48535C208.19775,34.90234,195.14453,28,176,28a12,12,0,0,0,0,24c18.15576,0,20,6.06348,20,32,0,12.1709,0,24.75586,5.20215,35.48535A34.95033,34.95033,0,0,0,206.94922,128a34.95033,34.95033,0,0,0-5.74707,8.51465C196,147.24414,196,159.8291,196,172c0,25.93652-1.84424,32-20,32a12,12,0,0,0,0,24c19.14453,0,32.19775-6.90234,38.79785-20.51465C220,196.75586,220,184.1709,220,172c0-25.93652,1.84424-32,20-32a12,12,0,0,0,0-24Z"/>
-                      </svg>
+                        <img class="whyCard-image-f" src="<?php echo get_template_directory_uri(); ?>/assets/images/lamps-professional-off.png" alt="">
+                        <img class="whyCard-image-h" src="<?php echo get_template_directory_uri(); ?>/assets/images/lamps-professional-on.png" alt="">
                     </div>
-                    <h3 class="whyCard-title base">پشتیبانی حرفه ای و تخصصی</h3>
+                    <h3 class="whyCard-title Dana-DemiBold">تمرکز بر توسعه پایدار و ارزشهای سازمانی</h3>
+                </div>
+            </div>
+            <div class="col-md-2 whyCard">
+              <p class="boarder-why"></p>
+                <!-- <div class="whyCard-dot"></div> -->
+                <div class="whyCard-content">
+                    <div class="whyCard-Icon">
+                        <img class="whyCard-image-f" src="<?php echo get_template_directory_uri(); ?>/assets/images/lamps-star-off.png" alt="">
+                        <img class="whyCard-image-h" src="<?php echo get_template_directory_uri(); ?>/assets/images/lamps-star-on.png" alt="">
+                    </div>
+                    <h3 class="whyCard-title px-5 Dana-DemiBold">جامعیت و تنوع تحصص ها</h3>
                 </div>
             </div>
         </div> 
       </div>     
   </section>
 
-  <section class="serviseSection" >
-     
+  <section class="serviseSection">
+      <h1 class="Dana-Black">ارائه خدمات</h1>
+      <div class="container">
+        <div class="row">
+          <?php for ($i = 0; $i < 12; $i++): ?>
+            <div class="col-md-3">
+              <div class="serviseCard">
+                <div class="serviseContent">
+                    <img class="whyCard-image-f" src="<?php echo get_template_directory_uri(); ?>/assets/images/Sbrain-off.png" alt="">
+                    <h5 class="serviseTitle Dana-ExtraBold">جذب و استخدام</h5>
+                </div>
+              </div>
+            </div>
+          <?php endfor; ?>  
+        </div>
+      </div>
+  </section>
+
+  <section class="newsSection">
+
+  </section>
+  <section class="FAQSection">
+
+  </section>
+  <section class="cusstomerSection">
+
   </section>
 </main>
 

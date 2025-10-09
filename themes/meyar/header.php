@@ -46,7 +46,7 @@
                     wp_nav_menu(array(
                         'theme_location' => 'primary',
                         'menu_id'        => 'primary-menu',
-                        'menu_class'     => 'nav-menu base',
+                        'menu_class'     => 'nav-menu Dana-Regular',
                         'container'      => false,
                         'fallback_cb'    => 'wp_page_menu',
                         'depth'          => 3
@@ -55,7 +55,7 @@
                 </nav>
 
                 <div class="col-md-2 d-flex justify-content-end">
-                    <button class="buttonTroy base" >تماس با ما</button>
+                    <button class="buttonTroy Dana-Bold" >تماس با ما</button>
                 </div>
             </div>
         </div>
