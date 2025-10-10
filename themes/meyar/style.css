@@ -93,6 +93,11 @@ a{
     border: none;
 }
 
+.sectionTitle{
+   text-align: center;
+   color: var(--White);
+}
+
 
 /* variable ---------------------------------------------------------------------------- */
 body {
@@ -517,15 +522,12 @@ body {
 
 /* // serviseSection --------------------------------------------------------------------------------------------------------- // */
 
+
 .serviseSection{
-    padding-bottom: 50px;
+    /* padding-bottom:px; */
     margin-top: -50px;
-    padding-top: 120px;
+    padding-block: 120px;
     background: linear-gradient(0deg,rgba(0, 115, 186, 1) 20%, rgba(32, 196, 244, 1) 81%);
-}
-.serviseSection h1{
-   text-align: center;
-   color: var(--White);
 }
 
 
@@ -549,3 +551,87 @@ body {
 .serviseContent h5{
     color: var(--White);
 }
+
+
+/* newsSection ---------------------------------------------------------------------------------------------------------newsSection */
+
+.newsSection{
+    position: relative;
+    margin-top: -85px;
+    border-radius: 50px;
+    z-index: 10000;
+    height: 400px;
+    background: linear-gradient(0deg,rgba(214, 214, 214, 1) 0%, rgba(228, 228, 228, 1) 25%, rgba(255, 255, 255, 1) 57%);
+}
+
+
+
+/* FAQSection ------------------------------------------------------------------------------------------------------------ FAQSection */
+
+.FAQSection{
+    position: relative;
+    /* z-index: -10; */
+    margin-top: -85px;
+    padding-block: 120px;
+    background: linear-gradient(0deg,rgba(0, 115, 186, 1) -35%, rgba(32, 196, 244, 1) 120%);
+}
+
+.FAQSection-items{
+
+}
+
+.FAQSection-item{
+    cursor: pointer;
+    background: linear-gradient(35deg,rgba(255, 255, 255, 0.16) -274%, rgba(255, 255, 255, 1) 277%);
+    padding-block: 25px;
+    padding-inline: 130px;
+    border-radius: 50px;
+    margin-bottom: 20px;
+}
+.FAQSection-item.active {
+  background-color: var(--White); /* Light blue background when open */
+}
+
+.FAQSection-item-question{
+    color: var(--Merlot);
+    margin: 0;
+}
+
+.FAQSection-item-answer{
+    color: var(--Merlot);
+    font-size: 12px;
+    display: none;
+}
+
+.FAQSection-item.active .FAQSection-item-answer {
+  display: block;
+}
+
+
+
+/* cusstomerSection -------------------------------------------------------------------------------------------------------- custumeSection */
+.cusstomerSection{
+    position: relative;;
+    background-color: var(--White);
+    margin-top: -85px;
+    border-radius: 50px;
+    z-index: 10000;
+    height: 200px;
+}
+
+/* footer -------------------------------------------------------------------------------------------------------------------footer */
+
+.site-footer{
+    background-color: var(--Zodiac);
+    margin-top: -85px;
+    position: relative;
+    z-index: -12;
+    padding-top: 130px;
+}
+
+.copyRight{
+    color: var(--White);
+    direction: ltr;
+    margin-top: auto;
+}
+

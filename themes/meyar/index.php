@@ -93,7 +93,7 @@
   </section>
 
   <section class="serviseSection">
-      <h1 class="Dana-Black">ارائه خدمات</h1>
+      <h1 class="sectionTitle Dana-Black">ارائه خدمات</h1>
       <div class="container">
         <div class="row">
           <?php for ($i = 0; $i < 12; $i++): ?>
@@ -113,12 +113,37 @@
   <section class="newsSection">
 
   </section>
-  <section class="FAQSection">
 
+  <section class="FAQSection">
+      <h1 class="sectionTitle Dana-Black mb-4">سوالات متداول</h1>
+      <div class="FAQSection-items container">
+        <div class="FAQSection-item Dana-DemiBold">
+            <h4 class="FAQSection-item-question">نحوه دريافت خدمات از گروه معيار چگونه است؟</h4>
+            <div class="mt-4 FAQSection-item-answer">
+                <p>اگر پاسخ های دریافتی شما با نوع سبک سوالات مطرح شده مطابقت نداشته باشند، شکست خواهید خورد. در واقع منظور این است که تصور نمایید شخصی از شما سوال پرسیده است که نام شما چیست؟ شما به جای اینکه عنوان کنید نام من سارا است، بیان می دارید، مردم من را با نام سارا صدا می زنند..</h4>
+            </div>
+        </div>
+        <div class="FAQSection-item Dana-DemiBold">
+            <h4 class="FAQSection-item-question">نحوه دريافت خدمات از گروه معيار چگونه است؟</h4>
+            <div class="mt-4 FAQSection-item-answer">
+                <p>اگر پاسخ های دریافتی شما با نوع سبک سوالات مطرح شده مطابقت نداشته باشند، شکست خواهید خورد. در واقع منظور این است که تصور نمایید شخصی از شما سوال پرسیده است که نام شما چیست؟ شما به جای اینکه عنوان کنید نام من سارا است، بیان می دارید، مردم من را با نام سارا صدا می زنند..</h4>
+            </div>
+        </div>
+        <div class="FAQSection-item Dana-DemiBold">
+            <h4 class="FAQSection-item-question">نحوه دريافت خدمات از گروه معيار چگونه است؟</h4>
+            <div class="mt-4 FAQSection-item-answer">
+                <p>اگر پاسخ های دریافتی شما با نوع سبک سوالات مطرح شده مطابقت نداشته باشند، شکست خواهید خورد. در واقع منظور این است که تصور نمایید شخصی از شما سوال پرسیده است که نام شما چیست؟ شما به جای اینکه عنوان کنید نام من سارا است، بیان می دارید، مردم من را با نام سارا صدا می زنند..</h4>
+            </div>
+        </div>
+      </div>
   </section>
+  
   <section class="cusstomerSection">
 
   </section>
+
+
 </main>
+
 
 <?php get_footer(); ?>
