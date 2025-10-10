@@ -100,7 +100,8 @@
             <div class="col-md-3">
               <div class="serviseCard">
                 <div class="serviseContent">
-                    <img class="whyCard-image-f" src="<?php echo get_template_directory_uri(); ?>/assets/images/Sbrain-off.png" alt="">
+                    <img class="serviseCard-image-f" src="<?php echo get_template_directory_uri(); ?>/assets/images/Sbrain-off.png" alt="">
+                    <img class="serviseCard-image-n" src="<?php echo get_template_directory_uri(); ?>/assets/images/servise-time-on.png" alt="">
                     <h5 class="serviseTitle Dana-ExtraBold">جذب و استخدام</h5>
                 </div>
               </div>
