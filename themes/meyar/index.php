@@ -138,7 +138,7 @@
       </div>
   </section>
   
-  <section class="cusstomerSection">
+  <section class="customerSection">
       <h1 class="sectionTitle Dana-Black mb-4">مشتریان</h1>
       <div class="container">
           <img class="w-100" src="<?php echo get_template_directory_uri(); ?>/assets/images/Custumers.png" alt="">

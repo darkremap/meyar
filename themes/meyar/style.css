@@ -610,7 +610,7 @@ body {
 
 
 /* cusstomerSection -------------------------------------------------------------------------------------------------------- custumeSection */
-.cusstomerSection{
+.customerSection{
     position: relative;;
     background-color: var(--White);
     margin-top: -85px;
@@ -619,7 +619,7 @@ body {
     padding-block: 50px;
 }
 
-.cusstomerSection h1{
+.customerSection h1{
     color: var(--Merlot);
     margin-bottom: 50px !important;
 }
