@@ -652,14 +652,66 @@ body {
 .site-footer{
     background-color: var(--Zodiac);
     margin-top: -85px;
-    position: relative;
-    z-index: -12;
     padding-top: 130px;
+}
+
+.footer-right{
+    color: var(--White);
+    border-left: 1px solid var(--PastelBlue);
+    padding-left: 50px;
+}
+
+.footer-right p{
+    text-align: justify;
+    line-height: 27px;
+    margin: 0;
+}
+.footer-midel {
+    height: -webkit-fill-available;
+}
+.footer-midel ul{
+    height: -webkit-fill-available;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-top: 30px;
+    padding-right: 50px;
+    list-style-type: none;
+}
+.footer-midel a{
+    text-decoration: none;
+    font-family: Dana-ExtraBold , sans-serif ;
+    color: var(--White);
+}
+.footer-left{
+    border-right: 1px solid var(--PastelBlue);
+    padding-right: 50px;
+}
+.footer-left-lodacion span,
+.footer-left-phon span{
+    margin-left: 10px;
+}
+.footer-left-lodacion h5 ,
+.footer-left-phon h5{
+    color: var(--White);
+    line-height: 56px;
+    font-size: 16px;
+}
+
+.footer-left-media{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 25px;
+}
+.footer-left-media img{
+    width: 40px;
+    height: 40px;
 }
 
 .copyRight{
     color: var(--White);
     direction: ltr;
     margin-top: auto;
+    padding-block: 30px;
 }
 

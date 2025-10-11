@@ -10,25 +10,59 @@
             <?php endif; ?> -->
             
             <div class="row">
-                <div class="col-md-4">
-                    
-
+                <div class="col-md-5 footer-right">
+                    <h5 class="mb-3 Dana-Bold">معیار در یک نگاه</h5>
+                    <p class="Dana-Regular">معیار به‌عنوان یک بانک جامع خدمات روانشناختی، مدیریت سازمانی و منابع انسانی، مجموعه‌ای متشکل از بیش از ۵۰ کارگروه تخصصی و سازمانی است که شامل مشاوران و متخصصان حوزه روانشناسی بالینی و صنعتی-سازمانی، مهندسان صنایع، اساتید دانشگاه، روان‌سنجان، کارشناسان بهداشت و ایمنی و سایر حرفه‌ای‌های مرتبط می‌باشد.
+                        معيار در يك نگاه
+                        معیار با تکیه بر دانش فنی، علمی و سال‌ها تجربه، هدف دارد شبکه‌ای تخصصی و یکپارچه ایجاد کند تا سازمان‌ها بتوانند تمامی نیازهای خود در این حوزه‌ها را برطرف کنند و نیازی به مراجعه به منابع و سایت‌های مختلف برای دریافت خدمات متنوع نداشته باشند.
+                        در مجموعه معیار، ما فضایی فراهم کرده‌ایم تا شما با اطمینان خاطر بتوانید به آرمان‌ها و اهداف سازمانی خود دست یابید.
+                    </p>
                 </div>
-                <div class="col-md-4">
-                    <div class="site-info">
+                <div class="col-md-3">
                         <?php
                         wp_nav_menu(array(
                             'theme_location' => 'footer',
                             'menu_id'        => 'footer-menu',
-                            'menu_class'     => ' Dana-Regular',
+                            'menu_class'     => 'footer-midel Dana-Regular',
                             'container'      => false,
                             'depth'          => 1,
                         ));
                         ?>
-                    </div>
                 </div>
-                <div class="col-md-4">
-                    
+                <div class="col-md-4 footer-left">
+                    <div class="footer-left-lodacion">
+                         <h5 class="Dana-Bold">
+                                <span>
+                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/locationIcon.png" alt="">
+                                </span>
+                                یـوسف آبـاد، بـالاتــر از پمپ بنــزیـن، (روبه روی بانک کارآفرین/جنب نوین چرم) ساختـمان پزشـکان ۵۰۱، طبقه ۴، واحد ۱۷
+                        </h5>
+                    </div>
+                    <div class="footer-left-phon">
+                         <h5 class="Dana-Bold">
+                                <span>
+                                    <img  src="<?php echo get_template_directory_uri(); ?>/assets/images/PhoneIcone.png" alt="">
+                                </span>
+                               ۰۲۱-۲۲۲ ۳۳ ۴۴
+                        </h5>
+                    </div>
+                    <div class="footer-left-media">
+                        <a href="#">
+                            <img  src="<?php echo get_template_directory_uri(); ?>/assets/images/InstagramLogo.png" alt="">
+                        </a>
+                        <a href="#">
+                            <img  src="<?php echo get_template_directory_uri(); ?>/assets/images/InstagramLogo.png" alt="">
+                        </a>
+                        <a href="#">
+                            <img  src="<?php echo get_template_directory_uri(); ?>/assets/images/InstagramLogo.png" alt="">
+                        </a>
+                        <a href="#">
+                            <img  src="<?php echo get_template_directory_uri(); ?>/assets/images/InstagramLogo.png" alt="">
+                        </a>
+                        <a href="#">
+                            <img  src="<?php echo get_template_directory_uri(); ?>/assets/images/InstagramLogo.png" alt="">
+                        </a>
+                    </div>
                 </div>
             </div>
             <div class="copyRight">
