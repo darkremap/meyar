@@ -112,7 +112,39 @@
   </section>
 
   <section class="newsSection">
-
+    <div class="container">
+      <div class="row">
+        <div class="col-md-5">
+          
+        </div>
+        <div class="col-md-7 newsSection-navTable">
+           <div class="warpper">
+              <input class="radio" id="one" name="group" type="radio" checked>
+              <input class="radio" id="two" name="group" type="radio">
+              <input class="radio" id="three" name="group" type="radio">
+              <div class="tabs">
+              <label class="tab Dana-Bold" id="one-tab" for="one">دوره ها</label>
+              <label class="tab Dana-Bold" id="two-tab" for="two">رویدادها</label>
+              <label class="tab Dana-Bold" id="three-tab" for="three">مقالات</label>
+                </div>
+              <div class="panels">
+              <div class="panel" id="one-panel">
+                <div class="panel-title">دوره ها</div>
+                <p>مقالات</p>
+              </div>
+              <div class="panel" id="two-panel">
+                <div class="panel-title">رویدادها</div>
+                <p>روزدادها</p>
+              </div>
+              <div class="panel" id="three-panel">
+                <div class="panel-title">مقالات</div>
+                <p>دوره ها</p>
+              </div>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div> 
   </section>
 
   <section class="FAQSection">
