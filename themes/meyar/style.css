@@ -117,22 +117,44 @@ body {
     background: transparent;
     position: sticky;
     top: 0;
-    z-index: 1000;
+    z-index: 100000;
+}
+.header-scrolled{
+    background-color: var(--White);
 }
 
+.header-scrolled a {
+    color: var(--Zodiac) !important;
+}
+.header-scrolled .header-homeIcon path{
+    fill: var(--Zodiac);
+}
+.header-scrolled .site-logo-Son{
+    display: flex;
+}
+.header-scrolled .site-logo-Soff{
+    display: none;
+}
+.header-scrolled .buttonTroy{
+ color: var(--Zodiac);
+    border: 1px solid var(--Zodiac);
+    background: linear-gradient(34deg,rgba(32, 196, 244, 0.16) 0%, rgba(32, 196, 244, 0) 100%);
+}
 .header-container {
     align-items: center;
     padding-block: 12px;
 }
-
+.site-logo-Son{
+    display: none;
+}
 .header-branding {
     display: flex;
     align-items: center;
     gap: 15px;
 }
 .header-homeIcon{
-    margin-block: auto;
-    margin-left: 60px;
+    margin-top: 4px;
+    margin-left: 40px;
 }
 .header-homeIcon img{
     height: 24px;
@@ -584,12 +606,12 @@ body {
     margin-top: -85px;
     border-radius: 50px;
     z-index: 10000;
+    height: 400px;
     background: linear-gradient(0deg,rgba(214, 214, 214, 1) 0%, rgba(228, 228, 228, 1) 25%, rgba(255, 255, 255, 1) 57%);
 }
 .newsSection-navTable{
     padding-block: 50px;
 }
-
 
 .warpper{
     display:flex;
@@ -655,17 +677,13 @@ body {
 }
 
 
-
-
-
-
 /* FAQSection ------------------------------------------------------------------------------------------------------------ FAQSection */
 
 .FAQSection{
     position: relative;
     /* z-index: -10; */
     margin-top: -85px;
-    padding-block: 120px;
+    padding: 120px 300px;
     background: linear-gradient(0deg,rgba(0, 115, 186, 1) -35%, rgba(32, 196, 244, 1) 120%);
 }
 
@@ -682,7 +700,7 @@ body {
     margin-bottom: 20px;
 }
 .FAQSection-item.active {
-  background-color: var(--White); /* Light blue background when open */
+    background-color: var(--White); /* Light blue background when open */
 }
 
 .FAQSection-item-question{
@@ -694,12 +712,12 @@ body {
     color: var(--Merlot);
     font-size: 12px;
     display: none;
+    margin-top: 20px;
 }
 
 .FAQSection-item.active .FAQSection-item-answer {
-  display: block;
+    display: block;
 }
-
 
 
 /* cusstomerSection -------------------------------------------------------------------------------------------------------- custumeSection */

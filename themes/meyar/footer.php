@@ -88,5 +88,16 @@
         });
         });
     </script>
+    <script>
+        // Add scroll event listener to change header background
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('.site-header');
+            if (window.scrollY > 50) {
+                header.classList.add('header-scrolled');
+            } else {
+                header.classList.remove('header-scrolled');
+            }
+        });
+    </script>
 </body>
 </html>

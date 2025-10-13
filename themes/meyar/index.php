@@ -112,7 +112,7 @@
   </section>
 
   <section class="newsSection">
-    <div class="container">
+    <!-- <div class="container">
       <div class="row">
         <div class="col-md-5">
           
@@ -144,39 +144,51 @@
             </div>
         </div>
       </div>
-    </div> 
+    </div>  -->
   </section>
 
-  <section class="FAQSection">
+  <!-- <section class="FAQSection">
       <h1 class="sectionTitle Dana-Black mb-4">سوالات متداول</h1>
       <div class="FAQSection-items container">
         <div class="FAQSection-item Dana-DemiBold">
             <h4 class="FAQSection-item-question">نحوه دريافت خدمات از گروه معيار چگونه است؟</h4>
-            <div class="mt-4 FAQSection-item-answer">
+            <div class="FAQSection-item-answer">
                 <p>اگر پاسخ های دریافتی شما با نوع سبک سوالات مطرح شده مطابقت نداشته باشند، شکست خواهید خورد. در واقع منظور این است که تصور نمایید شخصی از شما سوال پرسیده است که نام شما چیست؟ شما به جای اینکه عنوان کنید نام من سارا است، بیان می دارید، مردم من را با نام سارا صدا می زنند..</h4>
             </div>
         </div>
         <div class="FAQSection-item Dana-DemiBold">
             <h4 class="FAQSection-item-question">نحوه دريافت خدمات از گروه معيار چگونه است؟</h4>
-            <div class="mt-4 FAQSection-item-answer">
+            <div class="FAQSection-item-answer">
                 <p>اگر پاسخ های دریافتی شما با نوع سبک سوالات مطرح شده مطابقت نداشته باشند، شکست خواهید خورد. در واقع منظور این است که تصور نمایید شخصی از شما سوال پرسیده است که نام شما چیست؟ شما به جای اینکه عنوان کنید نام من سارا است، بیان می دارید، مردم من را با نام سارا صدا می زنند..</h4>
             </div>
         </div>
         <div class="FAQSection-item Dana-DemiBold">
             <h4 class="FAQSection-item-question">نحوه دريافت خدمات از گروه معيار چگونه است؟</h4>
-            <div class="mt-4 FAQSection-item-answer">
+            <div class="FAQSection-item-answer">
+                <p>اگر پاسخ های دریافتی شما با نوع سبک سوالات مطرح شده مطابقت نداشته باشند، شکست خواهید خورد. در واقع منظور این است که تصور نمایید شخصی از شما سوال پرسیده است که نام شما چیست؟ شما به جای اینکه عنوان کنید نام من سارا است، بیان می دارید، مردم من را با نام سارا صدا می زنند..</h4>
+            </div>
+        </div>
+        <div class="FAQSection-item Dana-DemiBold">
+            <h4 class="FAQSection-item-question">نحوه دريافت خدمات از گروه معيار چگونه است؟</h4>
+            <div class="FAQSection-item-answer">
+                <p>اگر پاسخ های دریافتی شما با نوع سبک سوالات مطرح شده مطابقت نداشته باشند، شکست خواهید خورد. در واقع منظور این است که تصور نمایید شخصی از شما سوال پرسیده است که نام شما چیست؟ شما به جای اینکه عنوان کنید نام من سارا است، بیان می دارید، مردم من را با نام سارا صدا می زنند..</h4>
+            </div>
+        </div>
+        <div class="FAQSection-item Dana-DemiBold">
+            <h4 class="FAQSection-item-question">نحوه دريافت خدمات از گروه معيار چگونه است؟</h4>
+            <div class="FAQSection-item-answer">
                 <p>اگر پاسخ های دریافتی شما با نوع سبک سوالات مطرح شده مطابقت نداشته باشند، شکست خواهید خورد. در واقع منظور این است که تصور نمایید شخصی از شما سوال پرسیده است که نام شما چیست؟ شما به جای اینکه عنوان کنید نام من سارا است، بیان می دارید، مردم من را با نام سارا صدا می زنند..</h4>
             </div>
         </div>
       </div>
-  </section>
+  </section> -->
   
-  <section class="customerSection">
+  <!-- <section class="customerSection">
       <h1 class="sectionTitle Dana-Black mb-4">مشتریان</h1>
       <div class="container">
           <img class="w-100" src="<?php echo get_template_directory_uri(); ?>/assets/images/Custumers.png" alt="">
       </div>
-  </section>
+  </section> -->
 
 
 </main>

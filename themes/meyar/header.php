@@ -20,7 +20,8 @@
             <div class="row header-container">
                 <div class="col-md-2 header-branding">
                     <div class="site-logo">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/LogoLight.png" alt="Mwyar">
+                        <img class="site-logo-Soff" src="<?php echo get_template_directory_uri(); ?>/assets/images/LogoLight.png" alt="Mwyar">
+                        <img class="site-logo-Son" src="<?php echo get_template_directory_uri(); ?>/assets/images/LogoBlue.png" alt="Mwyar">
                     </div>    
                 </div>
 
@@ -34,10 +35,10 @@
                     
                     <div class="header-homeIcon">
                         <a href="/">
-                            <svg fill="#ffffffff" width="24px" height="24px" viewBox="0 0 36 46" version="1.1"  preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                                <title>home-line</title>
-                                <path class="clr-i-outline clr-i-outline-path-1" d="M33.71,17.29l-15-15a1,1,0,0,0-1.41,0l-15,15a1,1,0,0,0,1.41,1.41L18,4.41,32.29,18.71a1,1,0,0,0,1.41-1.41Z"></path><path class="clr-i-outline clr-i-outline-path-2" d="M28,32h-5V22H13V32H8V18L6,20V32a2,2,0,0,0,2,2h7V24h6V34h7a2,2,0,0,0,2-2V19.76l-2-2Z"></path>
-                                <rect x="0" y="0" width="36" height="36" fill-opacity="0"/>
+                            <svg width="20" height="19" viewBox="0 0 20 19"  xmlns="http://www.w3.org/2000/svg">
+                                <path d="M16.4831 19H3.51689C2.67944 19 2 18.3911 2 17.6406V13.3594C2 12.6089 2.67944 12 3.51689 12C4.35434 12 5.03377 12.6089 5.03377 13.3594V16.2811H14.9662V13.3594C14.9662 12.6089 15.6457 12 16.4831 12C17.3206 12 18 12.6089 18 13.3594V17.6406C18 18.3911 17.3206 19 16.4831 19Z" fill="white"/>
+                                <path d="M18.5466 11C18.1747 11 17.8028 10.8639 17.5187 10.5911L10 3.37021L2.48126 10.5911C1.91375 11.1361 0.993141 11.1361 0.425632 10.5911C-0.141877 10.0461 -0.141877 9.16192 0.425632 8.61689L8.97218 0.408915C9.24473 0.147163 9.6148 0 10 0C10.3852 0 10.7553 0.147163 11.0278 0.408915L19.5744 8.61689C20.1419 9.16192 20.1419 10.0461 19.5744 10.5911C19.2903 10.8639 18.9184 11 18.5466 11Z" fill="white"/>
+                                <path d="M3.5 9C2.67188 9 2 8.30178 2 7.44118V2.55882C2 1.69822 2.67188 1 3.5 1C4.32812 1 5 1.69822 5 2.55882V7.44118C5 8.30178 4.32812 9 3.5 9Z" fill="white"/>
                             </svg>
                         </a>
                     </div>
