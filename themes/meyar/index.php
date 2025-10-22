@@ -5,14 +5,14 @@
       <div class="container">
         <div class="row">
           <div class="col-md-4 heroSection-content">
-            <h1 class="Dana-ExtraBold">توسعه انسانی تعالی سازمانی</h1>
+            <h1 class="Dana-ExtraBold">توسعــــــه انســانی تعــــــــالی سازمانی</h1>
             <div class="heroSection-content-btns">
                 <a class="buttonTroy Dana-Bold meyar-yello-btn" href="#">درخواست دمو</a>
                 <a class="mx-3 buttonTroy Dana-Bold meyar-white-btn" href="#">دریافت کاتالوگ</a>
             </div>
           </div>
           <div class="col-md-8 d-flex justify-content-center">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/hero.png" alt="">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/hero.gif" alt="">
           </div>
         </div>
       </div>
@@ -95,7 +95,7 @@
   <section class="serviseSection">
       <h1 class="sectionTitle Dana-Black">ارائه خدمات</h1>
       <div class="container">
-        <div class="row">
+        <div class="row serviseSection-Items">
           <?php for ($i = 0; $i < 12; $i++): ?>
             <div class="col-md-3">
               <div class="serviseCard">
@@ -112,10 +112,29 @@
   </section>
 
   <section class="newsSection">
-    <!-- <div class="container">
+    <div class="container">
       <div class="row">
         <div class="col-md-5">
-          
+          <div class="newsSection-event-card">
+            <div class="newsSection-Event">
+                <h2 class="mb-3 Dana-Bold">تازه ها</h2>
+                <div class="newsSection-Event-items">
+                     <?php for ($i = 0; $i < 4; $i++): ?>
+                      <div class="newsSection-Event-item">
+                        <div class="newsSection-Event-item-title">
+                            <h4>خبر شماره یک</h4>
+                            <p>حلاسه خبر شماره یک</p>
+                        </div>
+                        <div class="newsSection-Event-item-icon">
+                          <svg width="11" height="15" viewBox="0 0 11 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M8.62573 2.62573L3.62574 7.62572L8.62573 12.6257" stroke="#20C4F4" stroke-width="4" stroke-linecap="round"/>
+                          </svg>
+                        </div>
+                      </div>
+                    <?php endfor; ?>  
+                </div>
+            </div>
+          </div>
         </div>
         <div class="col-md-7 newsSection-navTable">
            <div class="warpper">
@@ -130,65 +149,210 @@
               <div class="panels">
               <div class="panel" id="one-panel">
                 <div class="panel-title">دوره ها</div>
-                <p>مقالات</p>
               </div>
               <div class="panel" id="two-panel">
                 <div class="panel-title">رویدادها</div>
-                <p>روزدادها</p>
               </div>
               <div class="panel" id="three-panel">
                 <div class="panel-title">مقالات</div>
-                <p>دوره ها</p>
               </div>
               </div>
             </div>
         </div>
       </div>
-    </div>  -->
+    </div> 
   </section>
 
-  <!-- <section class="FAQSection">
+  <section class="FAQSection">
       <h1 class="sectionTitle Dana-Black mb-4">سوالات متداول</h1>
       <div class="FAQSection-items container">
         <div class="FAQSection-item Dana-DemiBold">
-            <h4 class="FAQSection-item-question">نحوه دريافت خدمات از گروه معيار چگونه است؟</h4>
+            <h4 class="FAQSection-item-question">گروه معيار چه خدماتي ارائه مي دهد؟</h4>
             <div class="FAQSection-item-answer">
-                <p>اگر پاسخ های دریافتی شما با نوع سبک سوالات مطرح شده مطابقت نداشته باشند، شکست خواهید خورد. در واقع منظور این است که تصور نمایید شخصی از شما سوال پرسیده است که نام شما چیست؟ شما به جای اینکه عنوان کنید نام من سارا است، بیان می دارید، مردم من را با نام سارا صدا می زنند..</h4>
+                <p>شرکت معيار به عنوان ارائه‌دهنده خدمات روانشناسی صنعتی-سازمانی، با بهره‌گیری از علوم روانشناختی و روش‌های مبتنی بر شواهد و تجربه، به سازمان‌ها در حل چالش‌های منابع انسانی و ساير دپارتمان ها و بهبود عملکرد کمک می‌کند. این خدمات شامل ارزیابی و گزینش کارکنان، توسعه رهبری، تحول فرهنگ سازمانی و افزایش بهره‌وری می‌شود. با استفاده از ابزارهایی مانند آزمون‌های روانسنجی، مصاحبه‌های ساختاریافته و کوچینگ، به سازمان‌ها در ایجاد محیط کاری سالم و اثربخش یاری می‌رسانید. هدف نهایی، همسو کردن سرمایه انسانی با اهداف استراتژیک سازمان و ایجاد مزیت رقابتی پایدار است.</p>
             </div>
         </div>
         <div class="FAQSection-item Dana-DemiBold">
             <h4 class="FAQSection-item-question">نحوه دريافت خدمات از گروه معيار چگونه است؟</h4>
             <div class="FAQSection-item-answer">
-                <p>اگر پاسخ های دریافتی شما با نوع سبک سوالات مطرح شده مطابقت نداشته باشند، شکست خواهید خورد. در واقع منظور این است که تصور نمایید شخصی از شما سوال پرسیده است که نام شما چیست؟ شما به جای اینکه عنوان کنید نام من سارا است، بیان می دارید، مردم من را با نام سارا صدا می زنند..</h4>
+                <p>برای دریافت خدمات از گروه معیار، می‌توانید از طریق وب‌سایت رسمی مجموعه یا شماره‌های تماس با کارشناسان ما ارتباط برقرار کنید. در گام نخست، یک جلسه مشاوره رایگان برای تحلیل نیازهای سازمان شما برگزار می‌شود. سپس، طرح خدمات سفارشی متناسب با اهداف و بودجه شما طراحی و ارائه می‌گردد. پس از تأیید نهایی و انعقاد قرارداد، اجرای پروژه توسط تیم متخصصان ما آغاز شده و تا دستیابی به نتایج ملموس پشتيباني و همراهی ادامه می‌یابد. برای آغاز همکاری، همین امروز با ما تماس بگیرید.</p>
             </div>
         </div>
         <div class="FAQSection-item Dana-DemiBold">
-            <h4 class="FAQSection-item-question">نحوه دريافت خدمات از گروه معيار چگونه است؟</h4>
+            <h4 class="FAQSection-item-question">آیا خدمات شما برای سازمان‌های کوچک مقياس (٢٠ تا ٩٩ نفر)هم مناسب است؟</h4>
             <div class="FAQSection-item-answer">
-                <p>اگر پاسخ های دریافتی شما با نوع سبک سوالات مطرح شده مطابقت نداشته باشند، شکست خواهید خورد. در واقع منظور این است که تصور نمایید شخصی از شما سوال پرسیده است که نام شما چیست؟ شما به جای اینکه عنوان کنید نام من سارا است، بیان می دارید، مردم من را با نام سارا صدا می زنند..</h4>
+                <p>پاسخ: بله. خدمات ما به صورت ماژولار و مقیاس‌پذیر طراحی شده و برای سازمان‌های با هر اندازه و در هر صنعتی قابل تطبیق است.</p>
             </div>
         </div>
         <div class="FAQSection-item Dana-DemiBold">
-            <h4 class="FAQSection-item-question">نحوه دريافت خدمات از گروه معيار چگونه است؟</h4>
+            <h4 class="FAQSection-item-question">چطور مي توانم با معيار همكاري كنم؟</h4>
             <div class="FAQSection-item-answer">
-                <p>اگر پاسخ های دریافتی شما با نوع سبک سوالات مطرح شده مطابقت نداشته باشند، شکست خواهید خورد. در واقع منظور این است که تصور نمایید شخصی از شما سوال پرسیده است که نام شما چیست؟ شما به جای اینکه عنوان کنید نام من سارا است، بیان می دارید، مردم من را با نام سارا صدا می زنند..</h4>
+                <p>برای همکاری با گروه معیار، می‌توانید از طریق تلفن، ايميل يا وب‌سایت مجموعه با پر کردن فرم درخواست همكاري در سايت اقدام کنید. کارشناسان ما پس از بررسي رزومه شما و نیاز مجموعه، جلسه اي براي مصاحبه با شما هماهنگ خواهند كرد.</p>
             </div>
         </div>
         <div class="FAQSection-item Dana-DemiBold">
-            <h4 class="FAQSection-item-question">نحوه دريافت خدمات از گروه معيار چگونه است؟</h4>
+            <h4 class="FAQSection-item-question">چه تفاوتي بين معيار و مجموعه هاي ديگر توسعه كسب و كار وجود دارد؟</h4>
             <div class="FAQSection-item-answer">
-                <p>اگر پاسخ های دریافتی شما با نوع سبک سوالات مطرح شده مطابقت نداشته باشند، شکست خواهید خورد. در واقع منظور این است که تصور نمایید شخصی از شما سوال پرسیده است که نام شما چیست؟ شما به جای اینکه عنوان کنید نام من سارا است، بیان می دارید، مردم من را با نام سارا صدا می زنند..</h4>
+                <p>تفاوت اصلی "معیار" با سایر مجموعه‌های توسعه کسب‌وکار در تخصص یکپارچه و منحصربه‌فرد آن در حوزه روانشناسی صنعتی-سازمانی است. برخلایت روش‌های عمومی مشاوره مدیریت، ما با ترکیب دانش روانشناسی، ابزارهای روانسنجی استاندارد و راهکارهای بومی، مانند بازي هاي سازماني به صورت علمی و عمقی به بهبود سرمایه انسانی و فرهنگ سازمانی می‌پردازیم. این رویکرد تضمین می‌کند که تغییرات ایجاد شده نه تنها ملموس، بلکه پایدار و همسو با ویژگی‌های منحصربه‌فرد هر سازمان باشند.</p>
             </div>
         </div>
       </div>
-  </section> -->
+  </section>
   
-  <!-- <section class="customerSection">
+  <section class="customerSection">
       <h1 class="sectionTitle Dana-Black mb-4">مشتریان</h1>
-      <div class="container">
-          <img class="w-100" src="<?php echo get_template_directory_uri(); ?>/assets/images/Custumers.png" alt="">
+      <div class="">
+          <!-- <img class="w-100" src="<?php echo get_template_directory_uri(); ?>/assets/images/Custumers.png" alt=""> -->
+          <div class="customerSection-slider">
+            <div class="customerSection-slide-track">
+                <div class="customerSection-slide">
+                   <img src="<?php echo get_template_directory_uri(); ?>/assets/images/C1.png" alt="">
+                </div>
+                <div class="customerSection-slide">
+                   <img src="<?php echo get_template_directory_uri(); ?>/assets/images/C2.png" alt="">
+                </div>
+                <div class="customerSection-slide">
+                   <img src="<?php echo get_template_directory_uri(); ?>/assets/images/C3.png" alt="">
+                </div>
+                <div class="customerSection-slide">
+                   <img src="<?php echo get_template_directory_uri(); ?>/assets/images/C4.png" alt="">
+                </div>
+                <div class="customerSection-slide">
+                   <img src="<?php echo get_template_directory_uri(); ?>/assets/images/C6.png" alt="">
+                </div>
+                <div class="customerSection-slide">
+                   <img src="<?php echo get_template_directory_uri(); ?>/assets/images/C7.png" alt="">
+                </div>
+                <div class="customerSection-slide">
+                   <img src="<?php echo get_template_directory_uri(); ?>/assets/images/C8.png" alt="">
+                </div>
+                <div class="customerSection-slide">
+                   <img src="<?php echo get_template_directory_uri(); ?>/assets/images/C9.png" alt="">
+                </div>
+                <div class="customerSection-slide">
+                   <img src="<?php echo get_template_directory_uri(); ?>/assets/images/C10.png" alt="">
+                </div>
+                <div class="customerSection-slide">
+                   <img src="<?php echo get_template_directory_uri(); ?>/assets/images/C11.png" alt="">
+                </div>
+                <div class="customerSection-slide">
+                   <img src="<?php echo get_template_directory_uri(); ?>/assets/images/C12.png" alt="">
+                </div>
+                <div class="customerSection-slide">
+                   <img src="<?php echo get_template_directory_uri(); ?>/assets/images/C5.png" alt="">
+                </div>
+                <div class="customerSection-slide">
+                   <img src="<?php echo get_template_directory_uri(); ?>/assets/images/C1.png" alt="">
+                </div>
+                <div class="customerSection-slide">
+                   <img src="<?php echo get_template_directory_uri(); ?>/assets/images/C2.png" alt="">
+                </div>
+                <div class="customerSection-slide">
+                   <img src="<?php echo get_template_directory_uri(); ?>/assets/images/C3.png" alt="">
+                </div>
+                <div class="customerSection-slide">
+                   <img src="<?php echo get_template_directory_uri(); ?>/assets/images/C4.png" alt="">
+                </div>
+                <div class="customerSection-slide">
+                   <img src="<?php echo get_template_directory_uri(); ?>/assets/images/C6.png" alt="">
+                </div>
+                <div class="customerSection-slide">
+                   <img src="<?php echo get_template_directory_uri(); ?>/assets/images/C7.png" alt="">
+                </div>
+                <div class="customerSection-slide">
+                   <img src="<?php echo get_template_directory_uri(); ?>/assets/images/C8.png" alt="">
+                </div>
+                <div class="customerSection-slide">
+                   <img src="<?php echo get_template_directory_uri(); ?>/assets/images/C9.png" alt="">
+                </div>
+                <div class="customerSection-slide">
+                   <img src="<?php echo get_template_directory_uri(); ?>/assets/images/C10.png" alt="">
+                </div>
+                <div class="customerSection-slide">
+                   <img src="<?php echo get_template_directory_uri(); ?>/assets/images/C11.png" alt="">
+                </div>
+                <div class="customerSection-slide">
+                   <img src="<?php echo get_template_directory_uri(); ?>/assets/images/C12.png" alt="">
+                </div>
+                <div class="customerSection-slide">
+                   <img src="<?php echo get_template_directory_uri(); ?>/assets/images/C5.png" alt="">
+                </div>
+                <div class="customerSection-slide">
+                   <img src="<?php echo get_template_directory_uri(); ?>/assets/images/C1.png" alt="">
+                </div>
+                <div class="customerSection-slide">
+                   <img src="<?php echo get_template_directory_uri(); ?>/assets/images/C2.png" alt="">
+                </div>
+                <div class="customerSection-slide">
+                   <img src="<?php echo get_template_directory_uri(); ?>/assets/images/C3.png" alt="">
+                </div>
+                <div class="customerSection-slide">
+                   <img src="<?php echo get_template_directory_uri(); ?>/assets/images/C4.png" alt="">
+                </div>
+                <div class="customerSection-slide">
+                   <img src="<?php echo get_template_directory_uri(); ?>/assets/images/C6.png" alt="">
+                </div>
+                <div class="customerSection-slide">
+                   <img src="<?php echo get_template_directory_uri(); ?>/assets/images/C7.png" alt="">
+                </div>
+                <div class="customerSection-slide">
+                   <img src="<?php echo get_template_directory_uri(); ?>/assets/images/C8.png" alt="">
+                </div>
+                <div class="customerSection-slide">
+                   <img src="<?php echo get_template_directory_uri(); ?>/assets/images/C9.png" alt="">
+                </div>
+                <div class="customerSection-slide">
+                   <img src="<?php echo get_template_directory_uri(); ?>/assets/images/C10.png" alt="">
+                </div>
+                <div class="customerSection-slide">
+                   <img src="<?php echo get_template_directory_uri(); ?>/assets/images/C11.png" alt="">
+                </div>
+                <div class="customerSection-slide">
+                   <img src="<?php echo get_template_directory_uri(); ?>/assets/images/C12.png" alt="">
+                </div>
+                <div class="customerSection-slide">
+                   <img src="<?php echo get_template_directory_uri(); ?>/assets/images/C5.png" alt="">
+                </div>
+                <div class="customerSection-slide">
+                   <img src="<?php echo get_template_directory_uri(); ?>/assets/images/C1.png" alt="">
+                </div>
+                <div class="customerSection-slide">
+                   <img src="<?php echo get_template_directory_uri(); ?>/assets/images/C2.png" alt="">
+                </div>
+                <div class="customerSection-slide">
+                   <img src="<?php echo get_template_directory_uri(); ?>/assets/images/C3.png" alt="">
+                </div>
+                <div class="customerSection-slide">
+                   <img src="<?php echo get_template_directory_uri(); ?>/assets/images/C4.png" alt="">
+                </div>
+                <div class="customerSection-slide">
+                   <img src="<?php echo get_template_directory_uri(); ?>/assets/images/C6.png" alt="">
+                </div>
+                <div class="customerSection-slide">
+                   <img src="<?php echo get_template_directory_uri(); ?>/assets/images/C7.png" alt="">
+                </div>
+                <div class="customerSection-slide">
+                   <img src="<?php echo get_template_directory_uri(); ?>/assets/images/C8.png" alt="">
+                </div>
+                <div class="customerSection-slide">
+                   <img src="<?php echo get_template_directory_uri(); ?>/assets/images/C9.png" alt="">
+                </div>
+                <div class="customerSection-slide">
+                   <img src="<?php echo get_template_directory_uri(); ?>/assets/images/C10.png" alt="">
+                </div>
+                <div class="customerSection-slide">
+                   <img src="<?php echo get_template_directory_uri(); ?>/assets/images/C11.png" alt="">
+                </div>
+                <div class="customerSection-slide">
+                   <img src="<?php echo get_template_directory_uri(); ?>/assets/images/C12.png" alt="">
+                </div>
+                <div class="customerSection-slide">
+                   <img src="<?php echo get_template_directory_uri(); ?>/assets/images/C5.png" alt="">
+                </div>
+            </div>
+          </div>
       </div>
-  </section> -->
+  </section>
 
 
 </main>
