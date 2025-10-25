@@ -791,11 +791,12 @@ body {
 
 
 .customerSection-slide-track {
-    width: 100%;
-    display: flex;
     gap: 4em;
     overflow: hidden;
     padding-block: 30px;
+    display: flex;
+    margin-right: -1000px;
+    animation: customerSection-scroll 40s linear infinite;
 }
 
 .customerSection-slide {
@@ -828,12 +829,6 @@ body {
     100% { transform: translateX(calc(-200px * 9)); /* Move by half the track width */ }
 }
 
-.customerSection-slide-track {
-    display: flex;
-    margin-right: -1000px;
-    width: calc(200px * 18); /* Double the number of slides for seamless loop */
-    animation: customerSection-scroll 40s linear infinite;
-}
 
 
 
@@ -911,7 +906,7 @@ body {
 
 /* about Us ------------------------------------------------------------------------------------- ablut Us */
 .about{
-    padding-bottom: 200px;
+    padding-bottom: 50px;
     margin-top: -100px;
     background: #20C4F4;
     background: linear-gradient(158deg,rgba(32, 196, 244, 1) 0%, rgba(27, 50, 129, 1) 72%, rgba(0, 0, 67, 1) 100%);
@@ -926,25 +921,28 @@ body {
 }
 
 .about-hero-right p{
-    line-height: 34px;
+    line-height: 36px;
     font-size: 20px;
+    text-align: justify;
 }
 
-.about-why{
 
+.about-why-right img{
+    width: 100%;
+    height: 100%;
 }
 
-.about-hero-righ{
-
+.about-hero-left img{
+    width: 100%;
 }
 
 .about-why-left{
-padding-top: 50px;
+    padding-top: 50px;
 }
 
 .about-why-left-item{
    display: flex;
-   margin-bottom: 25px;
+   margin-bottom: 40px;
 }
 
 .about-why-left-item h3{
@@ -963,11 +961,21 @@ padding-top: 50px;
 }
 
 .about-overview{
-    padding: 60px;
+    margin-top: -100px;
 }
 
 .about-overview-right{
     color: var(--White);
+    position: relative;
+}
+
+.about-line{
+    position: absolute;
+    top: 19px;
+    right: 142px;
+    border-top: 1px solid var(--Maroon);
+    height: 1px;
+    width: 715px;
 }
 
 .about-overview-right h3{
@@ -981,12 +989,23 @@ padding-top: 50px;
     margin-bottom: 100px;
 }
 
-.about-overview-left{
-
+.about-overview-left img{
+    width: 100%;
+    height: 100%;
 }
 
-.about-target{
+.about-target-right{
+    position: relative;
+}
 
+.about-target-right .about-line{
+    right: 0;
+    width: 612px;
+}
+
+.about-target-right img{
+    padding-top: 100px;
+    width: 100%;
 }
 .about-target-left{
     color: var(--White);

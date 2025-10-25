@@ -9,16 +9,16 @@ get_header(); ?>
     <section class="about-hero">
         <div class="container">
             <div class="row">
-                <div class="col-md-8">
+                <div class="col-md-7">
                     <div class="about-hero-right">
-                        <h3 class="mb-4 Dana-ExtraBold">معیار در یک نگاه</h3>
-                        <p class="mb-4 Dana-Medium">معیـــار در یک نــگاه معیار به‌عنوان یک بانک جامع خدمات روانشناختی، مدیریت سازمانی و منابع انسانی، مجموعه‌ای متشکل از بیش از ۵۰ کارگروه تخصصی و سازمانی است که شامل مشاوران و متخصصان حوزه روانشناسی بالینی و صنعتی-سازمانی، مهندسان صنایع، اساتید دانشگاه، روان‌سنجان، کارشناسان بهداشت و ایمنی و سایر حرفه‌ای‌های مرتبط می‌باشد. </p>
-                        <p class="mb-4 Dana-Medium">معیار با تکیه بر دانش فنی، علمی و سال‌ها تجربه، هدف دارد شبکه‌ای تخصصی و یکپارچه ایجاد کند تا سازمان‌ها بتوانند تمامی نیازهای خود در این حوزه‌ها را برطرف کنند و نیازی به مراجعه به منابع و سایت‌های مختلف برای دریافت خدمات متنوع نداشته باشند. </p>
+                        <h3 class="mb-5 Dana-ExtraBold">معیار در یک نگاه</h3>
+                        <p class="mb-5 Dana-Medium">معیـــار در یک نــگاه معیار به‌عنوان یک بانک جامع خدمات روانشناختی، مدیریت سازمانی و منابع انسانی، مجموعه‌ای متشکل از بیش از ۵۰ کارگروه تخصصی و سازمانی است که شامل مشاوران و متخصصان حوزه روانشناسی بالینی و صنعتی-سازمانی، مهندسان صنایع، اساتید دانشگاه، روان‌سنجان، کارشناسان بهداشت و ایمنی و سایر حرفه‌ای‌های مرتبط می‌باشد. </p>
+                        <p class="mb-5 Dana-Medium">معیار با تکیه بر دانش فنی، علمی و سال‌ها تجربه، هدف دارد شبکه‌ای تخصصی و یکپارچه ایجاد کند تا سازمان‌ها بتوانند تمامی نیازهای خود در این حوزه‌ها را برطرف کنند و نیازی به مراجعه به منابع و سایت‌های مختلف برای دریافت خدمات متنوع نداشته باشند. </p>
                         <p class="Dana-Medium">در مجموعه معیار، ما فضایی فراهم کرده‌ایم تا شما با اطمینان خاطر بتوانید به آرمان‌ها و اهداف سازمانی خود دست یابید.</p>
                     </div>
                 </div>
-                <div class="col-md-4 about-hero-left">
-
+                <div class="col-md-5 about-hero-left">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/about01.png" alt="">
                 </div>  
             </div>
         </div>
@@ -28,8 +28,8 @@ get_header(); ?>
         <div class="container">
             <div class="row">
                 <div class="col-md-8">
-                    <div class="about-hero-right">
-
+                    <div class="about-why-right">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/about02.png" alt="">
                     </div>
                 </div>
                 <div class="col-md-4 about-why-left">
@@ -41,7 +41,7 @@ get_header(); ?>
                         <p class="pointer"></p> 
                         <h3 class="Dana-ExtraBold">بهره‌گیری از دانش روز و تجربه‌های عملیاتی</h3>
                     </div>
-                                        <div class="about-why-left-item">
+                    <div class="about-why-left-item">
                         <p class="pointer"></p> 
                         <h3 class="Dana-ExtraBold">طراحی راهکارهای سفارشی‌سازی شده</h3>
                     </div>
@@ -67,6 +67,7 @@ get_header(); ?>
             <div class="row">
                 <div class="col-md-8">
                     <div class="about-overview-right">
+                        <span class="about-line" ></span>
                         <h3 class="Dana-ExtraBold">چشم انداز</h3>
                         <p class="Dana-Medium">چشم‌انداز معیار، تبدیل شدن به خانه امن توسعه سازمانی برای تمام کسب‌وکارهای ایرانی است؛ جایی که هر سازمانی بتواند متناسب با اندازه و صنعت خود، مسیر رشد شفاف و علمی را طی کند.</p>
                         <h3 class="Dana-ExtraBold">مــاموریت</h3>
@@ -91,7 +92,7 @@ get_header(); ?>
                     </div>
                 </div>
                 <div class="col-md-4 about-overview-left">
-
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/about03.png" alt="">
                 </div>  
             </div>
         </div>
@@ -102,7 +103,8 @@ get_header(); ?>
             <div class="row">
                 <div class="col-md-6">
                     <div class="about-target-right">
-
+                        <span class="about-line"></span>
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/about04.png" alt="">
                     </div>
                 </div>
                 <div class="col-md-6 about-target-left">
