@@ -741,7 +741,7 @@ body {
 
 .FAQSection-item{
     cursor: pointer;
-    background: linear-gradient(35deg,rgba(255, 255, 255, 0.16) -274%, rgba(255, 255, 255, 1) 277%);
+    background: linear-gradient(248.39deg, rgba(255, 255, 255, 0.8) -25.01%, rgba(255, 255, 255, 0.128) 100.61%);
     padding-block: 25px;
     padding-inline: 130px;
     border-radius: 50px;
@@ -826,7 +826,7 @@ body {
 
 @keyframes customerSection-scroll {
     0% { transform: translateX(0); }
-    100% { transform: translateX(calc(-200px * 9)); /* Move by half the track width */ }
+    100% { transform: translateX(calc(-200px * 4)); /* Move by half the track width */ }
 }
 
 
@@ -846,6 +846,10 @@ body {
     color: var(--White);
     border-left: 1px solid var(--PastelBlue);
     padding-left: 50px;
+}
+
+.footer-right h5{
+    color: var(--Maroon);
 }
 
 .footer-right p{

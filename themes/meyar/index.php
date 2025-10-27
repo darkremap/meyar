@@ -205,7 +205,7 @@
           <!-- <img class="w-100" src="<?php echo get_template_directory_uri(); ?>/assets/images/Custumers.png" alt=""> -->
           <div class="customerSection-slider">
             <div class="customerSection-slide-track">
-              <?php for ($i = 0; $i < 4; $i++): ?>
+              <?php for ($i = 0; $i < 2; $i++): ?>
                 <div class="customerSection-slide">
                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/C1.png" alt="">
                 </div>
