@@ -128,6 +128,7 @@ function custom_post_type_services() {
     );
     register_post_type( 'service', $args );
 
+
 }
 add_action( 'init', 'custom_post_type_services', 0 );
 
