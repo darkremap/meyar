@@ -23,6 +23,10 @@ Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-com
   src: url(./assets/fonts/Dana-ExtraBold.ttf);
 }
 @font-face { 
+  font-family: Dana-ExtraBlack;
+  src: url(./assets/fonts/Dana-ExtraBlack.ttf);
+}
+@font-face { 
   font-family: Dana-Bold;
   src: url(./assets/fonts/Dana-Bold.ttf);
 }
@@ -44,6 +48,9 @@ Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-com
 }
 .Dana-ExtraBold{
     font-family: Dana-ExtraBold , sans-serif;
+}
+.Dana-ExtraBlack{
+    font-family: Dana-ExtraBlack , sans-serif;
 }
 .Dana-Bold{
     font-family: Dana-Bold , sans-serif;
@@ -1120,7 +1127,149 @@ body {
 
 }
 .service-h-card-text{
-    
+
 }
 
 /* singleService ------------------------------------------------------------------------------- singleService */
+
+
+/* services ------------------------------------------------------------------------------------ services-main */
+.services-main{
+    background: radial-gradient(140.03% 136.72% at 51.53% -14.13%, #20C4F4 0%, #1B3281 56.73%, #20C4F4 99.56%);
+    margin-top: -100px;
+    padding-block: 150px;
+}
+
+.services-head{
+
+}
+
+.services-head-right{
+    padding-bottom: 180px;
+}
+
+.services-head-right h1{
+    color: var(--White);
+    font-size: 48px;
+}
+
+.services-head-right h2{
+    color: #8EE9FB;
+    font-size: 55px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 55px;
+    line-height: 114.4%;
+    text-align: right;
+    letter-spacing: 0.18em;
+}   
+/* services ------------------------------------------------------------------------------------ services-main */
+
+.services-items{
+
+}
+
+.services-item{
+    position: relative;
+}
+.services-item-line{
+    position: absolute;
+    background: linear-gradient(158deg,rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+    top: 133px;
+    right: 576px;
+    width: 78px;
+    height: 2px;
+}
+.margin-mines{
+    margin-top: -80px;
+}
+.services-item-card{
+    display: flex;
+    padding-left: 60px;
+}
+
+.services-item-card-right{
+    padding: 45px 60px;
+    z-index: 10;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--Merlot);
+    text-align: center;
+    clip-path: ellipse(100% 85% at 100% 50%);
+}
+.services-item-card-right h1{
+    border-bottom: 5px solid var(--Merlot);
+    width: 100%;
+    font-size: 55px;
+}
+.services-item-card-right h2{
+    font-size: 24px;
+}
+
+
+.services-item-card-left{
+    background-color: var(--White);
+    margin-block: 10px;
+    padding: 40px 125px 30px 50px;
+    margin-right: -100px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.services-item-card-left p{
+    text-align: justify;
+    color: var(--Midnight);
+    height: 115px;
+    overflow-y: hidden;
+
+}
+.services-item-card-left-icons{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.services-item-card-left-iconbox{
+    display: flex;
+    gap: 15px;
+}
+.iconbox-img{
+    border-left: 2px solid var(--Merlot);
+    padding-left: 15px;
+}
+
+.leftSide-card .services-item-card-left{
+    padding: 40px 50px  30px 125px;
+    margin-left: -100px;
+    margin-right: 0;
+}
+
+.leftSide-card .services-item-card-right{
+    clip-path: ellipse(100% 85% at 0 50%);
+    border-left: none;
+}
+
+
+.leftSide-card .services-item-card{
+    padding-left: 0;
+    padding-right: 60px;
+    border-radius: 0 10px 0 10px;
+}
+
+.leftSide-card .services-item-line{
+    background: linear-gradient(158deg,rgba(255, 255, 255, 0) 0%, 158deg,rgba(255, 255, 255, 1) 100%);
+    right: -10px;
+}
+
+
+/* .services-item-card {
+  transition: transform 0.4s ease;
+}
+
+.services-item-card:hover {
+  transform: translateY(-20px);
+  cursor: pointer;
+} */

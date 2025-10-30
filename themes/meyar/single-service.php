@@ -5,13 +5,13 @@
             <div class="row">
                 <div class="col-md-3 singleService-content-right">
                     <div class="singleService-content-right-header">
-                        <h4 class="Dena-Regular">دیگر خدمات</h4>
-                        <h1 class="Dena-Black">فرآیندهای سازمانی</h1>
+                        <h4 class="Dana-Regular">دیگر خدمات</h4>
+                        <h1 class="Dana-Black">فرآیندهای سازمانی</h1>
                     </div>
                     <div class="row">
                         <div class="col-md-12">
                             <div class="service-h-card">
-                                <img class="site-logo-Soff" src="<?php echo get_template_directory_uri(); ?>/assets/images/.png" alt="Mwyar">
+                                <img class="site-logo-Soff" src="<?php echo get_template_directory_uri(); ?>/assets/images/.png" alt="Meyar">
                                 <div class="service-h-card-body">
                                     <h5 class="service-h-card-title">بهبود سلامت سازمانی کارکنان</h5>
                                     <p class="service-h-card-text">فرآیندی نظام‌مند است که با تمرکز بر ارتقای رفاه روانی-اجتماعی کارکنان و ...</p>

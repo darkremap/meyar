@@ -133,6 +133,8 @@ function custom_post_type_services() {
 add_action( 'init', 'custom_post_type_services', 0 );
 
 
+
+
 // Register Custom Post Type for courses
 function custom_post_type_courses() {
 
