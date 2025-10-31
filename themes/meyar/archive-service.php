@@ -16,6 +16,7 @@
         </div>
 
         <div class="services-items">
+            <span class="services-items-line"></span>
             <div class="container">
                 <?php for ($i = 0; $i < 7; $i++): ?>
                     <div class="row margin-mines">
@@ -23,6 +24,14 @@
                             <?php if ($i % 2 == 0) { ?>
                                 <div class="services-item">
                                     <span class="services-item-line"></span>
+                                    <span class="services-item-point" style="background-color: 
+                                                                                <?php if ($i == 0 || $i == 3 || $i == 4) { ?>
+                                                                                    #FDB913
+                                                                                <?php } else { ?>
+                                                                                    #75EABA 
+                                                                                <?php } ?>
+                                                                              ">
+                                    </span>
                                     <div class="services-item-card">
                                         <div class="services-item-card-right" style="background-color: 
                                                                                 <?php if ($i == 0 || $i == 3 || $i == 4) { ?>
@@ -99,6 +108,14 @@
                             <?php if ($i % 2 != 0) { ?>
                                 <div class="services-item leftSide-card">
                                     <span class="services-item-line"></span>
+                                    <span class="services-item-point" style="background-color: 
+                                                                                <?php if ($i == 0 || $i == 3 || $i == 4) { ?>
+                                                                                    #FDB913
+                                                                                <?php } else { ?>
+                                                                                    #75EABA 
+                                                                                <?php } ?>
+                                                                              ">
+                                    </span>
                                     <div class="services-item-card">
                                         <div class="services-item-card-left">
                                             <p class="Dana-Regular">ارزیابی و گزینش کارکنان فرآیندی نظام‌مند برای انتخاب بهترین فرد متناسب با شغل است که با تحلیل شغل (تعیین وظایف و شایستگی‌های مورد نیاز) آغاز می‌شود.</p>
