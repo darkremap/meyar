@@ -1040,7 +1040,8 @@ body {
 .singleService{
     background: radial-gradient(140.03% 136.72% at 51.53% -14.13%, #20C4F4 0%, #1B3281 56.73%, #20C4F4 99.56%);
     margin-top: -100px;
-    padding-block: 150px;
+    padding-top: 150px;
+    padding-bottom: 80px;
 }
 
 /* .singleService-content{
@@ -1055,7 +1056,7 @@ body {
 }
 
 .singleService-text{
-    padding-block: 30px;
+    padding-block: 50px;
 }
 
 .singleService-text-title{
@@ -1091,8 +1092,15 @@ body {
     margin-bottom: 8px;
 }
 
-.singleService-tizer-header{
-
+.singleService-tizer{
+    border-bottom: 1px solid var(--orange);
+}
+.singleService-tizer-video{
+    padding-inline: 120px;
+}
+.singleService-tizer-video video{
+    height: 490px;
+    width: 100%;
 }
 .singleService-header-title{
     display: flex;
@@ -1107,6 +1115,41 @@ body {
 .singleService-header-title h1{
     color: var(--White);
     font-size: 32px;
+}
+
+.singleService-pointTitle{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.singleService-pointTitle span{
+    width: 14px;
+    height: 14px;
+    background-color: var(--orange);
+}
+
+.otherService{
+    padding-block: 50px;
+}
+
+.otherService-items{
+    padding-block: 30px;
+}
+
+.otherService-card{
+    gap: 10px;
+    border-radius: 10px;
+    margin-bottom: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+}
+
+.otherService-card h1{
+    color: var(--Merlot);
+    font-size: 20px;
 }
 
 /* singleService ------------------------------------------------------------------------------- singleService */
