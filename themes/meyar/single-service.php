@@ -1,45 +1,59 @@
 <?php get_header(); ?>
 
 <div class="singleService">
-        <div class="container singleService-content">
-               
-                <div class="singleService-content">
-                    <div class="singleService-content-image">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/servisesSinglePage-heroImage.png" alt="">
-                    </div>
-
-                    <div class="singleService-text">
-                        <?php
-                        if ( have_posts() ) :
-                            while ( have_posts() ) : the_post(); ?>
-                                
-                                <article id="post-<?php the_ID(); ?>" <?php post_class('single-service'); ?>>
-                                    
-                                    <!-- Service Title -->
-                                    <h1 class="singleService-text-title Dana-Black"><?php the_title(); ?></h1>
-
-                                    <!-- Featured Image (optional) -->
-                                    <!-- <?php if ( has_post_thumbnail() ) : ?>
-                                        <div class="service-image">
-                                            <?php the_post_thumbnail('large'); ?>
-                                        </div>
-                                    <?php endif; ?> -->
-
-                                    <!-- Service Content -->
-                                    <div class="singleService-text-content">
-                                        <?php the_content(); ?>
-                                    </div>
-
-                                </article>
-
-                            <?php endwhile;
-                        else :
-                            echo '<p>No service found.</p>';
-                        endif;
-                        ?>
-                    </div>
-                </div>
+    <section class="container singleService-content">    
+        <div class="singleService-content-image">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/servisesSinglePage-heroImage.png" alt="">
         </div>
+        <div class="singleService-text">
+            <?php
+            if ( have_posts() ) :
+                while ( have_posts() ) : the_post(); ?>
+                    
+                    <article id="post-<?php the_ID(); ?>" <?php post_class('single-service'); ?>>
+                        
+                        <!-- Service Title -->
+                        <h1 class="singleService-text-title Dana-Black"><?php the_title(); ?></h1>
+
+                        <!-- Featured Image (optional) -->
+                        <!-- <?php if ( has_post_thumbnail() ) : ?>
+                            <div class="service-image">
+                                <?php the_post_thumbnail('large'); ?>
+                            </div>
+                        <?php endif; ?> -->
+
+                        <!-- Service Content -->
+                        <div class="singleService-text-content">
+                            <?php the_content(); ?>
+                        </div>
+
+                    </article>
+
+                <?php endwhile;
+            else :
+                echo '<p>No service found.</p>';
+            endif;
+            ?>
+        </div>
+    </section>
+    <section class="singleService-tizer">
+        <div class="container singleService-tizer-header">
+            <div class="singleService-header-title">
+                <span></span>
+                <h1 class="Dana-Black">تیز معرفی سرویس</h1>
+                <svg width="37" height="43" viewBox="0 0 37 43" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M25.6961 30.3867L33.1982 30.4308C34.113 30.4362 34.8591 31.1878 34.8537 32.1059L34.8097 39.6081C34.8043 40.5228 34.0527 41.269 33.1346 41.2636L25.6324 41.2195C24.7177 41.2142 23.9715 40.4625 23.9769 39.5445L24.021 32.0422C24.0264 31.1275 24.778 30.3813 25.6961 30.3867Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M9.91072 27.3855L9.83253 38.9822C9.81558 41.8672 15.3813 41.8597 15.3681 38.9712L15.311 31.0127L15.2632 16.9155M15.3651 24.6565C16.1271 26.6983 17.285 26.9597 18.1086 26.4988C19.4635 25.7394 19.0038 24.1283 18.951 22.8614L18.5866 13.5909C18.4613 10.3935 1.99797 10.5347 1.44802 13.4567C1.00178 15.2669 0.917155 19.4047 0.848546 22.5272C0.816134 24.0516 0.231539 27.1678 2.555 26.9369C3.22539 26.8972 3.95909 26.3487 4.51029 24.9245M4.71187 16.8502L4.49837 30.9458L4.34774 38.9031C4.30061 41.7912 9.81895 41.8638 9.8359 38.9789M25.9766 15.6214L33.4787 15.6655C34.3935 15.6709 35.1396 16.4225 35.1342 17.3406L35.0902 24.8428C35.0848 25.7575 34.3332 26.5037 33.4151 26.4983L25.9129 26.4542C24.9982 26.4488 24.252 25.6972 24.2574 24.7791L24.3015 17.2769C24.3069 16.3622 25.0585 15.616 25.9766 15.6214ZM9.95658 0.760247C12.1881 0.773359 13.9869 2.59337 13.9738 4.82493C13.9649 6.33274 13.1329 7.64137 11.9025 8.32776C11.3007 8.67606 10.5992 8.87633 9.85196 8.87194C7.6204 8.85883 5.82501 7.03885 5.83813 4.80728C5.84699 3.29947 6.67897 1.99084 7.90605 1.30443C8.50791 0.952784 9.20938 0.755857 9.95658 0.760247Z" stroke="white" stroke-width="1.52" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M26.2578 0.855909L33.76 0.899988C34.6747 0.905363 35.4209 1.65698 35.4155 2.57507L35.3714 10.0773C35.366 10.992 34.6144 11.7382 33.6963 11.7328L26.1941 11.6887C25.2794 11.6833 24.5333 10.9317 24.5386 10.0136L24.5827 2.50807C24.5881 1.59333 25.3397 0.847164 26.2578 0.852558L26.2578 0.855909Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M27.9419 19.3398L31.1971 22.6335C31.2354 22.6723 31.2356 22.7352 31.197 22.7737C31.1581 22.8121 31.0945 22.8118 31.0561 22.7729L27.8009 19.4792C27.7627 19.4402 27.7636 19.3773 27.8024 19.339C27.8412 19.3009 27.9035 19.3013 27.9419 19.3398Z" fill="white" stroke="white" stroke-width="2"/>
+                    <path d="M31.2168 19.4985L27.9231 22.7537C27.8843 22.7921 27.8214 22.7922 27.783 22.7536C27.7445 22.7147 27.7449 22.6512 27.7838 22.6127L31.0775 19.3575C31.1164 19.3194 31.1793 19.3202 31.2177 19.359C31.2557 19.3979 31.2554 19.4601 31.2168 19.4985Z" fill="white" stroke="white" stroke-width="2"/>
+                    <path d="M32.1151 34.3026C32.1369 34.3028 32.1569 34.3106 32.1736 34.3264C32.1861 34.3394 32.1938 34.3563 32.1938 34.3793C32.1936 34.4029 32.1848 34.4229 32.169 34.4387L28.7133 37.854C28.7017 37.8653 28.6904 37.8724 28.681 37.8763C28.6719 37.8799 28.662 37.882 28.6507 37.8819C28.6352 37.8818 28.6246 37.8788 28.6175 37.8759C28.6106 37.873 28.6029 37.868 28.5941 37.8591L26.6681 35.9103C26.6568 35.8987 26.6496 35.8874 26.6458 35.8779C26.6421 35.8688 26.64 35.859 26.6401 35.8476C26.6402 35.8321 26.6432 35.8215 26.6462 35.8145C26.6487 35.8083 26.6529 35.8016 26.66 35.794C26.6704 35.7846 26.6799 35.7782 26.6884 35.7747C26.6976 35.7709 26.7081 35.7689 26.7197 35.769C26.7351 35.7691 26.7458 35.7721 26.7528 35.775C26.7598 35.7779 26.7675 35.783 26.7762 35.7918L28.6547 37.6925L32.0652 34.3219C32.0776 34.3095 32.0932 34.3025 32.1151 34.3026Z" fill="white" stroke="white" stroke-width="2"/>
+                    <path d="M32.6791 4.50672C32.7009 4.50688 32.7208 4.5147 32.7375 4.5305C32.75 4.54352 32.7578 4.56045 32.7577 4.58336C32.7576 4.60696 32.7488 4.62703 32.733 4.64278L29.2773 8.05809C29.2657 8.06938 29.2544 8.07652 29.2449 8.08036C29.2358 8.08402 29.226 8.08609 29.2146 8.08604C29.1992 8.08595 29.1885 8.08293 29.1815 8.07998C29.1745 8.07709 29.1669 8.0721 29.1581 8.06324L27.232 6.11439C27.2207 6.10278 27.2136 6.09147 27.2098 6.08204C27.2061 6.07292 27.204 6.06311 27.2041 6.05173C27.2042 6.03618 27.2072 6.02564 27.2101 6.01856C27.2127 6.0124 27.2169 6.00572 27.2239 5.99813C27.2343 5.98869 27.2438 5.98228 27.2524 5.97877C27.2616 5.97501 27.2721 5.97303 27.2836 5.97309C27.2991 5.9732 27.3098 5.9762 27.3168 5.97915C27.3237 5.98205 27.3314 5.98707 27.3402 5.99589L29.2187 7.89661L32.6292 4.52596C32.6415 4.51361 32.6572 4.50656 32.6791 4.50672Z" fill="white" stroke="white" stroke-width="2"/>
+                </svg>
+            </div>
+        </div>
+    </section>
+
 </div>
 
 <?php get_footer(); ?>

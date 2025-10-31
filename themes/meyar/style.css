@@ -1042,16 +1042,11 @@ body {
     margin-top: -100px;
     padding-block: 150px;
 }
-.singleService-content{
-    border-radius: 50px;
-    padding: 50px 40px;
-}
 
-
-.singleService-content{
+/* .singleService-content{
     padding-right: 20px;
-    padding-inline: 20px;
-}
+    padding: 30px 20px 30px 20px ;
+} */
 
 .singleService-content-image{
     display: flex;
@@ -1064,13 +1059,13 @@ body {
 }
 
 .singleService-text-title{
-    font-size: 28px;
-    color: var(--Zodiac);
+    font-size: 32px;
+    color: var(--White);
 }
 
 .singleService-text-content{
-    padding-top: 20px;
-    
+    padding: 20px;
+    border-bottom: 1px solid var(--orange);
 }
 .singleService-text-content h1,
 .singleService-text-content h2,
@@ -1080,43 +1075,38 @@ body {
 .singleService-text-content h6{
     font-size: 24px;
     font-family: Dana-Black , sans-serif;
-    color: var(--Midnight);
+    color: var(--White);
 }
 .singleService-text-content p{
-    font-size: 14px;
+    font-size: 16px;
     font-family: Dana-Regular , sans-serif;
-    color: var(--Midnight);
+    color: var(--White);
     text-align: justify;
-    line-height: 25px;
+    line-height: 28px;
 }
 .singleService-text-content li{
-    font-size: 14px;
+    font-size: 16px;
     font-family: Dana-Regular , sans-serif;
-    color: var(--Midnight);
-    margin-bottom: 7px;
+    color: var(--White);
+    margin-bottom: 8px;
 }
 
-.singleService-content-right{
+.singleService-tizer-header{
 
 }
-
-.singleService-content-right-header{
-
+.singleService-header-title{
+    display: flex;
+    align-items: center;
+    gap: 15px;
 }
-
-.service-h-card{
-
+.singleService-header-title span{
+    width: 14px;
+    height: 14px;
+    background-color: var(--orange);
 }
-
-.service-h-card-body{
-
-}
-
-.service-h-card-title{
-
-}
-.service-h-card-text{
-
+.singleService-header-title h1{
+    color: var(--White);
+    font-size: 32px;
 }
 
 /* singleService ------------------------------------------------------------------------------- singleService */
