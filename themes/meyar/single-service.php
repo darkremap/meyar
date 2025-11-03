@@ -55,7 +55,14 @@
             </div>
         </div>
         <div class="singleService-tizer-video">
-            <video src="<?php echo get_template_directory_uri(); ?>/assets/images/services-checkbox.png"></video>
+            <!-- <video src="<?php echo get_template_directory_uri(); ?>/assets/images/t.mp4"></video> -->
+                <!-- <video autoplay muted loop playsinline>
+                    <source src="<?php echo get_template_directory_uri(); ?>/assets/images/t.mp4" type="video/mp4">
+                </video> -->
+                <video id="myVideo" poster="" controls>
+                    <source src="<?php echo get_template_directory_uri(); ?>/assets/images/t.mp4" type="video/mp4">
+                </video>
+    
         </div>
     </section>
 

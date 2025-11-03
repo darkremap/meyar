@@ -19,10 +19,10 @@
         <div class="container">
             <div class="row header-container">
                 <div class="col-md-2 header-branding">
-                    <div class="site-logo">
+                    <a class="site-logo" href="/">
                         <img class="site-logo-Soff" src="<?php echo get_template_directory_uri(); ?>/assets/images/LogoLight.png" alt="Mwyar">
                         <img class="site-logo-Son" src="<?php echo get_template_directory_uri(); ?>/assets/images/LogoBlue.png" alt="Mwyar">
-                    </div>    
+                    </a>    
                 </div>
 
                 <nav class="col-md-8 main-navigation" id="main-navigation">

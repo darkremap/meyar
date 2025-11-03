@@ -10,9 +10,9 @@
                         <h1 class="Dana-Black">فرآیندهای سازمانی</h1>
                         <h2 class="Dana-Regular">organizational processes</h1>
                     </div>
-
                 </div>
             </div>
+            <div class="services-heroImage"></div>
         </div>
 
         <div class="services-items">
