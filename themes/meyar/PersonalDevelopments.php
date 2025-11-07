@@ -29,7 +29,7 @@ get_header();
          <div class="container">
             <?php for ($i = 0; $i < 4; $i++): ?>
                 <?php if ($i % 2 == 0) { ?>
-                    <div class="row personalServices-items">
+                    <div class="row personalServices-items basePosition">
                         <div class="col-md-9 personalServices-contentItem">
                             <div class="personalServices-contentCard">
                                 <div class="personalServices-contentCard-iconbox">  

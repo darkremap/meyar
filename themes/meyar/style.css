@@ -1346,11 +1346,18 @@ body {
 .personalServices-tagCard{
     height: 100%;
     padding-right: 20px;
-    /* clip-path: polygon(50% 0%, 75% 0, 75% 58%, 100% 70%, 75% 80%, 75% 100%, 0 99%, 0% 70%, 0% 35%, 0 0); */
-
+    position: relative;
 }
-
-
+.basePosition .personalServices-tagCard::after{
+    content: '';
+    position: absolute;
+    top: 70%;
+    left: 93%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    height: 35px;
+    width: 35px;
+    background-color: #75EABA;
+}
 .personalServices-tagCard-body{
     height: 100%;
     border-radius: 20px;
@@ -1420,4 +1427,15 @@ body {
 .reversPosition .personalservices-contentCard-text{
     padding-right: 0;
     padding-left: 40px;
+}
+
+.reversPosition .personalServices-tagCard::after{
+    content: '';
+    position: absolute;
+    top: 70%;
+    left: 7%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    height: 35px;
+    width: 35px;
+    background-color: #FDB913;
 }
