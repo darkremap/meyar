@@ -80,6 +80,7 @@ a{
   --White: #FFFFFF ;
   --LightMerlot: #999999;
   --orange: #FDB913;
+  --base : #112369;
 }
 
 .buttonTroy{
@@ -210,29 +211,33 @@ body {
 .nav-menu .children {
     position: absolute;
     top: 100%;
-    left: 0;
+    left: -140px;
     background: #fff;
     min-width: 200px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    border-radius: 5px;
+    border-radius: 10px;
     opacity: 0;
     visibility: hidden;
     transform: translateY(-10px);
     transition: all 0.3s ease;
     list-style: none;
-    padding: 10px 0;
+    padding: 0 10px;
     z-index: 1000;
+    border: 1px solid var(--LightMerlot);
 }
-
 .nav-menu .sub-menu li,
 .nav-menu .children li {
     margin: 0;
+    border-bottom: 1px solid var(--base);
 }
 
 .nav-menu .sub-menu a,
 .nav-menu .children a {
     padding: 10px 20px;
     white-space: nowrap;
+    color: var(--base);
+    font-family: Dana-Regular , sans-serif;
+    font-size: 14px;
 }
 
 .nav-menu li:hover > .sub-menu,
@@ -1206,7 +1211,7 @@ body {
 .services-items-line{
     position: absolute;
     top: 133px;
-    right: 950px;
+    right: 50%;
     width: 2px;
     height: 1124px;
     background-color: var(--White);
@@ -1329,3 +1334,90 @@ body {
   transform: translateY(-20px);
   cursor: pointer;
 } */
+
+
+/* Personal Services ---------------------------------------------------------------------------------------- Personam Services */
+.personalServices-items{
+    margin-bottom: 40px;
+}
+.personalServices-tagItem{
+
+}
+.personalServices-tagCard{
+    height: 100%;
+    padding-right: 20px;
+    /* clip-path: polygon(50% 0%, 75% 0, 75% 58%, 100% 70%, 75% 80%, 75% 100%, 0 99%, 0% 70%, 0% 35%, 0 0); */
+
+}
+
+
+.personalServices-tagCard-body{
+    height: 100%;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--White);
+}
+.personalServices-tagCard-body h1{
+    font-size: 96px;
+    margin: 0;
+}
+
+
+
+.personalServices-contentCard{
+    display: flex;
+    background-color: var(--White);
+    padding: 30px;
+    border-radius: 20px;
+}
+.personalServices-contentCard-iconbox{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-left: 20px;
+    border-left: 1px solid var(--Merlot);
+}
+.personalservices-contentCard-text{
+    padding-right: 40px;
+    font-size: 15px;
+}
+.personalservices-contentCard-text p{
+    margin: 0;
+    text-align: justify;
+}
+.personalServices-contentCard-title{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.personalServices-contentCard-title h1{
+    color: var(--Zodiac);
+    font-size: 24px;
+}
+.personalServices-contentCard-title img{
+    width: 60px;
+    height: 70px;
+}
+
+
+.reversPosition .personalServices-tagCard{
+    height: 100%;
+    padding-left: 20px;
+    padding-right: 0;
+}
+
+.reversPosition .personalServices-contentCard-iconbox{
+    border-left: none;
+    border-right: 1px solid var(--Merlot);
+    padding-left: 0;
+    padding-right: 20px;
+}
+
+.reversPosition .personalservices-contentCard-text{
+    padding-right: 0;
+    padding-left: 40px;
+}
