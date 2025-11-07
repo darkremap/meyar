@@ -228,9 +228,10 @@ body {
 .nav-menu .sub-menu li,
 .nav-menu .children li {
     margin: 0;
+}
+.nav-menu .sub-menu > *:not(:last-child){
     border-bottom: 1px solid var(--base);
 }
-
 .nav-menu .sub-menu a,
 .nav-menu .children a {
     padding: 10px 20px;
