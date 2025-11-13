@@ -13,7 +13,7 @@
                     <article id="post-<?php the_ID(); ?>" <?php post_class('single-service'); ?>>
                         
                          <div class="singleService-pointTitle">
-                            <span></span>
+                            <span class="titlePoint"></span>
                             <h1 class="singleService-text-title Dana-Black"><?php the_title(); ?></h1>
                          </div>
 
@@ -41,7 +41,7 @@
     <section class="container singleService-tizer">
         <div class="container singleService-tizer-header">
             <div class="singleService-header-title">
-                <span></span>
+                <span class="titlePoint"></span>
                 <h1 class="Dana-Black">تیز معرفی سرویس</h1>
                 <svg width="37" height="43" viewBox="0 0 37 43" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M25.6961 30.3867L33.1982 30.4308C34.113 30.4362 34.8591 31.1878 34.8537 32.1059L34.8097 39.6081C34.8043 40.5228 34.0527 41.269 33.1346 41.2636L25.6324 41.2195C24.7177 41.2142 23.9715 40.4625 23.9769 39.5445L24.021 32.0422C24.0264 31.1275 24.778 30.3813 25.6961 30.3867Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -68,7 +68,7 @@
 
     <section class="container otherService">
         <div class="singleService-pointTitle">
-            <span></span>
+            <span class="titlePoint"></span>
             <h1 class="singleService-text-title Dana-Black">سایر خدمات در حوزه فرآیندهای سازمانی</h1>
         </div>
         <div class="otherService-items">

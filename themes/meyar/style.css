@@ -81,6 +81,7 @@ a{
   --LightMerlot: #999999;
   --orange: #FDB913;
   --base : #112369;
+  --green : #75EABA;
 }
 
 .buttonTroy{
@@ -1117,7 +1118,7 @@ body {
     align-items: center;
     gap: 15px;
 }
-.singleService-header-title span{
+.titlePoint{
     width: 14px;
     height: 14px;
     background-color: var(--orange);
@@ -1131,11 +1132,6 @@ body {
     display: flex;
     align-items: center;
     gap: 15px;
-}
-.singleService-pointTitle span{
-    width: 14px;
-    height: 14px;
-    background-color: var(--orange);
 }
 
 .otherService{
@@ -1440,4 +1436,102 @@ body {
     height: 35px;
     width: 35px;
     background-color: #FDB913;
+}
+
+/* singlePersonalDevelopment ------------------------------------------------------------------------------ singlePersonalDevelopment */
+
+.singlePersonalDevelopment{
+    background: radial-gradient(140.03% 136.72% at 51.53% -14.13%, #20C4F4 0%, #1B3281 56.73%, #20C4F4 99.56%);
+    margin-top: -100px;
+    padding-block: 150px;
+}
+
+.spd-header{
+    margin-top: -100px;
+    border-bottom: 1px solid var(--orange);
+    padding-bottom: 20px;
+}
+
+.spd-content{
+    padding-block: 30px;
+}
+.spd-content-text{
+    color: var(--White);
+}
+.spd-content-text-title{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 30px;
+}
+.spd-content-text-title h1{
+    font-size: 32px;
+    padding-right: 10px;
+
+}
+
+.spd-parts{
+
+}
+.spd-parts-items{
+    border-right: 15px solid var(--orange);
+}
+.spd-parts-items-title{
+    display: flex;
+    position: relative;
+}
+.spd-parts-items-title-number{
+    background-color: var(--orange);
+    position: absolute;
+    right: -32px;
+    top: -1px;
+    border-radius: 50px;
+    width: 52px;
+    height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--White);
+    font-size: 24px;
+    color: var(--White);
+}
+.spd-parts-items-content{
+    padding-block: 30px;
+    padding-right: 20px;
+}
+.spd-parts-items-title-body{
+    margin-right: 30px;
+    font-size: 22px;
+    color: var(--White);
+    border: 1px solid var(--green) ;
+    width: 25vw;
+    border-radius: 50px;
+    padding: 8px 30px 8px 10px;
+}
+.spd-dashLine{
+
+}
+.spd-dashPoint{
+
+}
+
+.spd-parts-item{
+    padding-right: 30px;
+}
+.spd-parts-item-card{
+    height: 150px;
+    background-color: var(--White);
+    border-radius: 5px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.spd-parts-item-card h1{
+    color: var(--base);
+    font-size: 18px;
+}
+.spd-parts-item-card p{
+    color: var(--PastelBlue);
+    font-size: 14px;
 }
