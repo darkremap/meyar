@@ -124,11 +124,15 @@ function custom_post_type_services() {
         'exclude_from_search'   => false,
         'publicly_queryable'    => true,
         'capability_type'       => 'post',
+        'rewrite'               => array('slug' => 'services'),
     );
     register_post_type( 'service', $args );
 
+
 }
 add_action( 'init', 'custom_post_type_services', 0 );
+
+
 
 
 // Register Custom Post Type for courses
@@ -225,7 +229,7 @@ function custom_post_type_personal_developments() {
         'label'                 => __( 'PersonalDevelopment', 'text_domain' ),
         'description'           => __( 'Post Type for PersonalDevelopments', 'text_domain' ),
         'labels'                => $labels,
-        'supports'              => array( 'title', 'editor', 'excerpt', 'author', 'thumbnail', 'comments', 'revisions', 'custom-fields' ,'page-attributes' ),
+        'supports'              => array( 'title', 'editor', 'excerpt', 'author', 'thumbnail', 'comments', 'revisions', 'custom-fields' ,'page-attributes','page-attributes' ),
         'taxonomies'            => array( 'category', 'post_tag' ),
         'hierarchical'          => true,
         'public'                => true,
@@ -238,6 +242,7 @@ function custom_post_type_personal_developments() {
         'has_archive'           => true,
         'exclude_from_search'   => false,
         'publicly_queryable'    => true,
+        'hierarchical'          => true,
         'capability_type'       => 'post',
     );
     register_post_type( 'personal_development', $args );
