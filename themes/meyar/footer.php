@@ -99,5 +99,29 @@
             }
         });
     </script>
+
+    <script>
+        const items = document.querySelectorAll(".spd-parts-items");
+        items.forEach((item, index) => {
+            if (index === 0) {
+                item.querySelector(".spd-parts-items-body").classList.add("open");
+                item.querySelector(".spd-parts-items-title-number").classList.add("open");
+            }
+        });
+
+        items.forEach(item => {
+            item.querySelector(".spd-parts-items-title-body").addEventListener("click", () => {
+                items.forEach(i => {
+                    i.querySelector(".spd-parts-items-body").classList.remove("open");
+                    i.querySelector(".spd-parts-items-title-number").classList.remove("open");
+
+                });
+                item.querySelector(".spd-parts-items-body").classList.add("open");
+                item.querySelector(".spd-parts-items-title-number").classList.add("open");
+
+            });
+        });
+
+    </script>
 </body>
 </html>
