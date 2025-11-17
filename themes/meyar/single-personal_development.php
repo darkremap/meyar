@@ -22,7 +22,19 @@ get_header(); ?>
             <div class="spd-parts-items">
                 <div class="spd-parts-items-title">
                     <div class="Dana-Bold spd-parts-items-title-number">0<?php echo $j +1 ?></div>
-                    <div class="Dana-Bold spd-parts-items-title-body">آزمونهای شخصیت</div>
+                    <div class="Dana-Bold spd-parts-items-title-body">
+                        <p class="m-0">آزمونهای شخصیت</p>                       
+                        <svg class="spd-parts-items-title-body-Icon1" width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="13" cy="13" r="13" fill="#75EABA"/>
+                            <path d="M9 16.5356L12.5355 20.0712L16.0711 16.5356" stroke="#1B3281" stroke-width="2" stroke-linecap="round"/>
+                            <path d="M9 9.53564L12.5355 13.0712L16.0711 9.53564" stroke="#1B3281" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                        <svg class="spd-parts-items-title-body-Icon2" width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="13" cy="13" r="13" fill="#75EABA"/>
+                            <path d="M10.0361 9.5L6.5006 13.0355L10.0361 16.5711" stroke="#1B3281" stroke-width="2" stroke-linecap="round"/>
+                            <path d="M17.0361 9.5L13.5006 13.0355L17.0361 16.5711" stroke="#1B3281" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
                     <div class="spd-dashLine"></div>
                     <div class="spd-dashPoint"></div>
                 </div>
