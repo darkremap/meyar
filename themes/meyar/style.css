@@ -101,6 +101,13 @@ a{
     color: var(--Zodiac) !important;
     border: none;
 }
+.meyar-orange-btn{
+    background : var(--orange) !important;
+    color: var(--Zodiac) !important;
+    border: none;
+    padding: 15px 80px;
+    border-radius: 50px;
+}
 
 .sectionTitle{
    text-align: center;
@@ -1440,4 +1447,112 @@ body {
     height: 35px;
     width: 35px;
     background-color: #FDB913;
+}
+
+
+/* formsPortocols --------------------------------------------------------------------------------- */
+.formsPortocols{
+    background: radial-gradient(140.03% 136.72% at 51.53% -14.13%, #20C4F4 0%, #1B3281 56.73%, #20C4F4 99.56%);
+    margin-top: -100px;
+    padding-top: 150px;
+}
+.formsPortocols-body{
+    padding-bottom: 150px; 
+}
+.formsPortocols-body h1{
+    color: var(--White);
+    font-size: 48px;
+}
+.fp-cards{
+
+}
+.fp-card{
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.fp-card-icon{
+    background-color: var(--Tory);
+    border-radius: 50%;
+    padding: 70px;
+}
+.fp-card-info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.fp-card-info p{
+
+}
+.fp-card-title{
+    color: var(--White);
+    font-size: 24px;
+    padding-block: 20px;
+}
+.fp-card-desc{
+    font-size: 15px; 
+    color: var(--White);
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+
+/* c-body ----------------------------------------------------------------------- */
+.courses{
+    background: radial-gradient(140.03% 136.72% at 51.53% -14.13%, #20C4F4 0%, #1B3281 56.73%, #20C4F4 99.56%);
+    margin-top: -100px;
+    padding-block: 150px;
+}
+
+.c-body{
+    height: 400px;
+}
+
+.c-body h1{
+    color: var(--White);
+    line-height: 60px;
+}
+
+.c-filter{
+
+}
+.c-cards{
+
+}
+.c-card{
+ background-color: var(--White);
+ border-radius: 20px;
+ padding: 30px;
+ margin-bottom: 20px;
+}
+.c-card-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.c-card-info-title{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.c-card-info-title h1{
+    font-size: 32px;
+    color: var(--Zodiac);
+}
+
+.c-card-actions{
+
+}
+.c-card-info-desc{
+    color: var(--LightMerlot);
+}
+.c-card-image{
+    height: 160px;
+}
+.c-card-image img{
+    height: 100%;
+    width: 100%;
+    border-radius: 20px;
 }
