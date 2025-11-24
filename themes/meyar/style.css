@@ -1517,6 +1517,36 @@ body {
 .c-filter{
 
 }
+.c-filter-search{
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+    border-bottom: 2px solid var(--orange);
+}
+.c-filter-input-group{
+    display: flex;
+    background-color: white;
+    flex-direction: row;
+    align-items: center;
+    width: 40%;
+    justify-content: space-between;
+    padding: 10px 20px;
+    border-radius: 50px;
+}
+.c-filter-input-group h2{
+    font-size: 20px;
+    margin: 0;
+    color: var(--Zodiac);
+    padding-left: 20px;
+    border-left: 2px solid var(--LightMerlot);
+}
+.c-filter-form-control{
+    width: 70%;
+    border: none;
+}
+.c-filter-form-control:active{
+    border: none;
+}
+
 .c-cards{
 
 }
@@ -1545,6 +1575,10 @@ body {
 .c-card-actions{
 
 }
+.c-card-info-thicher h2{
+    color: var(--PastelBlue);
+    font-size: 20px;
+}
 .c-card-info-desc{
     color: var(--LightMerlot);
 }
@@ -1555,4 +1589,14 @@ body {
     height: 100%;
     width: 100%;
     border-radius: 20px;
+}
+
+.c-card.hidden {
+    display: none;
+}
+
+.c-otherCourses{
+    margin-top: 30px;
+    padding-top: 30px;
+    border-top: 1px solid var(--orange);
 }
