@@ -30,7 +30,11 @@ get_header(); ?>
     <div class="container c-cards">
         <div class="row">
             <?php for ($i = 0; $i < 12; $i++): ?>
-                <div class="col-md-12 c-card">
+                <?php
+                    // Add a 'more-card' class to cards after the 5th one
+                    $card_class = ($i >= 5) ? 'c-card more-card' : 'c-card';
+                ?>
+                <div class="<?php echo $card_class; ?>">
                     <div class="row">
                         <div class="col-md-9 c-card-info">
                             <div class="c-card-info-title">
@@ -52,6 +56,12 @@ get_header(); ?>
                     </div>
                 </div>
             <?php endfor; ?> 
+        </div>
+         <!-- Load More Button -->
+        <div class="row">
+            <div class="col-12 text-center">
+                <button id="load-more-courses" class="meyar-orange-btn Dana-Bold">دوره‌های بیشتر</button>
+            </div>
         </div>
     </div>
     <div class="container c-otherCourses">
