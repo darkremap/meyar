@@ -81,6 +81,7 @@ a{
   --LightMerlot: #999999;
   --orange: #FDB913;
   --base : #112369;
+  --green : #75EABA;
 }
 
 .buttonTroy{
@@ -1447,6 +1448,171 @@ body {
     height: 35px;
     width: 35px;
     background-color: #FDB913;
+}
+
+/* singlePersonalDevelopment ------------------------------------------------------------------------------ singlePersonalDevelopment */
+
+.singlePersonalDevelopment{
+    background: radial-gradient(140.03% 136.72% at 51.53% -14.13%, #20C4F4 0%, #1B3281 56.73%, #20C4F4 99.56%);
+    margin-top: -100px;
+    padding-block: 150px;
+}
+
+.spd-header{
+    margin-top: -100px;
+    border-bottom: 1px solid var(--orange);
+    padding-bottom: 20px;
+}
+
+.spd-content{
+    padding-block: 30px;
+}
+.spd-content-text{
+    color: var(--White);
+}
+.spd-content-text-title{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 30px;
+}
+.spd-content-text-title h1{
+    font-size: 32px;
+    padding-right: 10px;
+
+}
+
+.spd-parts{
+    padding-bottom: 40px;
+    margin-bottom: 40px;
+    border-bottom: 1px solid var(--orange);
+}
+.spd-parts-items{
+    border-right: 15px solid var(--orange);
+    margin-inline: 70px;
+    padding-bottom: 50px;
+}
+.spd-parts-items-title{
+    display: flex;
+    position: relative;
+
+}
+.spd-parts-items-title-number{
+    background-color: var(--White);
+    position: absolute;
+    right: -32px;
+    top: -6px;
+    border-radius: 50px;
+    width: 52px;
+    height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid var(--LightMerlot);
+    font-size: 24px;
+    color: var(--LightMerlot);
+    padding-top: 5px;
+}
+.spd-parts-items-title-number.open{
+    filter: drop-shadow(0px 0px 32px #FFFFFF);
+    border: 1px solid var(--White);
+    background-color: var(--orange);
+    color: var(--White);
+}
+
+.spd-parts-items-content{
+    padding-block: 30px;
+    padding-right: 20px;
+    color: var(--White);
+    line-height: 28px;
+}
+
+.spd-parts-items-title-body{
+    margin-right: 30px;
+    font-size: 22px;
+    color: var(--White);
+    border: 1px solid var(--green) ;
+    width: 20vw;
+    border-radius: 50px;
+    padding: 4px 10px;
+    background-color: var(--PastelBlue);
+    z-index: 2;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.spd-dashLine{
+    border-top: 1px dashed var(--green);
+    height: 2px;
+    position: absolute;
+    top: 27px;
+    left: 0;
+    width: 90%;
+    z-index: 0;
+}
+.spd-dashPoint{
+    position: absolute;
+    top: 22px;
+    left: 0;
+    width: 10px;
+    height: 10px;
+    background-color: var(--green);
+    border-radius: 10px;
+}
+
+.spd-parts-items-body{
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;                        /* ← محو باشد */
+    transform: translateY(-6px);        /* ← کمی بالاتر */
+    transition:
+        max-height 0.55s cubic-bezier(0.25, 0.1, 0.25, 1),
+        opacity 0.35s ease,
+        transform 0.45s ease;           /* ← حرکت نرم */
+}
+
+.spd-parts-items-body.open{
+    max-height: -webkit-fill-available;
+    opacity: 1;                         /* ← کاملاً دیده شود */
+    transform: translateY(0);           /* ← جای اصلی */
+}
+
+
+.spd-parts-item{
+    padding-right: 30px;
+}
+.spd-parts-item-card-title{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.spd-parts-item-card{
+    height: 150px;
+    background-color: var(--White);
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.spd-parts-item-card h1{
+    color: var(--base);
+    font-size: 18px;
+    margin: 0;
+}
+.spd-parts-item-card p{
+    color: var(--PastelBlue);
+    font-size: 14px;
+}
+
+.spd-parts-item-card:hover{
+    background-color: var(--green);
+    cursor: pointer;
+}
+.spd-parts-item-card:hover  path{
+    fill: var(--White);
 }
 
 

@@ -99,6 +99,49 @@
             }
         });
     </script>
+     <script>
+        const items = document.querySelectorAll(".spd-parts-items");
+        items.forEach((item, index) => {
+            if (index === 0) {
+                item.querySelector(".spd-parts-items-body").classList.add("open");
+                item.querySelector(".spd-parts-items-title-number").classList.add("open");
+                // Also, set the icons for the first item
+                const icon1 = item.querySelector(".spd-parts-items-title-body-Icon2");
+                const icon2 = item.querySelector(".spd-parts-items-title-body-Icon1");
+                icon1.style.display = "none";
+                icon2.style.display = "block";
+            }
+            else{
+                const icon1 = item.querySelector(".spd-parts-items-title-body-Icon2");
+                const icon2 = item.querySelector(".spd-parts-items-title-body-Icon1");
+                icon2.style.display = "none";
+                icon1.style.display = "block";
+            }
+
+        });
+
+        items.forEach(item => {
+            item.querySelector(".spd-parts-items-title-body").addEventListener("click", () => {
+                items.forEach(i => {
+                    i.querySelector(".spd-parts-items-body").classList.remove("open");
+                    i.querySelector(".spd-parts-items-title-number").classList.remove("open");
+                    // Also reset the icons for all items
+                    const icon1 = i.querySelector(".spd-parts-items-title-body-Icon2");
+                    const icon2 = i.querySelector(".spd-parts-items-title-body-Icon1");
+                    icon1.style.display = "block";
+                    icon2.style.display = "none";
+                });
+                item.querySelector(".spd-parts-items-body").classList.add("open");
+                item.querySelector(".spd-parts-items-title-number").classList.add("open");
+                // Set the icons for the clicked item
+                const icon1 = item.querySelector(".spd-parts-items-title-body-Icon2");
+                const icon2 = item.querySelector(".spd-parts-items-title-body-Icon1");
+                icon1.style.display = "none";
+                icon2.style.display = "block";
+            });
+        });
+
+    </script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             const searchInput = document.querySelector('.c-filter-form-control');
