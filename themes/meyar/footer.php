@@ -167,45 +167,6 @@
             }
         });
     </script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const searchInput = document.querySelector('.c-filter-form-control');
-            const courseCards = document.querySelectorAll('.c-card');
 
-            // --- Existing Search Filter Logic ---
-            if (searchInput) {
-                searchInput.addEventListener('input', function() {
-                    const searchTerm = this.value.toLowerCase().trim();
-
-                    courseCards.forEach(card => {
-                        const title = card.querySelector('.c-card-info-title h1').textContent.toLowerCase();
-                        const description = card.querySelector('.c-card-info-desc p').textContent.toLowerCase();
-                        
-                        if (title.includes(searchTerm) || description.includes(searchTerm)) {
-                            card.classList.remove('hidden');
-                        } else {
-                            card.classList.add('hidden');
-                        }
-                    });
-                });
-            }
-
-            // --- NEW: Load More Button Logic ---
-            const loadMoreBtn = document.getElementById('load-more-courses');
-            const moreCards = document.querySelectorAll('.more-card');
-
-            if (loadMoreBtn) {
-                loadMoreBtn.addEventListener('click', function() {
-                    // Loop through all hidden cards and show them
-                    moreCards.forEach(card => {
-                        card.style.display = 'block';
-                    });
-
-                    // Hide the "Load More" button after it's clicked
-                    this.style.display = 'none';
-                });
-            }
-        });
-    </script>
 </body>
 </html>

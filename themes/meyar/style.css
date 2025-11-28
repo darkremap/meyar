@@ -1629,9 +1629,6 @@ body {
     color: var(--White);
     font-size: 48px;
 }
-.fp-cards{
-
-}
 .fp-card{
     padding: 40px;
     display: flex;
@@ -1767,24 +1764,11 @@ body {
     border-top: 1px solid var(--orange);
 }
 
-/* Hide the cards with the 'more-card' class by default */
-.c-cards .more-card {
-    display: none;
-}
 
-/* Style for the Load More button */
-.load-more-btn {
-    background-color: #ff7b00; /* Or your theme's orange color */
-    color: #fff;
-    border: none;
-    padding: 12px 30px;
-    font-size: 16px;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-top: 30px;
-    transition: background-color 0.3s ease;
-}
+/* singleCourse -------------------------------------------------------------------------------------------------------------------------- singleCourse */
 
-.load-more-btn:hover {
-    background-color: #e56a00; /* A darker shade for hover */
+.singleCourse{
+    background: radial-gradient(140.03% 136.72% at 51.53% -14.13%, #20C4F4 0%, #1B3281 56.73%, #20C4F4 99.56%);
+    margin-top: -100px;
+    padding-block: 150px;
 }

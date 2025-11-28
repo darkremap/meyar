@@ -9,7 +9,7 @@ get_header(); ?>
     <div class="c-body">
         <div class="container">
             <div class="row">
-                <h1 class="col-md-4 Dana-Black">دوره‌هــای رهـبــری و تـوسـعـه ســـازمــانی</h1>
+                <h1 class="col-md-4 Dana-Black">دوره‌هــای آموزشی</h1>
             </div>
         </div>
     </div>
@@ -57,12 +57,7 @@ get_header(); ?>
                 </div>
             <?php endfor; ?> 
         </div>
-         <!-- Load More Button -->
-        <div class="row">
-            <div class="col-12 text-center">
-                <button id="load-more-courses" class="meyar-orange-btn Dana-Bold">دوره‌های بیشتر</button>
-            </div>
-        </div>
+
     </div>
     <div class="container c-otherCourses">
          <div class="singleService-pointTitle">
