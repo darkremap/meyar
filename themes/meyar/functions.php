@@ -110,7 +110,7 @@ function custom_post_type_services() {
         'label'                 => __( 'service', 'text_domain' ),
         'description'           => __( 'Post Type for services', 'text_domain' ),
         'labels'                => $labels,
-        'supports'              => array( 'title', 'editor', 'excerpt', 'author', 'thumbnail', 'comments', 'revisions', 'custom-fields' ,'page-attributes' ),
+        'supports'              => array( 'title', 'editor', 'excerpt', 'author', 'thumbnail', 'comments', 'revisions' ,'page-attributes' ),
         'taxonomies'            => array( 'category', 'post_tag' ),
         'hierarchical'          => true,
         'public'                => true,
@@ -171,7 +171,7 @@ function custom_post_type_courses() {
         'label'                 => __( 'course', 'text_domain' ),
         'description'           => __( 'Post Type for courses', 'text_domain' ),
         'labels'                => $labels,
-        'supports'              => array( 'title', 'editor', 'excerpt', 'author', 'thumbnail', 'comments', 'revisions', 'custom-fields' ,'page-attributes' ),
+        'supports'              => array( 'title', 'editor', 'excerpt', 'author', 'thumbnail', 'comments', 'revisions', 'page-attributes' ),
         'taxonomies'            => array( 'category', 'post_tag' ),
         'hierarchical'          => true,
         'public'                => true,
@@ -185,6 +185,7 @@ function custom_post_type_courses() {
         'exclude_from_search'   => false,
         'publicly_queryable'    => true,
         'capability_type'       => 'post',
+        'rewrite'               => array('slug' => 'courses' ),
     );
     register_post_type( 'course', $args );
 
@@ -229,7 +230,7 @@ function custom_post_type_personal_developments() {
         'label'                 => __( 'PersonalDevelopment', 'text_domain' ),
         'description'           => __( 'Post Type for PersonalDevelopments', 'text_domain' ),
         'labels'                => $labels,
-        'supports'              => array( 'title', 'editor', 'excerpt', 'author', 'thumbnail', 'comments', 'revisions', 'custom-fields' ,'page-attributes','page-attributes' ),
+        'supports'              => array( 'title', 'editor', 'excerpt', 'author', 'thumbnail', 'comments', 'revisions','page-attributes' ),
         'taxonomies'            => array( 'category', 'post_tag' ),
         'hierarchical'          => true,
         'public'                => true,

@@ -9,7 +9,7 @@ get_header(); ?>
     <div class="c-body">
         <div class="container">
             <div class="row">
-                <h1 class="col-md-4 Dana-Black">دوره‌هــای رهـبــری و تـوسـعـه ســـازمــانی</h1>
+                <h1 class="col-md-4 Dana-Black">دوره‌هــای آموزشی</h1>
             </div>
         </div>
     </div>
@@ -30,7 +30,11 @@ get_header(); ?>
     <div class="container c-cards">
         <div class="row">
             <?php for ($i = 0; $i < 12; $i++): ?>
-                <div class="col-md-12 c-card">
+                <?php
+                    // Add a 'more-card' class to cards after the 5th one
+                    $card_class = ($i >= 5) ? 'c-card more-card' : 'c-card';
+                ?>
+                <div class="<?php echo $card_class; ?>">
                     <div class="row">
                         <div class="col-md-9 c-card-info">
                             <div class="c-card-info-title">
@@ -53,6 +57,7 @@ get_header(); ?>
                 </div>
             <?php endfor; ?> 
         </div>
+
     </div>
     <div class="container c-otherCourses">
          <div class="singleService-pointTitle">
