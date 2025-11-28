@@ -35,8 +35,50 @@ get_header();?>
         </div>
     </div>
     <div class="container singleCourse-index">
-
+        <div class="warpper">
+            <input class="radio" id="one" name="group" type="radio" checked>
+            <input class="radio" id="two" name="group" type="radio">
+            <input class="radio" id="three" name="group" type="radio">
+            <input class="radio" id="four" name="group" type="radio">
+            <input class="radio" id="five" name="group" type="radio">
+            <input class="radio" id="six" name="group" type="radio">
+            <div class="tabs">
+                <label class="tab Dana-Bold" id="one-tab" for="one">طول دوره</label>
+                <label class="tab Dana-Bold" id="two-tab" for="two">سرفصلها</label>
+                <label class="tab Dana-Bold" id="three-tab" for="three">اهداف</label>
+                <label class="tab Dana-Bold" id="four-tab" for="four">مخاطبین دوره</label>
+                <label class="tab Dana-Bold" id="five-tab" for="five">شیوه برگزاری</label>
+                <label class="tab Dana-Bold" id="six-tab" for="six">گواهی دوره</label>
+            </div>
+            <div class="panels">
+                <div class="panel" id="one-panel">
+                    <div class="panel-title">طول دوره</div>
+                     <div class="panel-title">طول دوره</div>
+                      <div class="panel-title">طول دوره</div>
+                       <div class="panel-title">طول دوره</div>
+                        <div class="panel-title">طول دوره</div>
+                         <div class="panel-title">طول دوره</div>
+                          <div class="panel-title">طول دوره</div>
+                </div>
+                <div class="panel" id="two-panel">
+                    <div class="panel-title">سرفصلها</div>
+                </div>
+                <div class="panel" id="three-panel">
+                    <div class="panel-title">اهداف</div>
+                </div>
+                <div class="panel" id="four-panel">
+                    <div class="panel-title">مخاطبین دوره</div>
+                </div>
+                <div class="panel" id="five-panel">
+                    <div class="panel-title">شیوه برگزاری </div>
+                </div>
+                <div class="panel" id="six-panel">
+                    <div class="panel-title">گواهی دوره</div>
+                </div>
+            </div>
+        </div>
     </div>
+
     <div class="container singleService-tizer">
         <div class="container singleService-tizer-header">
             <div class="singleService-header-title">
