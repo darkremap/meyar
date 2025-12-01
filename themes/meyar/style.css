@@ -1642,9 +1642,12 @@ body {
     align-items: center;
 }
 .fp-card-icon{
-    background-color: var(--Tory);
+    background-color: var(--green);
     border-radius: 50%;
     padding: 50px;
+}
+.fp-card-icon path{
+    fill: var(--Zodiac);
 }
 .fp-card-info{
     display: flex;
@@ -1692,6 +1695,9 @@ body {
 }
 .fp-card-baseBody:hover .fp-card-actions {
     opacity: 1;
+}
+.fp-card-baseBody:hover .fp-card-icon{
+    background-color: var(--orange);
 }
 
 /* c-body ----------------------------------------------------------------------- */
