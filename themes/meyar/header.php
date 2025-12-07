@@ -56,7 +56,7 @@
                 </nav>
 
                 <div class="col-md-2 d-flex justify-content-end">
-                    <button class="buttonTroy Dana-Bold" >تماس با ما</button>
+                    <a href="<?php echo get_permalink( get_page_by_path( 'contact-us' ) ); ?>"  class="buttonTroy Dana-Bold" >تماس با ما</a>
                 </div>
             </div>
         </div>
