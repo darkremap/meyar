@@ -1624,7 +1624,7 @@ body {
 
 /* formsPortocols --------------------------------------------------------------------------------- */
 .formsPortocols{
-    background: radial-gradient(140.03% 136.72% at 51.53% -14.13%, #20C4F4 0%, #1B3281 56.73%, #20C4F4 99.56%);
+    background-color: var(--PastelBlue);
     margin-top: -100px;
     padding-top: 150px;
 }
@@ -1642,9 +1642,12 @@ body {
     align-items: center;
 }
 .fp-card-icon{
-    background-color: var(--Tory);
+    background-color: var(--green);
     border-radius: 50%;
-    padding: 70px;
+    padding: 50px;
+}
+.fp-card-icon path{
+    fill: var(--Zodiac);
 }
 .fp-card-info{
     display: flex;
@@ -1665,7 +1668,37 @@ body {
     padding-bottom: 20px;
     text-align: center;
 }
-
+.fp-card-baseBody{
+    position: relative;
+}
+.fp-card-cover{
+    position: absolute;
+    right: -10px;
+    top: 0;
+    width: 70px; 
+    height: 100%;
+    background-color: var(--PastelBlue);
+    box-shadow: -28px 0 20px -25px #000;
+    transition: width 0.5s ease;
+    z-index: 1;
+}
+.fp-card-actions{
+    opacity: 0;
+    transition: opacity 0.5s ease;;
+}
+.fp-card-actions a{
+    color: var(--orange);
+    font-size: 20px;
+}
+.fp-card-baseBody:hover .fp-card-cover {
+    width: 0;
+}
+.fp-card-baseBody:hover .fp-card-actions {
+    opacity: 1;
+}
+.fp-card-baseBody:hover .fp-card-icon{
+    background-color: var(--orange);
+}
 
 /* c-body ----------------------------------------------------------------------- */
 .courses{
