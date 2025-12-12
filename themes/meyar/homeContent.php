@@ -44,73 +44,91 @@
         <?php endif; ?>
     </h1>
     <div class="container">
-    <div class="row whyCards-container">
-        <div class="col-md-2 whyCard">
-            <!-- <div class="whyCard-dot"></div> -->
-            <div class="whyCard-content">
-                <div class="whyCard-Icon">
-                    <img class="whyCard-image-f" src="<?php echo get_template_directory_uri(); ?>/assets/images/lamps-network-off.png" alt="">
-                    <img class="whyCard-image-h" src="<?php echo get_template_directory_uri(); ?>/assets/images/lamps-network-on.png" alt="">
+        <div class="row whyCards-container">
+            <?php
+            $args = array(
+                'post_type'      => 'whymeyar',  // MUST be lowercase
+                'posts_per_page' => -1,          // get all posts
+                'orderby'        => 'menu_order', // uses page-attributes
+                'order'          => 'ASC'
+            );
+            $why_query = new WP_Query($args);
+            if ( $why_query->have_posts() ) :
+            ?>
+                <?php while ( $why_query->have_posts() ) : $why_query->the_post(); ?>
+                    <div class="col-md-2 whyCard">
+                        <div class="whyCard-content">
+                            <div class="whyCard-Icon">
+                                <img class="whyCard-image-f" src="<?php echo get_template_directory_uri(); ?>/assets/images/lamps-network-off.png" alt="">
+                                <img class="whyCard-image-h" src="<?php echo get_template_directory_uri(); ?>/assets/images/lamps-network-on.png" alt="">
+                            </div>
+                            <h3 class="whyCard-title Dana-DemiBold"><?php the_title(); ?></h3>
+                        </div>
+                    </div>
+                <?php endwhile; ?>
+            <?php endif; wp_reset_postdata(); ?>
+
+
+            <!-- <div class="col-md-2 whyCard">
+                <div class="whyCard-content">
+                    <div class="whyCard-Icon">
+                        <img class="whyCard-image-f" src="<?php echo get_template_directory_uri(); ?>/assets/images/lamps-network-off.png" alt="">
+                        <img class="whyCard-image-h" src="<?php echo get_template_directory_uri(); ?>/assets/images/lamps-network-on.png" alt="">
+                    </div>
+                    <h3 class="whyCard-title Dana-DemiBold">یکپارچگی خدمات</h3>
                 </div>
-                <h3 class="whyCard-title Dana-DemiBold">یکپارچگی خدمات</h3>
             </div>
-        </div>
-        <div class="col-md-2 whyCard">
-            <p class="boarder-why"></p>
-            <!-- <div class="whyCard-dot"></div> -->
-            <div class="whyCard-content">
-                <div class="whyCard-Icon">
-                    <img class="whyCard-image-f" src="<?php echo get_template_directory_uri(); ?>/assets/images/lamp-gear-off.png" alt="">
-                    <img class="whyCard-image-h" src="<?php echo get_template_directory_uri(); ?>/assets/images/lamp-gear-on.png" alt="">
+            <div class="col-md-2 whyCard">
+                <p class="boarder-why"></p>
+                <div class="whyCard-content">
+                    <div class="whyCard-Icon">
+                        <img class="whyCard-image-f" src="<?php echo get_template_directory_uri(); ?>/assets/images/lamp-gear-off.png" alt="">
+                        <img class="whyCard-image-h" src="<?php echo get_template_directory_uri(); ?>/assets/images/lamp-gear-on.png" alt="">
+                    </div>
+                    <h3 class="whyCard-title Dana-DemiBold">بهره گیری از دانش روز وتجربه های عملیاتی</h3>
                 </div>
-                <h3 class="whyCard-title Dana-DemiBold">بهره گیری از دانش روز وتجربه های عملیاتی</h3>
             </div>
-        </div>
-        <div class="col-md-2 whyCard">
-            <p class="boarder-why"></p>
-            <!-- <div class="whyCard-dot"></div> -->
-            <div class="whyCard-content">
-                <div class="whyCard-Icon">
-                    <img class="whyCard-image-f" src="<?php echo get_template_directory_uri(); ?>/assets/images/lamp-puzzle-off.png" alt="">
-                    <img class="whyCard-image-h" src="<?php echo get_template_directory_uri(); ?>/assets/images/lamp-puzzle-on.png" alt="">
+            <div class="col-md-2 whyCard">
+                <p class="boarder-why"></p>
+                <div class="whyCard-content">
+                    <div class="whyCard-Icon">
+                        <img class="whyCard-image-f" src="<?php echo get_template_directory_uri(); ?>/assets/images/lamp-puzzle-off.png" alt="">
+                        <img class="whyCard-image-h" src="<?php echo get_template_directory_uri(); ?>/assets/images/lamp-puzzle-on.png" alt="">
+                    </div>
+                    <h3 class="whyCard-title Dana-DemiBold">طراحی راهکارهای سفارشی برای هر سازمان</h3>
                 </div>
-                <h3 class="whyCard-title Dana-DemiBold">طراحی راهکارهای سفارشی برای هر سازمان</h3>
             </div>
-        </div>
-        <div class="col-md-2 whyCard">
-            <p class="boarder-why"></p>
-            <!-- <div class="whyCard-dot"></div> -->
-            <div class="whyCard-content">
-                <div class="whyCard-Icon">
-                    <img class="whyCard-image-f" src="<?php echo get_template_directory_uri(); ?>/assets/images/lamps-shield-off.png" alt="">
-                    <img class="whyCard-image-h" src="<?php echo get_template_directory_uri(); ?>/assets/images/lamps-shield-on.png" alt="">
+            <div class="col-md-2 whyCard">
+                <p class="boarder-why"></p>
+                <div class="whyCard-content">
+                    <div class="whyCard-Icon">
+                        <img class="whyCard-image-f" src="<?php echo get_template_directory_uri(); ?>/assets/images/lamps-shield-off.png" alt="">
+                        <img class="whyCard-image-h" src="<?php echo get_template_directory_uri(); ?>/assets/images/lamps-shield-on.png" alt="">
+                    </div>
+                    <h3 class="whyCard-title px-5 Dana-DemiBold">پشتیبانی مستمر و حرفه ای </h3>
                 </div>
-                <h3 class="whyCard-title px-5 Dana-DemiBold">پشتیبانی مستمر و حرفه ای </h3>
             </div>
-        </div>
-        <div class="col-md-2 whyCard">
-            <p class="boarder-why"></p>
-            <!-- <div class="whyCard-dot"></div> -->
-            <div class="whyCard-content">
-                <div class="whyCard-Icon">
-                    <img class="whyCard-image-f" src="<?php echo get_template_directory_uri(); ?>/assets/images/lamps-professional-off.png" alt="">
-                    <img class="whyCard-image-h" src="<?php echo get_template_directory_uri(); ?>/assets/images/lamps-professional-on.png" alt="">
+            <div class="col-md-2 whyCard">
+                <p class="boarder-why"></p>
+                <div class="whyCard-content">
+                    <div class="whyCard-Icon">
+                        <img class="whyCard-image-f" src="<?php echo get_template_directory_uri(); ?>/assets/images/lamps-professional-off.png" alt="">
+                        <img class="whyCard-image-h" src="<?php echo get_template_directory_uri(); ?>/assets/images/lamps-professional-on.png" alt="">
+                    </div>
+                    <h3 class="whyCard-title Dana-DemiBold">تمرکز بر توسعه پایدار و ارزشهای سازمانی</h3>
                 </div>
-                <h3 class="whyCard-title Dana-DemiBold">تمرکز بر توسعه پایدار و ارزشهای سازمانی</h3>
             </div>
-        </div>
-        <div class="col-md-2 whyCard">
-            <p class="boarder-why"></p>
-            <!-- <div class="whyCard-dot"></div> -->
-            <div class="whyCard-content">
-                <div class="whyCard-Icon">
-                    <img class="whyCard-image-f" src="<?php echo get_template_directory_uri(); ?>/assets/images/lamps-star-off.png" alt="">
-                    <img class="whyCard-image-h" src="<?php echo get_template_directory_uri(); ?>/assets/images/lamps-star-on.png" alt="">
+            <div class="col-md-2 whyCard">
+                <p class="boarder-why"></p>
+                <div class="whyCard-content">
+                    <div class="whyCard-Icon">
+                        <img class="whyCard-image-f" src="<?php echo get_template_directory_uri(); ?>/assets/images/lamps-star-off.png" alt="">
+                        <img class="whyCard-image-h" src="<?php echo get_template_directory_uri(); ?>/assets/images/lamps-star-on.png" alt="">
+                    </div>
+                    <h3 class="whyCard-title px-5 Dana-DemiBold">جامعیت و تنوع تحصص ها</h3>
                 </div>
-                <h3 class="whyCard-title px-5 Dana-DemiBold">جامعیت و تنوع تحصص ها</h3>
-            </div>
-        </div>
-    </div> 
+            </div> -->
+        </div> 
     </div>     
 </section>
 
