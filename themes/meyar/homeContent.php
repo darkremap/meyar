@@ -48,7 +48,7 @@
             <?php
             $args = array(
                 'post_type'      => 'whymeyar',  // MUST be lowercase
-                'posts_per_page' => -1,          // get all posts
+                'posts_per_page' => 6,          // get all posts
                 'orderby'        => 'menu_order', // uses page-attributes
                 'order'          => 'ASC'
             );
@@ -59,75 +59,19 @@
                     <div class="col-md-2 whyCard">
                         <div class="whyCard-content">
                             <div class="whyCard-Icon">
-                                <img class="whyCard-image-f" src="<?php echo get_template_directory_uri(); ?>/assets/images/lamps-network-off.png" alt="">
-                                <img class="whyCard-image-h" src="<?php echo get_template_directory_uri(); ?>/assets/images/lamps-network-on.png" alt="">
+                                <!-- ACF Fields -->
+                                <?php if ( get_field('whymeyaroffimage') ) : ?>
+                                    <img class="whyCard-image-f" src="<?php echo get_field('whymeyaroffimage')['url']; ?>" alt="">
+                                <?php endif; ?>
+                                <?php if ( get_field('whymeyaronimage') ) : ?>
+                                    <img class="whyCard-image-h" src="<?php echo get_field('whymeyaronimage')['url']; ?>" alt="">
+                                <?php endif; ?>
                             </div>
                             <h3 class="whyCard-title Dana-DemiBold"><?php the_title(); ?></h3>
                         </div>
                     </div>
                 <?php endwhile; ?>
             <?php endif; wp_reset_postdata(); ?>
-
-
-            <!-- <div class="col-md-2 whyCard">
-                <div class="whyCard-content">
-                    <div class="whyCard-Icon">
-                        <img class="whyCard-image-f" src="<?php echo get_template_directory_uri(); ?>/assets/images/lamps-network-off.png" alt="">
-                        <img class="whyCard-image-h" src="<?php echo get_template_directory_uri(); ?>/assets/images/lamps-network-on.png" alt="">
-                    </div>
-                    <h3 class="whyCard-title Dana-DemiBold">یکپارچگی خدمات</h3>
-                </div>
-            </div>
-            <div class="col-md-2 whyCard">
-                <p class="boarder-why"></p>
-                <div class="whyCard-content">
-                    <div class="whyCard-Icon">
-                        <img class="whyCard-image-f" src="<?php echo get_template_directory_uri(); ?>/assets/images/lamp-gear-off.png" alt="">
-                        <img class="whyCard-image-h" src="<?php echo get_template_directory_uri(); ?>/assets/images/lamp-gear-on.png" alt="">
-                    </div>
-                    <h3 class="whyCard-title Dana-DemiBold">بهره گیری از دانش روز وتجربه های عملیاتی</h3>
-                </div>
-            </div>
-            <div class="col-md-2 whyCard">
-                <p class="boarder-why"></p>
-                <div class="whyCard-content">
-                    <div class="whyCard-Icon">
-                        <img class="whyCard-image-f" src="<?php echo get_template_directory_uri(); ?>/assets/images/lamp-puzzle-off.png" alt="">
-                        <img class="whyCard-image-h" src="<?php echo get_template_directory_uri(); ?>/assets/images/lamp-puzzle-on.png" alt="">
-                    </div>
-                    <h3 class="whyCard-title Dana-DemiBold">طراحی راهکارهای سفارشی برای هر سازمان</h3>
-                </div>
-            </div>
-            <div class="col-md-2 whyCard">
-                <p class="boarder-why"></p>
-                <div class="whyCard-content">
-                    <div class="whyCard-Icon">
-                        <img class="whyCard-image-f" src="<?php echo get_template_directory_uri(); ?>/assets/images/lamps-shield-off.png" alt="">
-                        <img class="whyCard-image-h" src="<?php echo get_template_directory_uri(); ?>/assets/images/lamps-shield-on.png" alt="">
-                    </div>
-                    <h3 class="whyCard-title px-5 Dana-DemiBold">پشتیبانی مستمر و حرفه ای </h3>
-                </div>
-            </div>
-            <div class="col-md-2 whyCard">
-                <p class="boarder-why"></p>
-                <div class="whyCard-content">
-                    <div class="whyCard-Icon">
-                        <img class="whyCard-image-f" src="<?php echo get_template_directory_uri(); ?>/assets/images/lamps-professional-off.png" alt="">
-                        <img class="whyCard-image-h" src="<?php echo get_template_directory_uri(); ?>/assets/images/lamps-professional-on.png" alt="">
-                    </div>
-                    <h3 class="whyCard-title Dana-DemiBold">تمرکز بر توسعه پایدار و ارزشهای سازمانی</h3>
-                </div>
-            </div>
-            <div class="col-md-2 whyCard">
-                <p class="boarder-why"></p>
-                <div class="whyCard-content">
-                    <div class="whyCard-Icon">
-                        <img class="whyCard-image-f" src="<?php echo get_template_directory_uri(); ?>/assets/images/lamps-star-off.png" alt="">
-                        <img class="whyCard-image-h" src="<?php echo get_template_directory_uri(); ?>/assets/images/lamps-star-on.png" alt="">
-                    </div>
-                    <h3 class="whyCard-title px-5 Dana-DemiBold">جامعیت و تنوع تحصص ها</h3>
-                </div>
-            </div> -->
         </div> 
     </div>     
 </section>
@@ -206,36 +150,27 @@
 <section class="FAQSection">
     <h1 class="sectionTitle Dana-Black mb-4">سوالات متداول</h1>
     <div class="FAQSection-items container">
-    <div class="FAQSection-item Dana-DemiBold">
-        <h4 class="FAQSection-item-question">گروه معيار چه خدماتي ارائه مي دهد؟</h4>
-        <div class="FAQSection-item-answer">
-            <p>شرکت معيار به عنوان ارائه‌دهنده خدمات روانشناسی صنعتی-سازمانی، با بهره‌گیری از علوم روانشناختی و روش‌های مبتنی بر شواهد و تجربه، به سازمان‌ها در حل چالش‌های منابع انسانی و ساير دپارتمان ها و بهبود عملکرد کمک می‌کند. این خدمات شامل ارزیابی و گزینش کارکنان، توسعه رهبری، تحول فرهنگ سازمانی و افزایش بهره‌وری می‌شود. با استفاده از ابزارهایی مانند آزمون‌های روانسنجی، مصاحبه‌های ساختاریافته و کوچینگ، به سازمان‌ها در ایجاد محیط کاری سالم و اثربخش یاری می‌رسانید. هدف نهایی، همسو کردن سرمایه انسانی با اهداف استراتژیک سازمان و ایجاد مزیت رقابتی پایدار است.</p>
-        </div>
-    </div>
-    <div class="FAQSection-item Dana-DemiBold">
-        <h4 class="FAQSection-item-question">نحوه دريافت خدمات از گروه معيار چگونه است؟</h4>
-        <div class="FAQSection-item-answer">
-            <p>برای دریافت خدمات از گروه معیار، می‌توانید از طریق وب‌سایت رسمی مجموعه یا شماره‌های تماس با کارشناسان ما ارتباط برقرار کنید. در گام نخست، یک جلسه مشاوره رایگان برای تحلیل نیازهای سازمان شما برگزار می‌شود. سپس، طرح خدمات سفارشی متناسب با اهداف و بودجه شما طراحی و ارائه می‌گردد. پس از تأیید نهایی و انعقاد قرارداد، اجرای پروژه توسط تیم متخصصان ما آغاز شده و تا دستیابی به نتایج ملموس پشتيباني و همراهی ادامه می‌یابد. برای آغاز همکاری، همین امروز با ما تماس بگیرید.</p>
-        </div>
-    </div>
-    <div class="FAQSection-item Dana-DemiBold">
-        <h4 class="FAQSection-item-question">آیا خدمات شما برای سازمان‌های کوچک مقياس (٢٠ تا ٩٩ نفر)هم مناسب است؟</h4>
-        <div class="FAQSection-item-answer">
-            <p>پاسخ: بله. خدمات ما به صورت ماژولار و مقیاس‌پذیر طراحی شده و برای سازمان‌های با هر اندازه و در هر صنعتی قابل تطبیق است.</p>
-        </div>
-    </div>
-    <div class="FAQSection-item Dana-DemiBold">
-        <h4 class="FAQSection-item-question">چطور مي توانم با معيار همكاري كنم؟</h4>
-        <div class="FAQSection-item-answer">
-            <p>برای همکاری با گروه معیار، می‌توانید از طریق تلفن، ايميل يا وب‌سایت مجموعه با پر کردن فرم درخواست همكاري در سايت اقدام کنید. کارشناسان ما پس از بررسي رزومه شما و نیاز مجموعه، جلسه اي براي مصاحبه با شما هماهنگ خواهند كرد.</p>
-        </div>
-    </div>
-    <div class="FAQSection-item Dana-DemiBold">
-        <h4 class="FAQSection-item-question">چه تفاوتي بين معيار و مجموعه هاي ديگر توسعه كسب و كار وجود دارد؟</h4>
-        <div class="FAQSection-item-answer">
-            <p>تفاوت اصلی "معیار" با سایر مجموعه‌های توسعه کسب‌وکار در تخصص یکپارچه و منحصربه‌فرد آن در حوزه روانشناسی صنعتی-سازمانی است. برخلایت روش‌های عمومی مشاوره مدیریت، ما با ترکیب دانش روانشناسی، ابزارهای روانسنجی استاندارد و راهکارهای بومی، مانند بازي هاي سازماني به صورت علمی و عمقی به بهبود سرمایه انسانی و فرهنگ سازمانی می‌پردازیم. این رویکرد تضمین می‌کند که تغییرات ایجاد شده نه تنها ملموس، بلکه پایدار و همسو با ویژگی‌های منحصربه‌فرد هر سازمان باشند.</p>
-        </div>
-    </div>
+        <?php
+        $args = array(
+            'post_type'      => 'faq',  // MUST be lowercase
+            'posts_per_page' =>  5,          // get all posts
+            'orderby'        => 'menu_order', // uses page-attributes
+            'order'          => 'ASC'
+        );
+
+        $faq_query = new WP_Query($args);
+
+        if ( $faq_query->have_posts() ) :
+        ?>
+            <?php while ( $faq_query->have_posts() ) : $faq_query->the_post(); ?>
+            <div class="FAQSection-item Dana-DemiBold">
+                <h4 class="FAQSection-item-question"><?php the_title(); ?></h4>
+                <div class="FAQSection-item-answer">
+                    <p><?php the_excerpt(); ?></p>
+                </div>
+            </div>
+            <?php endwhile; ?>
+        <?php endif; wp_reset_postdata(); ?>
     </div>
 </section>
 
