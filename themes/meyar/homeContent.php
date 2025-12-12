@@ -93,16 +93,18 @@
                 <?php while ( $services_query->have_posts() ) : $services_query->the_post(); ?>
                     <div class="col-md-3">
                         <div class="serviseCard">
-                        <div class="serviseContent">
-                            <!-- ACF Fields -->
-                            <?php if ( get_field('servicesbackimage') ) : ?>
-                                <img class="serviseCard-image-n" src="<?php echo get_field('servicesbackimage')['url']; ?>" alt="">
-                            <?php endif; ?>
-                            <?php if ( get_field('servicesicon') ) : ?>
-                                <img class="serviseCard-image-f" src="<?php echo get_field('servicesicon')['url']; ?>" alt="">
-                            <?php endif; ?>            
-                            <h5 class="serviseTitle Dana-ExtraBold"><?php the_title(); ?></h5>
-                        </div>
+                            <a href="<?php the_permalink(); ?>">
+                                <div class="serviseContent">
+                                    <!-- ACF Fields -->
+                                    <?php if ( get_field('servicesbackimage') ) : ?>
+                                        <img class="serviseCard-image-n" src="<?php echo get_field('servicesbackimage')['url']; ?>" alt="">
+                                    <?php endif; ?>
+                                    <?php if ( get_field('servicesicon') ) : ?>
+                                        <img class="serviseCard-image-f" src="<?php echo get_field('servicesicon')['url']; ?>" alt="">
+                                    <?php endif; ?>            
+                                    <h5 class="serviseTitle Dana-ExtraBold"><?php the_title(); ?></h5>
+                                </div>
+                            </a>
                         </div>
                     </div>
                 <?php endwhile; ?>

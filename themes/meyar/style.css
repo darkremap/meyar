@@ -1172,6 +1172,11 @@ body {
     padding: 15px;
 }
 
+.otherService-card img{
+    width: 90px;
+    margin-bottom: 15px;
+}
+
 .otherService-card h1{
     color: var(--Merlot);
     font-size: 20px;
