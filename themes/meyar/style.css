@@ -861,9 +861,6 @@ body {
 }
 
 
-
-
-
 /* footer -------------------------------------------------------------------------------------------------------------------footer */
 
 .site-footer{
@@ -871,6 +868,10 @@ body {
     margin-top: -85px;
     padding-top: 130px;
     border-radius: 50px 50px 0 0;
+}
+.site-footer li{
+    list-style-type: none;
+    margin-bottom: 7px;
 }
 
 .footer-right{

@@ -79,19 +79,35 @@
 <section class="serviseSection">
     <h1 class="sectionTitle Dana-Black">ارائه خدمات</h1>
     <div class="container">
-    <div class="row serviseSection-Items">
-        <?php for ($i = 0; $i < 12; $i++): ?>
-        <div class="col-md-3">
-            <div class="serviseCard">
-            <div class="serviseContent">
-                <img class="serviseCard-image-f" src="<?php echo get_template_directory_uri(); ?>/assets/images/Sbrain-off.png" alt="">
-                <img class="serviseCard-image-n" src="<?php echo get_template_directory_uri(); ?>/assets/images/servise-time-on.png" alt="">
-                <h5 class="serviseTitle Dana-ExtraBold">جذب و استخدام</h5>
-            </div>
-            </div>
+        <div class="row serviseSection-Items">
+         <?php
+            $args = array(
+                'post_type'      => 'service',  // MUST be lowercase
+                'posts_per_page' => 12,          // get all posts
+                'orderby'        => 'menu_order', // uses page-attributes
+                'order'          => 'ASC'
+            );
+            $services_query = new WP_Query($args);
+            if ( $services_query->have_posts() ) :
+            ?>
+                <?php while ( $services_query->have_posts() ) : $services_query->the_post(); ?>
+                    <div class="col-md-3">
+                        <div class="serviseCard">
+                        <div class="serviseContent">
+                            <!-- ACF Fields -->
+                            <?php if ( get_field('servicesbackimage') ) : ?>
+                                <img class="serviseCard-image-n" src="<?php echo get_field('servicesbackimage')['url']; ?>" alt="">
+                            <?php endif; ?>
+                            <?php if ( get_field('servicesicon') ) : ?>
+                                <img class="serviseCard-image-f" src="<?php echo get_field('servicesicon')['url']; ?>" alt="">
+                            <?php endif; ?>            
+                            <h5 class="serviseTitle Dana-ExtraBold"><?php the_title(); ?></h5>
+                        </div>
+                        </div>
+                    </div>
+                <?php endwhile; ?>
+            <?php endif; wp_reset_postdata(); ?>
         </div>
-        <?php endfor; ?>  
-    </div>
     </div>
 </section>
 
