@@ -33,7 +33,7 @@
                         <span class="screen-reader-text">Menu</span>
                     </button>
                     
-                    <div class="header-homeIcon">
+                    <!-- <div class="header-homeIcon">
                         <a href="/">
                             <svg width="20" height="19" viewBox="0 0 20 19"  xmlns="http://www.w3.org/2000/svg">
                                 <path d="M16.4831 19H3.51689C2.67944 19 2 18.3911 2 17.6406V13.3594C2 12.6089 2.67944 12 3.51689 12C4.35434 12 5.03377 12.6089 5.03377 13.3594V16.2811H14.9662V13.3594C14.9662 12.6089 15.6457 12 16.4831 12C17.3206 12 18 12.6089 18 13.3594V17.6406C18 18.3911 17.3206 19 16.4831 19Z" fill="white"/>
@@ -41,7 +41,7 @@
                                 <path d="M3.5 9C2.67188 9 2 8.30178 2 7.44118V2.55882C2 1.69822 2.67188 1 3.5 1C4.32812 1 5 1.69822 5 2.55882V7.44118C5 8.30178 4.32812 9 3.5 9Z" fill="white"/>
                             </svg>
                         </a>
-                    </div>
+                    </div> -->
 
                     <?php
                     wp_nav_menu(array(

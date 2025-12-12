@@ -22,7 +22,13 @@
         </div>
         </div>
         <div class="col-md-8 d-flex justify-content-center">
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/hero.gif" alt="">
+            <?php 
+            $image = get_field('homepaleheroimage'); 
+            if ( $image ) : ?>
+                <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>">
+            <?php else : ?>
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/hero.gif" alt="">
+            <?php endif; ?>
         </div>
     </div>
     </div>
@@ -30,7 +36,13 @@
 
 
 <section class="whySection" >
-    <h1 class="Dana-Black">چرا معیار</h1>
+    <h1 class="Dana-Black">
+        <?php if ( get_field('titlesection2') ) : ?>
+            <?php echo get_field('titlesection2'); ?>
+        <?php else : ?>
+            (چرا معیار)
+        <?php endif; ?>
+    </h1>
     <div class="container">
     <div class="row whyCards-container">
         <div class="col-md-2 whyCard">

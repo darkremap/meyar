@@ -170,13 +170,13 @@ body {
     align-items: center;
     gap: 15px;
 }
-.header-homeIcon{
+/* .header-homeIcon{
     margin-top: 13px;
     margin-left: 40px;
 }
 .header-homeIcon img{
     height: 24px;
-}
+} */
 .site-logo img {
     width: 140px;
 }
