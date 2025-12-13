@@ -656,7 +656,9 @@ body {
     padding: 30px 50px;
 }
 .newsSection-Event h2{
-    color: var(--Merlot);
+    color: var(--PastelBlue);
+    border-bottom: 1px solid var(--Merlot);
+    padding-bottom: 30px;
 }
 .newsSection-Event-items{
 
@@ -666,6 +668,7 @@ body {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    padding-block: 10px;
 }
 
 .newsSection-Event-item-title h4{
@@ -1993,3 +1996,7 @@ body {
     margin: 3px;
     border-radius: 50px;
 }
+
+
+/* Events  --------------------------------------------------------------------------------------------------- */
+

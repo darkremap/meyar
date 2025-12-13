@@ -119,21 +119,47 @@
     <div class="col-md-5">
         <div class="newsSection-event-card">
         <div class="newsSection-Event">
-            <h2 class="mb-3 Dana-Bold">تازه ها</h2>
+            <h2 class="Dana-Bold">رویدادهای معیار</h2>
             <div class="newsSection-Event-items">
-                    <?php for ($i = 0; $i < 4; $i++): ?>
-                    <div class="newsSection-Event-item">
+                <div class="newsSection-Event-item">
                     <div class="newsSection-Event-item-title">
-                        <h4>خبر شماره یک</h4>
-                        <p>حلاسه خبر شماره یک</p>
+                        <a href="<?php echo esc_url( get_permalink( get_page_by_path( 'pastEvents' ) ) ); ?>">
+                            <h4>گذشته</h4>
+                            <p>رویدادهای گذشته</p>
+                        </a>
                     </div>
                     <div class="newsSection-Event-item-icon">
                         <svg width="11" height="15" viewBox="0 0 11 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M8.62573 2.62573L3.62574 7.62572L8.62573 12.6257" stroke="#20C4F4" stroke-width="4" stroke-linecap="round"/>
                         </svg>
                     </div>
+                </div> 
+                <div class="newsSection-Event-item">
+                    <div class="newsSection-Event-item-title">
+                        <a href="<?php echo esc_url( get_permalink( get_page_by_path( 'newEvents' ) ) ); ?>">
+                            <h4>اکنون</h4>
+                            <p>رویدادهای اکنون</p>
+                        </a>
                     </div>
-                <?php endfor; ?>  
+                    <div class="newsSection-Event-item-icon">
+                        <svg width="11" height="15" viewBox="0 0 11 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8.62573 2.62573L3.62574 7.62572L8.62573 12.6257" stroke="#20C4F4" stroke-width="4" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                </div> 
+                <div class="newsSection-Event-item">
+                    <div class="newsSection-Event-item-title">
+                        <a href="<?php echo esc_url( get_permalink( get_page_by_path( 'futureEvents' ) ) ); ?>">
+                            <h4>آینده</h4>
+                            <p>رویدادهای آینده</p>
+                        </a>
+                    </div>
+                    <div class="newsSection-Event-item-icon">
+                        <svg width="11" height="15" viewBox="0 0 11 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8.62573 2.62573L3.62574 7.62572L8.62573 12.6257" stroke="#20C4F4" stroke-width="4" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                </div> 
             </div>
         </div>
         </div>
