@@ -31,22 +31,20 @@ get_header(); ?>
         if ( $pastEvents_query->have_posts() ) :
         ?>
             <?php while ( $pastEvents_query->have_posts() ) : $pastEvents_query->the_post(); ?>
-                <a href="<?php echo esc_url( get_field('eventsurl') ); ?>">
-                    <div class="events-card">
-                        <div class="row">
-                            <div class="col-md-2">
-                                <!-- ACF Fields -->
-                                <?php if ( get_field('eventsimage') ) : ?>
-                                    <img  src="<?php echo get_field('eventsimage')['url']; ?>" alt="">
-                                <?php endif; ?>
-                            </div>
-                            <div class="col-md-10">
-                                <h1 class="Dana-Black"><?php the_title(); ?></h1>
-                                <p class="Dana-Regular"><?php the_excerpt(); ?></p>
-                            </div>
+                <div class="events-card">
+                    <div class="row">
+                        <div class="col-md-2">
+                            <!-- ACF Fields -->
+                            <?php if ( get_field('eventsimage') ) : ?>
+                                <img  src="<?php echo get_field('eventsimage')['url']; ?>" alt="">
+                            <?php endif; ?>
+                        </div>
+                        <div class="col-md-10">
+                            <h1 class="Dana-Black"><?php the_title(); ?></h1>
+                            <p class="Dana-Regular"><?php the_excerpt(); ?></p>
                         </div>
                     </div>
-                </a>
+                </div>
             <?php endwhile; ?>
         <?php endif; wp_reset_postdata(); ?>
     </div>
