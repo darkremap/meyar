@@ -126,36 +126,76 @@ get_header();?>
         <div class="FAQSection">
             <h1 class="sectionTitle Dana-Black mb-4">سوالات متداول</h1>
             <div class="FAQSection-items container">
+                <?php if ( get_field('coursesfaqq1') ) : ?>
                 <div class="FAQSection-item Dana-DemiBold">
-                    <h4 class="FAQSection-item-question">گروه معيار چه خدماتي ارائه مي دهد؟</h4>
+                    <h4 class="FAQSection-item-question">
+                        <?php echo get_field('coursesfaqq1')?>
+                    </h4>
                     <div class="FAQSection-item-answer">
-                        <p>شرکت معيار به عنوان ارائه‌دهنده خدمات روانشناسی صنعتی-سازمانی، با بهره‌گیری از علوم روانشناختی و روش‌های مبتنی بر شواهد و تجربه، به سازمان‌ها در حل چالش‌های منابع انسانی و ساير دپارتمان ها و بهبود عملکرد کمک می‌کند. این خدمات شامل ارزیابی و گزینش کارکنان، توسعه رهبری، تحول فرهنگ سازمانی و افزایش بهره‌وری می‌شود. با استفاده از ابزارهایی مانند آزمون‌های روانسنجی، مصاحبه‌های ساختاریافته و کوچینگ، به سازمان‌ها در ایجاد محیط کاری سالم و اثربخش یاری می‌رسانید. هدف نهایی، همسو کردن سرمایه انسانی با اهداف استراتژیک سازمان و ایجاد مزیت رقابتی پایدار است.</p>
+                        <p>
+                            <?php if ( get_field('coursesfaqa1') ) : ?>
+                                <?php echo get_field('coursesfaqa1')?>
+                            <?php endif; ?> 
+                        </p>
                     </div>
                 </div>
+                <?php endif; ?> 
+                <?php if ( get_field('coursesfaqq2') ) : ?>
                 <div class="FAQSection-item Dana-DemiBold">
-                    <h4 class="FAQSection-item-question">نحوه دريافت خدمات از گروه معيار چگونه است؟</h4>
+                    <h4 class="FAQSection-item-question">
+                        <?php echo get_field('coursesfaqq2')?>
+                    </h4>
                     <div class="FAQSection-item-answer">
-                        <p>برای دریافت خدمات از گروه معیار، می‌توانید از طریق وب‌سایت رسمی مجموعه یا شماره‌های تماس با کارشناسان ما ارتباط برقرار کنید. در گام نخست، یک جلسه مشاوره رایگان برای تحلیل نیازهای سازمان شما برگزار می‌شود. سپس، طرح خدمات سفارشی متناسب با اهداف و بودجه شما طراحی و ارائه می‌گردد. پس از تأیید نهایی و انعقاد قرارداد، اجرای پروژه توسط تیم متخصصان ما آغاز شده و تا دستیابی به نتایج ملموس پشتيباني و همراهی ادامه می‌یابد. برای آغاز همکاری، همین امروز با ما تماس بگیرید.</p>
+                        <p>
+                            <?php if ( get_field('coursesfaqa2') ) : ?>
+                                <?php echo get_field('coursesfaqa2')?>
+                            <?php endif; ?> 
+                        </p>
                     </div>
                 </div>
+                <?php endif; ?> 
+                <?php if ( get_field('coursesfaqq3') ) : ?>
                 <div class="FAQSection-item Dana-DemiBold">
-                    <h4 class="FAQSection-item-question">آیا خدمات شما برای سازمان‌های کوچک مقياس (٢٠ تا ٩٩ نفر)هم مناسب است؟</h4>
+                    <h4 class="FAQSection-item-question">
+                        <?php echo get_field('coursesfaqq3')?>
+                    </h4>
                     <div class="FAQSection-item-answer">
-                        <p>پاسخ: بله. خدمات ما به صورت ماژولار و مقیاس‌پذیر طراحی شده و برای سازمان‌های با هر اندازه و در هر صنعتی قابل تطبیق است.</p>
+                        <p>
+                            <?php if ( get_field('coursesfaqa3') ) : ?>
+                                <?php echo get_field('coursesfaqa3')?>
+                            <?php endif; ?> 
+                        </p>
                     </div>
                 </div>
+                <?php endif; ?> 
+                <?php if ( get_field('coursesfaqq4') ) : ?>
                 <div class="FAQSection-item Dana-DemiBold">
-                    <h4 class="FAQSection-item-question">چطور مي توانم با معيار همكاري كنم؟</h4>
+                    <h4 class="FAQSection-item-question">
+                        <?php echo get_field('coursesfaqq4')?>
+                    </h4>
                     <div class="FAQSection-item-answer">
-                        <p>برای همکاری با گروه معیار، می‌توانید از طریق تلفن، ايميل يا وب‌سایت مجموعه با پر کردن فرم درخواست همكاري در سايت اقدام کنید. کارشناسان ما پس از بررسي رزومه شما و نیاز مجموعه، جلسه اي براي مصاحبه با شما هماهنگ خواهند كرد.</p>
+                        <p>
+                            <?php if ( get_field('coursesfaqa4') ) : ?>
+                                <?php echo get_field('coursesfaqa4')?>
+                            <?php endif; ?> 
+                        </p>
                     </div>
                 </div>
+                <?php endif; ?> 
+                <?php if ( get_field('coursesfaqq5') ) : ?>
                 <div class="FAQSection-item Dana-DemiBold">
-                    <h4 class="FAQSection-item-question">چه تفاوتي بين معيار و مجموعه هاي ديگر توسعه كسب و كار وجود دارد؟</h4>
+                    <h4 class="FAQSection-item-question">
+                        <?php echo get_field('coursesfaqq5')?>
+                    </h4>
                     <div class="FAQSection-item-answer">
-                        <p>تفاوت اصلی "معیار" با سایر مجموعه‌های توسعه کسب‌وکار در تخصص یکپارچه و منحصربه‌فرد آن در حوزه روانشناسی صنعتی-سازمانی است. برخلایت روش‌های عمومی مشاوره مدیریت، ما با ترکیب دانش روانشناسی، ابزارهای روانسنجی استاندارد و راهکارهای بومی، مانند بازي هاي سازماني به صورت علمی و عمقی به بهبود سرمایه انسانی و فرهنگ سازمانی می‌پردازیم. این رویکرد تضمین می‌کند که تغییرات ایجاد شده نه تنها ملموس، بلکه پایدار و همسو با ویژگی‌های منحصربه‌فرد هر سازمان باشند.</p>
+                        <p>
+                            <?php if ( get_field('coursesfaqa5') ) : ?>
+                                <?php echo get_field('coursesfaqa5')?>
+                            <?php endif; ?> 
+                        </p>
                     </div>
                 </div>
+                <?php endif; ?> 
             </div>
         </div>
     </div>
