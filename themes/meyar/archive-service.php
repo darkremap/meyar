@@ -18,7 +18,18 @@
         <div class="services-items">
             <span class="services-items-line"></span>
             <div class="container">
-                <?php for ($i = 0; $i < 7; $i++): ?>
+                <?php
+                $args = array(
+                    'post_type'      => 'service',  // MUST be lowercase
+                    'posts_per_page' => -1,          // get all posts
+                    'orderby'        => 'menu_order', // uses page-attributes
+                    'order'          => 'ASC'
+                );
+                $services_query = new WP_Query($args);
+                if ( $services_query->have_posts() ) :
+                ?>
+                    <?php $i = 0; // Initialize counter ?>
+                    <?php while ( $services_query->have_posts() ) : $services_query->the_post(); ?>
                     <div class="row margin-mines">
                         <div class="col-md-6">
                             <?php if ($i % 2 == 0) { ?>
@@ -40,11 +51,15 @@
                                                                                     #75EABA 
                                                                                 <?php } ?>
                                                                               ">
-                                            <h1 class="Dana-ExtraBold">01</h1>
-                                            <h2 class="mt-3 Dana-ExtraBlack">جذب و استخدام</h2>
+                                            <h1 class="Dana-ExtraBold"><?php echo $i+1 ?></h1>
+                                            <h2 class="mt-3 Dana-ExtraBlack"><?php the_title(); ?></h2>
                                         </div>
                                         <div class="services-item-card-left">
-                                            <p class="Dana-Regular">ارزیابی و گزینش کارکنان فرآیندی نظام‌مند برای انتخاب بهترین فرد متناسب با شغل است که با تحلیل شغل (تعیین وظایف و شایستگی‌های مورد نیاز) آغاز می‌شود.</p>
+                                            <p class="Dana-Regular">
+                                            <?php if ( get_field('servicessummary') ) : ?>
+                                                <?php echo get_field('servicessummary'); ?>
+                                            <?php endif; ?>
+                                            </p>
                                             <div class="services-item-card-left-icons">
                                                 <img src="<?php echo get_template_directory_uri(); ?>/assets/images/services-checkbox.png" alt="Meyar">
                                                 <div class="services-item-card-left-iconbox">
@@ -181,15 +196,17 @@
                                                                                     #75EABA 
                                                                                 <?php } ?>
                                                                               ">
-                                            <h1 class="Dana-ExtraBold">01</h1>
-                                            <h2 class="mt-3 Dana-ExtraBlack">جذب و استخدام</h2>
+                                            <h1 class="Dana-ExtraBold"><?php echo $i+1 ?></h1>
+                                            <h2 class="mt-3 Dana-ExtraBlack"><?php the_title(); ?></h2>
                                         </div>
                                     </div>
                                 </div>
                             <?php } ?>
                         </div>
                     </div>
-                <?php endfor; ?> 
+                    <?php $i++; // Increment counter ?>
+                    <?php endwhile; ?>
+                <?php endif; wp_reset_postdata(); ?>
             </div>
         </div>
 

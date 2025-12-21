@@ -40,6 +40,7 @@
             ?>
         </div>
     </section>
+    <?php if ( get_field('servicetizer') ) : ?>  
     <section class="container singleService-tizer">
         <div class="container singleService-tizer-header">
             <div class="singleService-header-title">
@@ -47,12 +48,22 @@
                 <h1 class="Dana-Black">تیز معرفی سرویس</h1>
             </div>
         </div>
-        <div class="singleService-tizer-video">
-            <video id="myVideo" poster="" controls>
-                <source src="<?php echo get_template_directory_uri(); ?>/assets/images/t.mp4" type="video/mp4">
-            </video>
-        </div>
+        <?php 
+        $aparat_url =  get_field('servicetizer');
+        if ($aparat_url && preg_match('/aparat\.com\/v\/([a-zA-Z0-9]+)/', $aparat_url, $matches)) :
+            $video_id = $matches[1];
+        ?>
+            <div class="singleService-tizer-video aparat-responsive">
+                <iframe
+                    src="https://www.aparat.com/video/video/embed/videohash/<?php echo esc_attr($video_id); ?>/vt/frame"
+                    allowfullscreen
+                    webkitallowfullscreen
+                    mozallowfullscreen>
+                </iframe>
+            </div>
+        <?php endif; ?>
     </section>
+    <?php endif; ?> 
 
     <section class="container otherService">
         <div class="singleService-pointTitle">
