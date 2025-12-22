@@ -1229,7 +1229,7 @@ body {
 }
 
 .services-head-right h2{
-    color: #8EE9FB;
+    color: var(--green);
     font-size: 55px;
     font-style: normal;
     font-weight: 400;
@@ -1246,7 +1246,7 @@ body {
 .services-items-line{
     position: absolute;
     top: 133px;
-    bottom: 123px;
+    bottom: 135px;
     right: 50%;
     width: 2px;
     background-color: var(--White);
@@ -1317,12 +1317,13 @@ body {
     text-align: justify;
     color: var(--Midnight);
     height: 115px;
-    overflow-y: hidden;
+    padding-inline: 8px;
+    overflow-y: auto;
 
 }
 .services-item-card-left-icons{
     display: flex;
-    justify-content: space-between;
+    justify-content: end;
     align-items: center;
 }
 .services-item-card-left-iconbox{
@@ -1338,11 +1339,16 @@ body {
     padding: 40px 50px  30px 125px;
     margin-left: -100px;
     margin-right: 0;
+    direction: ltr;
 }
 
 .leftSide-card .services-item-card-right{
     clip-path: ellipse(100% 85% at 0 50%);
     border-left: none;
+}
+
+.leftSide-card .services-item-card-left-icons{
+    justify-content: start;
 }
 
 
@@ -1359,6 +1365,13 @@ body {
 
 .leftSide-card .services-item-point{
     right: -23px;
+}
+
+.leftSide-card .iconbox-img{
+    border-right: 2px solid var(--Merlot);
+    border-left: none;
+    padding-right: 15px;
+    padding-left: 0;
 }
 
 
