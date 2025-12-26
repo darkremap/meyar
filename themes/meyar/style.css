@@ -1645,6 +1645,8 @@ body {
 .spd-parts-item-card p{
     color: var(--PastelBlue);
     font-size: 14px;
+    height: 40px;
+    overflow: hidden;
 }
 
 .spd-parts-item-card:hover{
