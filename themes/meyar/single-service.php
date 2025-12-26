@@ -13,24 +13,20 @@
                 while ( have_posts() ) : the_post(); ?>
                     
                     <article id="post-<?php the_ID(); ?>" <?php post_class('single-service'); ?>>
-                        
-                         <div class="singleService-pointTitle">
-                            <span></span>
-                            <h1 class="singleService-text-title Dana-Black"><?php the_title(); ?></h1>
-                         </div>
-
-                        <!-- Featured Image (optional) -->
-                        <!-- <?php if ( has_post_thumbnail() ) : ?>
-                            <div class="service-image">
-                                <?php the_post_thumbnail('large'); ?>
+                        <div class="singleService-pointTitle">
+                            <div class="singleService-pointTitle-farsi">
+                                <span></span>
+                                <h1 class="singleService-text-title Dana-Black"><?php the_title(); ?></h1>
                             </div>
-                        <?php endif; ?> -->
-
-                        
+                            <h2 class="Dana-Bold">
+                                <?php if ( get_field('servicesenglishtitle') ) : ?>
+                                    <?php echo get_field('servicesenglishtitle'); ?>
+                                <?php endif; ?>
+                            </h2>
+                        </div>
                         <div class="singleService-text-content">
                             <?php the_content(); ?>
                         </div>
-
                     </article>
 
                 <?php endwhile;
@@ -66,30 +62,34 @@
     <?php endif; ?> 
 
     <section class="container otherService">
-        <div class="singleService-pointTitle">
+        <div class="singleService-header-title">
             <span></span>
-            <h1 class="singleService-text-title Dana-Black">سایر خدمات در حوزه فرآیندهای سازمانی</h1>
+            <h1 class="Dana-Black">سایر خدمات در حوزه فرآیندهای سازمانی</h1>
         </div>
         <div class="otherService-items">
             <div class="row">
                 <?php
+                $current_post_id = get_the_ID(); // دریافت ID پست فعلی
                 $args = array(
                     'post_type'      => 'service',  // MUST be lowercase
                     'posts_per_page' => 6,          // get all posts
                     'orderby'        => 'menu_order', // uses page-attributes
-                    'order'          => 'ASC'
+                    'order'          => 'ASC',
+                    'post__not_in'   => array($current_post_id) // حذف پست فعلی از نتایج
                 );
                 $services_query = new WP_Query($args);
                 if ( $services_query->have_posts() ) :
                 ?>
                     <?php while ( $services_query->have_posts() ) : $services_query->the_post(); ?>
-                        <div class="col-md-2">
-                            <div class="otherService-card"style="background-color: #FDB913">
-                                <?php if ( get_field('servicesicon') ) : ?>
-                                    <img  src="<?php echo get_field('servicesicon')['url']; ?>" alt="">
-                                <?php endif; ?>
-                                <h1 class="Dana-ExtraBlack"><?php the_title(); ?></h1>
-                            </div>
+                        <div class="col-md-2 col-4">
+                            <a href="<?php the_permalink(); ?>">
+                                <div class="otherService-card">
+                                    <?php if ( get_field('servicesicon') ) : ?>
+                                        <img  src="<?php echo get_field('servicesicon')['url']; ?>" alt="">
+                                    <?php endif; ?>
+                                    <h1 class="Dana-ExtraBlack"><?php the_title(); ?></h1>
+                                </div>
+                            </a>
                         </div>
                     <?php endwhile; ?>
                 <?php endif; wp_reset_postdata(); ?>

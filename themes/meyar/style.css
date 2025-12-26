@@ -1158,14 +1158,22 @@ body {
 .singleService-pointTitle{
     display: flex;
     align-items: center;
-    gap: 15px;
+    justify-content: space-between;
+}
+.singleService-pointTitle h2{
+    color: var(--green);
+    font-size: 24px;
 }
 .singleService-pointTitle span{
     width: 14px;
     height: 14px;
     background-color: var(--orange);
 }
-
+.singleService-pointTitle-farsi{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
 .otherService{
     padding-block: 50px;
 }
@@ -1175,14 +1183,17 @@ body {
 }
 
 .otherService-card{
+    background: linear-gradient(180deg, #0073BA -23.14%, #1B3281 80.48%);
     gap: 10px;
-    border-radius: 10px;
+    border: 3px solid #FFFFFF;
+    border-radius: 20px;
     margin-bottom: 24px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    padding: 15px;
+    padding: 10px;
+
 }
 
 .otherService-card img{
@@ -1191,8 +1202,9 @@ body {
 }
 
 .otherService-card h1{
-    color: var(--Merlot);
+    color: var(--orange);
     font-size: 20px;
+    text-align: center;
 }
 
 /* singleService ------------------------------------------------------------------------------- singleService */
@@ -1347,9 +1359,9 @@ body {
     border-left: none;
 }
 
-.leftSide-card .services-item-card-left-icons{
+/* .leftSide-card .services-item-card-left-icons{
     justify-content: start;
-}
+} */
 
 
 .leftSide-card .services-item-card{
@@ -1414,18 +1426,21 @@ body {
     align-items: center;
     justify-content: center;
     color: var(--White);
+    flex-direction: column;
 }
 .personalServices-tagCard-body h1{
-    font-size: 96px;
+    font-size: 85px;
     margin: 0;
 }
 
-
+.personalServices-tagCard-body img{
+    height: 75px;
+}
 
 .personalServices-contentCard{
     display: flex;
     background-color: var(--White);
-    padding: 30px;
+    padding: 45px;
     border-radius: 20px;
 }
 .personalServices-contentCard-iconbox{
@@ -1435,24 +1450,21 @@ body {
     padding-left: 20px;
     border-left: 1px solid var(--Merlot);
 }
+.personalServices-contentCard-header{
+    padding-right: 30px;
+}
 .personalservices-contentCard-text{
-    padding-right: 40px;
     font-size: 15px;
 }
 .personalservices-contentCard-text p{
     margin: 0;
     text-align: justify;
 }
-.personalServices-contentCard-title{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-}
 
-.personalServices-contentCard-title h1{
+.personalServices-contentCard-header h1{
     color: var(--Zodiac);
-    font-size: 24px;
+    font-size: 32px;
+    margin-bottom: 25px;
 }
 .personalServices-contentCard-title img{
     width: 60px;
@@ -1508,17 +1520,6 @@ body {
 }
 .spd-content-text{
     color: var(--White);
-}
-.spd-content-text-title{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    margin-bottom: 30px;
-}
-.spd-content-text-title h1{
-    font-size: 32px;
-    padding-right: 10px;
-
 }
 
 .spd-parts{
