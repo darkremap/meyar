@@ -167,5 +167,53 @@
             }
         });
     </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+
+            // باز کردن پاپ‌آپ
+            document.querySelectorAll(".iconbox-img a").forEach(function (btn) {
+                btn.addEventListener("click", function (e) {
+                    e.preventDefault();
+
+                    const popup = this.closest(".services-item-card-left")
+                                    .querySelector(".showTizerPopup");
+
+                    if (popup) {
+                        popup.classList.add("active");
+                    }
+                });
+            });
+
+            // بستن پاپ‌آپ (overlay یا دکمه ×)
+            document.querySelectorAll(".showTizerPopup").forEach(function (popup) {
+
+                popup.addEventListener("click", function (e) {
+
+                    // کلیک روی overlay
+                    if (e.target.classList.contains("popup-overlay")) {
+                        closePopup(popup);
+                    }
+
+                    // کلیک روی دکمه ضربدر (یا SVG داخلش)
+                    if (e.target.closest(".popup-close")) {
+                        closePopup(popup);
+                    }
+
+                });
+
+            });
+
+            function closePopup(popup) {
+                popup.classList.remove("active");
+
+                // توقف ویدیو
+                const iframe = popup.querySelector("iframe");
+                if (iframe) iframe.src = iframe.src;
+            }
+
+        });
+    </script>
+
+
 </body>
 </html>
