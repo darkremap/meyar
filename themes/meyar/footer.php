@@ -167,5 +167,71 @@
             }
         });
     </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+
+            document.querySelectorAll(".iconbox-img a").forEach(function (btn) {
+                btn.addEventListener("click", function (e) {
+                    e.preventDefault();
+
+                    const popup = this.closest(".services-item-card-left")
+                                    .querySelector(".showTizerPopup");
+
+                    if (!popup) return;
+
+                    const iframe = popup.querySelector("iframe");
+                    const loader = popup.querySelector(".popup-loader");
+
+                    // فعال‌سازی loader
+                    if (loader) loader.classList.add("active");
+
+                    // ذخیره src فقط یکبار
+                    if (iframe && !iframe.dataset.src) {
+                        iframe.dataset.src = iframe.src;
+                    }
+
+                    // set src (شروع لود)
+                    if (iframe && iframe.dataset.src) {
+                        iframe.src = iframe.dataset.src;
+                    }
+
+                    // وقتی ویدیو لود شد
+                    iframe.onload = function () {
+                        if (loader) loader.classList.remove("active");
+                    };
+
+                    popup.classList.add("active");
+                });
+            });
+
+            document.querySelectorAll(".showTizerPopup").forEach(function (popup) {
+
+                popup.addEventListener("click", function (e) {
+                    if (
+                        e.target.classList.contains("popup-overlay") ||
+                        e.target.closest(".popup-close")
+                    ) {
+                        closePopup(popup);
+                    }
+                });
+
+            });
+
+            function closePopup(popup) {
+                popup.classList.remove("active");
+
+                const iframe = popup.querySelector("iframe");
+                const loader = popup.querySelector(".popup-loader");
+
+                if (iframe) iframe.src = "";
+                if (loader) loader.classList.add("active"); // ریست برای دفعه بعد
+            }
+
+        });
+    </script>
+
+
+
+
 </body>
 </html>

@@ -171,18 +171,105 @@
             <input class="radio" id="three" name="group" type="radio">
             <div class="tabs">
             <label class="tab Dana-Bold" id="one-tab" for="one">دوره ها</label>
-            <label class="tab Dana-Bold" id="two-tab" for="two">رویدادها</label>
-            <label class="tab Dana-Bold" id="three-tab" for="three">مقالات</label>
+            <label class="tab Dana-Bold" id="two-tab" for="two">اخبار</label>
+            <label class="tab Dana-Bold" id="three-tab" for="three">دانشنامه</label>
             </div>
             <div class="panels">
             <div class="panel" id="one-panel">
-            <div class="panel-title">دوره ها</div>
+            <div class="panel-title">
+                <div class="row">
+                    <?php
+                        $args = array(
+                            'post_type'      => 'course',  // MUST be lowercase
+                            'posts_per_page' => 3,          // get all posts
+                            'orderby'        => 'menu_order', // uses page-attributes
+                            'order'          => 'ASC'
+                        );
+                        $services_query = new WP_Query($args);
+                        if ( $services_query->have_posts() ) :
+                        ?>
+                            <?php while ( $services_query->have_posts() ) : $services_query->the_post(); ?>
+                                <div class="col-4">
+                                    <div class="panelCard">
+                                        <a href="<?php the_permalink(); ?>">
+                                            <div class="panelContent">
+                                                <!-- ACF Fields -->
+                                                <?php if ( get_field('coursesheroimage') ) : ?>
+                                                    <img src="<?php echo get_field('coursesheroimage')['url']; ?>" alt="">
+                                                <?php endif; ?>          
+                                                <h5 class="panelTitle Dana-ExtraBold"><?php the_title(); ?></h5>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            <?php endwhile; ?>
+                        <?php endif; wp_reset_postdata(); ?>
+                </div>
+            </div>
             </div>
             <div class="panel" id="two-panel">
-            <div class="panel-title">رویدادها</div>
+            <div class="panel-title">
+                <div class="row">
+                    <?php
+                        $args = array(
+                            'post_type'      => 'news',  // MUST be lowercase
+                            'posts_per_page' => 3,          // get all posts
+                            'orderby'        => 'menu_order', // uses page-attributes
+                            'order'          => 'ASC'
+                        );
+                        $services_query = new WP_Query($args);
+                        if ( $services_query->have_posts() ) :
+                        ?>
+                            <?php while ( $services_query->have_posts() ) : $services_query->the_post(); ?>
+                                <div class="col-4">
+                                    <div class="panelCard">
+                                        <a href="<?php the_permalink(); ?>">
+                                            <div class="panelContent">
+                                                <!-- ACF Fields -->
+                                                <?php if ( get_field('newsheroimage') ) : ?>
+                                                    <img src="<?php echo get_field('newsheroimage')['url']; ?>" alt="">
+                                                <?php endif; ?>          
+                                                <h5 class="panelTitle Dana-ExtraBold"><?php the_title(); ?></h5>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            <?php endwhile; ?>
+                        <?php endif; wp_reset_postdata(); ?>
+                </div>
+            </div>
             </div>
             <div class="panel" id="three-panel">
-            <div class="panel-title">مقالات</div>
+            <div class="panel-title">
+                <div class="row">
+                    <?php
+                        $args = array(
+                            'post_type'      => 'Article',  // MUST be lowercase
+                            'posts_per_page' => 3,          // get all posts
+                            'orderby'        => 'menu_order', // uses page-attributes
+                            'order'          => 'ASC'
+                        );
+                        $services_query = new WP_Query($args);
+                        if ( $services_query->have_posts() ) :
+                        ?>
+                            <?php while ( $services_query->have_posts() ) : $services_query->the_post(); ?>
+                                <div class="col-4">
+                                    <div class="panelCard">
+                                        <a href="<?php the_permalink(); ?>">
+                                            <div class="panelContent">
+                                                <!-- ACF Fields -->
+                                                <?php if ( get_field('articleheroimage') ) : ?>
+                                                    <img src="<?php echo get_field('articleheroimage')['url']; ?>" alt="">
+                                                <?php endif; ?>          
+                                                <h5 class="panelTitle Dana-ExtraBold"><?php the_title(); ?></h5>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            <?php endwhile; ?>
+                        <?php endif; wp_reset_postdata(); ?>
+                </div>
+            </div>
             </div>
             </div>
         </div>

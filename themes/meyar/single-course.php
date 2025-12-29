@@ -13,24 +13,33 @@ get_header();?>
                 <h1 class="col-md-4 Dana-Black">دوره‌هــای رهـبــری و تـوسـعـه ســـازمــانی</h1>
             </div>
         </div>
+        <div class="c-body-image">
+            <img  src="<?php echo get_template_directory_uri(); ?>/assets/images/coursesHeroImage.png" alt="">
+        </div>
     </div>
     <div class="container singleCourse-body">
         <div class="singleCourse-body-title">
             <div class="singleService-pointTitle">
                 <span></span>
-                <h1 class="singleService-text-title Dana-Black">دوره تفـــکر سیستـــمی</h1>
+                <h1 class="singleService-text-title Dana-Black"><?php the_title(); ?></h1>
             </div>
             <div class="Dana-Bold singleCourse-body-title-techer">
-                <h2>مهدی مسلمی فر</h2>
+                <h2>
+                    <?php if ( get_field('coursesteachername') ) : ?>
+                        <?php echo get_field('coursesteachername')?>
+                    <?php endif; ?> 
+                </h2>
             </div>
         </div>
         <!-- content bayad kamel style dade shavad h1 li ui p ....  -->
         <div class="row singleCourse-body-content">
             <div class="col-md-9 Dana-Mixed singleCourse-body-content-text">
-                <p>معرفی دوره یادآوری این نکته مهم است که اصطلاح «تفکر سیستمی» برای افراد مختلف می‌تواند معانی متنوعی داشته باشد. آنچه باید بدان توجه کنیم این است که تفکر سیستمی بیش از آنکه مجموعه‌ای از ابزارها و روش‌ها باشد، یک فلسفه زیربنایی است. بسیاری از ما به امید حل مسائل اغلب تجاری‌مان دست به دامن ابزارهای رایج در تفکر سیستمی می‌شویم. اما خوب است بدانیم که تفکر سیستمی در تمام جوانب دنیای پیرامون ما وجود دارد. آگاهی ما از نقش ساختار در ایجاد شرایطی که با آن مواجهیم، به رسمیت شناختن این که قوانین قدرتمندی در سیستم‌های فعال وجود دارد که ما از آن‌ها بی‌اطلاعیم و درک اینکه اعمال ما عواقبی دارد که ما از آن‌ها غافل هستیم موجب می‌شود تا جهان‌بینی بهتری نسبت به دنیای اطراف (شخصی و سازمانی) داشته باشیم. ضمن اینکه تفکر سیستمی یک ابزار تشخیصی است. همان‌طور که در زمینه پزشکی، درمان مؤثر به دنبال تشخیص کامل ایجاد می‌شود، تفکر سیستمی نیز رویکردی منضبط برای بررسی کامل‌تر و دقیق‌تر مسائل قبل از اقدام ما ایجاد خواهد کرد و به ما این امکان را می‌دهد تا قبل از نتیجه‌گیری سریع در مورد مسائل، سؤالات بهتری بپرسیم و راه‌حل‌های بهتری ایجاد کنیم.</p>
+                <p><?php the_excerpt(); ?></p>
             </div>
             <div class="col-md-3 singleCourse-body-content-image">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/services-checkbox.png" alt="Meyar">
+                <?php if ( get_field('coursesheroimage') ) : ?>
+                    <img src="<?php echo get_field('coursesheroimage')['url']; ?>" alt="">
+                <?php endif; ?> 
             </div>
         </div>
     </div>
@@ -43,42 +52,52 @@ get_header();?>
             <input class="radio" id="five" name="group" type="radio">
             <input class="radio" id="six" name="group" type="radio">
             <div class="tabs">
-                <label class="tab Dana-Bold" id="one-tab" for="one">طول دوره</label>
+                <label class="tab Dana-Bold" id="one-tab" for="one">اهداف</label>
                 <label class="tab Dana-Bold" id="two-tab" for="two">سرفصلها</label>
-                <label class="tab Dana-Bold" id="three-tab" for="three">اهداف</label>
-                <label class="tab Dana-Bold" id="four-tab" for="four">مخاطبین دوره</label>
-                <label class="tab Dana-Bold" id="five-tab" for="five">شیوه برگزاری</label>
-                <label class="tab Dana-Bold" id="six-tab" for="six">گواهی دوره</label>
+                <label class="tab Dana-Bold" id="three-tab" for="three">شیوه برگزاری</label>
+                <label class="tab Dana-Bold" id="four-tab" for="four">گواهی</label>
+                <label class="tab Dana-Bold" id="five-tab" for="five">مخاطبین</label>
             </div>
+            <!-- baraye hameye taghaye momkene rech text bayad style bedam -->
             <div class="panels">
                 <div class="panel" id="one-panel">
-                    <div class="panel-title">طول دوره</div>
-                     <div class="panel-title">طول دوره</div>
-                      <div class="panel-title">طول دوره</div>
-                       <div class="panel-title">طول دوره</div>
-                        <div class="panel-title">طول دوره</div>
-                         <div class="panel-title">طول دوره</div>
-                          <div class="panel-title">طول دوره</div>
+                    <?php if ( get_field('coursestarget') ) : ?>
+                        <?php echo get_field('coursestarget')?>
+                    <?php endif; ?> 
                 </div>
                 <div class="panel" id="two-panel">
-                    <div class="panel-title">سرفصلها</div>
+                    <div class="panel-title">
+                        <?php if ( get_field('coursesindex') ) : ?>
+                            <?php echo get_field('coursesindex')?>
+                        <?php endif; ?> 
+                    </div>
                 </div>
                 <div class="panel" id="three-panel">
-                    <div class="panel-title">اهداف</div>
+                    <div class="panel-title">
+                        <?php if ( get_field('coursesformat') ) : ?>
+                            <?php echo get_field('coursesformat')?>
+                        <?php endif; ?> 
+                    </div>
                 </div>
                 <div class="panel" id="four-panel">
-                    <div class="panel-title">مخاطبین دوره</div>
+                    <div class="panel-title">
+                        <?php if ( get_field('coursescertificate') ) : ?>
+                            <?php echo get_field('coursescertificate')?>
+                        <?php endif; ?> 
+                    </div>
                 </div>
                 <div class="panel" id="five-panel">
-                    <div class="panel-title">شیوه برگزاری </div>
-                </div>
-                <div class="panel" id="six-panel">
-                    <div class="panel-title">گواهی دوره</div>
+                    <div class="panel-title">
+                        <?php if ( get_field('coursesfollowers') ) : ?>
+                            <?php echo get_field('coursesfollowers')?>
+                        <?php endif; ?> 
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 
+    <?php if ( get_field('coursestizer') ) : ?>   
     <div class="container singleService-tizer">
         <div class="container singleService-tizer-header">
             <div class="singleService-header-title">
@@ -86,46 +105,97 @@ get_header();?>
                 <h1 class="Dana-Black">تیز معرفی سرویس</h1>
             </div>
         </div>
-        <div class="singleService-tizer-video">
-            <video id="myVideo" poster="" controls>
-                <source src="<?php echo get_template_directory_uri(); ?>/assets/images/t.mp4" type="video/mp4">
-            </video>
-        </div>
+
+        <?php 
+        $aparat_url =  get_field('coursestizer');
+        if ($aparat_url && preg_match('/aparat\.com\/v\/([a-zA-Z0-9]+)/', $aparat_url, $matches)) :
+            $video_id = $matches[1];
+        ?>
+            <div class="singleService-tizer-video aparat-responsive">
+                <iframe
+                    src="https://www.aparat.com/video/video/embed/videohash/<?php echo esc_attr($video_id); ?>/vt/frame"
+                    allowfullscreen
+                    webkitallowfullscreen
+                    mozallowfullscreen>
+                </iframe>
+            </div>
+        <?php endif; ?>
     </div>
+    <?php endif; ?> 
     <div class="container singleCourse-faq">
         <div class="FAQSection">
             <h1 class="sectionTitle Dana-Black mb-4">سوالات متداول</h1>
             <div class="FAQSection-items container">
+                <?php if ( get_field('coursesfaqq1') ) : ?>
                 <div class="FAQSection-item Dana-DemiBold">
-                    <h4 class="FAQSection-item-question">گروه معيار چه خدماتي ارائه مي دهد؟</h4>
+                    <h4 class="FAQSection-item-question">
+                        <?php echo get_field('coursesfaqq1')?>
+                    </h4>
                     <div class="FAQSection-item-answer">
-                        <p>شرکت معيار به عنوان ارائه‌دهنده خدمات روانشناسی صنعتی-سازمانی، با بهره‌گیری از علوم روانشناختی و روش‌های مبتنی بر شواهد و تجربه، به سازمان‌ها در حل چالش‌های منابع انسانی و ساير دپارتمان ها و بهبود عملکرد کمک می‌کند. این خدمات شامل ارزیابی و گزینش کارکنان، توسعه رهبری، تحول فرهنگ سازمانی و افزایش بهره‌وری می‌شود. با استفاده از ابزارهایی مانند آزمون‌های روانسنجی، مصاحبه‌های ساختاریافته و کوچینگ، به سازمان‌ها در ایجاد محیط کاری سالم و اثربخش یاری می‌رسانید. هدف نهایی، همسو کردن سرمایه انسانی با اهداف استراتژیک سازمان و ایجاد مزیت رقابتی پایدار است.</p>
+                        <p>
+                            <?php if ( get_field('coursesfaqa1') ) : ?>
+                                <?php echo get_field('coursesfaqa1')?>
+                            <?php endif; ?> 
+                        </p>
                     </div>
                 </div>
+                <?php endif; ?> 
+                <?php if ( get_field('coursesfaqq2') ) : ?>
                 <div class="FAQSection-item Dana-DemiBold">
-                    <h4 class="FAQSection-item-question">نحوه دريافت خدمات از گروه معيار چگونه است؟</h4>
+                    <h4 class="FAQSection-item-question">
+                        <?php echo get_field('coursesfaqq2')?>
+                    </h4>
                     <div class="FAQSection-item-answer">
-                        <p>برای دریافت خدمات از گروه معیار، می‌توانید از طریق وب‌سایت رسمی مجموعه یا شماره‌های تماس با کارشناسان ما ارتباط برقرار کنید. در گام نخست، یک جلسه مشاوره رایگان برای تحلیل نیازهای سازمان شما برگزار می‌شود. سپس، طرح خدمات سفارشی متناسب با اهداف و بودجه شما طراحی و ارائه می‌گردد. پس از تأیید نهایی و انعقاد قرارداد، اجرای پروژه توسط تیم متخصصان ما آغاز شده و تا دستیابی به نتایج ملموس پشتيباني و همراهی ادامه می‌یابد. برای آغاز همکاری، همین امروز با ما تماس بگیرید.</p>
+                        <p>
+                            <?php if ( get_field('coursesfaqa2') ) : ?>
+                                <?php echo get_field('coursesfaqa2')?>
+                            <?php endif; ?> 
+                        </p>
                     </div>
                 </div>
+                <?php endif; ?> 
+                <?php if ( get_field('coursesfaqq3') ) : ?>
                 <div class="FAQSection-item Dana-DemiBold">
-                    <h4 class="FAQSection-item-question">آیا خدمات شما برای سازمان‌های کوچک مقياس (٢٠ تا ٩٩ نفر)هم مناسب است؟</h4>
+                    <h4 class="FAQSection-item-question">
+                        <?php echo get_field('coursesfaqq3')?>
+                    </h4>
                     <div class="FAQSection-item-answer">
-                        <p>پاسخ: بله. خدمات ما به صورت ماژولار و مقیاس‌پذیر طراحی شده و برای سازمان‌های با هر اندازه و در هر صنعتی قابل تطبیق است.</p>
+                        <p>
+                            <?php if ( get_field('coursesfaqa3') ) : ?>
+                                <?php echo get_field('coursesfaqa3')?>
+                            <?php endif; ?> 
+                        </p>
                     </div>
                 </div>
+                <?php endif; ?> 
+                <?php if ( get_field('coursesfaqq4') ) : ?>
                 <div class="FAQSection-item Dana-DemiBold">
-                    <h4 class="FAQSection-item-question">چطور مي توانم با معيار همكاري كنم؟</h4>
+                    <h4 class="FAQSection-item-question">
+                        <?php echo get_field('coursesfaqq4')?>
+                    </h4>
                     <div class="FAQSection-item-answer">
-                        <p>برای همکاری با گروه معیار، می‌توانید از طریق تلفن، ايميل يا وب‌سایت مجموعه با پر کردن فرم درخواست همكاري در سايت اقدام کنید. کارشناسان ما پس از بررسي رزومه شما و نیاز مجموعه، جلسه اي براي مصاحبه با شما هماهنگ خواهند كرد.</p>
+                        <p>
+                            <?php if ( get_field('coursesfaqa4') ) : ?>
+                                <?php echo get_field('coursesfaqa4')?>
+                            <?php endif; ?> 
+                        </p>
                     </div>
                 </div>
+                <?php endif; ?> 
+                <?php if ( get_field('coursesfaqq5') ) : ?>
                 <div class="FAQSection-item Dana-DemiBold">
-                    <h4 class="FAQSection-item-question">چه تفاوتي بين معيار و مجموعه هاي ديگر توسعه كسب و كار وجود دارد؟</h4>
+                    <h4 class="FAQSection-item-question">
+                        <?php echo get_field('coursesfaqq5')?>
+                    </h4>
                     <div class="FAQSection-item-answer">
-                        <p>تفاوت اصلی "معیار" با سایر مجموعه‌های توسعه کسب‌وکار در تخصص یکپارچه و منحصربه‌فرد آن در حوزه روانشناسی صنعتی-سازمانی است. برخلایت روش‌های عمومی مشاوره مدیریت، ما با ترکیب دانش روانشناسی، ابزارهای روانسنجی استاندارد و راهکارهای بومی، مانند بازي هاي سازماني به صورت علمی و عمقی به بهبود سرمایه انسانی و فرهنگ سازمانی می‌پردازیم. این رویکرد تضمین می‌کند که تغییرات ایجاد شده نه تنها ملموس، بلکه پایدار و همسو با ویژگی‌های منحصربه‌فرد هر سازمان باشند.</p>
+                        <p>
+                            <?php if ( get_field('coursesfaqa5') ) : ?>
+                                <?php echo get_field('coursesfaqa5')?>
+                            <?php endif; ?> 
+                        </p>
                     </div>
                 </div>
+                <?php endif; ?> 
             </div>
         </div>
     </div>

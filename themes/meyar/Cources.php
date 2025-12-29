@@ -12,6 +12,9 @@ get_header(); ?>
                 <h1 class="col-md-4 Dana-Black">دوره‌هــای آموزشی</h1>
             </div>
         </div>
+        <div class="c-body-image">
+            <img  src="<?php echo get_template_directory_uri(); ?>/assets/images/coursesHeroImage.png" alt="">
+        </div>
     </div>
     <div class="container c-filter">
         <div class="row">
@@ -29,37 +32,54 @@ get_header(); ?>
     </div>
     <div class="container c-cards">
         <div class="row">
-            <?php for ($i = 0; $i < 12; $i++): ?>
-                <?php
-                    // Add a 'more-card' class to cards after the 5th one
-                    $card_class = ($i >= 5) ? 'c-card more-card' : 'c-card';
+            <?php
+                $args = array(
+                    'post_type'      => 'course',  // MUST be lowercase
+                    'posts_per_page' =>  -1,          // get all posts
+                    'orderby'        => 'menu_order', // uses page-attributes
+                    'order'          => 'ASC'
+                );
+                $services_query = new WP_Query($args);
+                if ( $services_query->have_posts() ) :
                 ?>
-                <div class="<?php echo $card_class; ?>">
-                    <div class="row">
-                        <div class="col-md-9 c-card-info">
-                            <div class="c-card-info-title">
-                                <h1 class="Dana-Black">عنوان <?php echo $i  ?></h1>
-                                <div class="c-card-actions">
-                                    <a class="Dana-Bold meyar-orange-btn" href="#">مشاهده دوره</a>
+                    <?php while ( $services_query->have_posts() ) : $services_query->the_post(); ?>
+                        <div class="c-card">
+                            <div class="row">
+                                <div class="col-md-9 c-card-info">
+                                    <div class="c-card-info-title">
+                                        <h1 class="Dana-Black"><?php the_title(); ?></h1>
+                                        <div class="c-card-actions">
+                                            <a class="Dana-Bold meyar-orange-btn" href="<?php the_permalink(); ?>">مشاهده دوره</a>
+                                        </div>
+                                    </div>
+                                    <div class="c-card-info-thicher">
+                                        <h2 class="Dana-Bold">
+                                            <?php if ( get_field('coursesteachername') ) : ?>
+                                                <?php echo get_field('coursesteachername')?>
+                                            <?php endif; ?>   
+                                        </h2>
+                                    </div>
+                                    <div class="c-card-info-desc">
+                                        <p class="Dana-Regular">
+                                            <?php if ( get_field('coursessummary') ) : ?>
+                                                <?php echo get_field('coursessummary')?>
+                                            <?php endif; ?> 
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 c-card-image">
+                                    <?php if ( get_field('coursesheroimage') ) : ?>
+                                        <img src="<?php echo get_field('coursesheroimage')['url']; ?>" alt="">
+                                    <?php endif; ?>   
                                 </div>
                             </div>
-                            <div class="c-card-info-thicher">
-                                <h2 class="Dana-Bold">دکتر مهدی مسلمی فر</h2>
-                            </div>
-                            <div class="c-card-info-desc">
-                                <p class="Dana-Regular">آنچه باید بدان توجه کنیم این است که تفکر سیستمی بیش از آنکه مجموعه‌ای از ابزارها و روش‌ها باشد، یک فلسفه زیربنایی است. بسیاری از ما به امید حل مسائل اغلب تجاری‌مان دست به دامن ابزارهای رایج در تفکر سیستمی می‌شویم. </p>
-                            </div>
                         </div>
-                        <div class="col-md-3 c-card-image">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/services-checkbox.png" alt="Meyar">
-                        </div>
-                    </div>
-                </div>
-            <?php endfor; ?> 
+                    <?php endwhile; ?>
+                <?php endif; wp_reset_postdata(); ?>
         </div>
 
     </div>
-    <div class="container c-otherCourses">
+    <!-- <div class="container c-otherCourses">
          <div class="singleService-pointTitle">
             <span></span>
             <h1 class="singleService-text-title Dana-Black">سایر دوره های آموزشی</h1>
@@ -116,7 +136,7 @@ get_header(); ?>
                 <?php endfor; ?> 
             </div>
         </div>
-    </div>
+    </div> -->
 </section>
 
 
