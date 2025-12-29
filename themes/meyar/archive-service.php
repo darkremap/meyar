@@ -147,6 +147,7 @@
                                             <div class="showTizerPopup">
                                                 <div class="popup-overlay"></div>
                                                 <div class="popup-content">
+                                                    <div class="popup-loader"><span></span></div>
                                                     <button class="popup-close" aria-label="بستن">
                                                         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                         <circle cx="10" cy="10" r="10" fill="#FDB913"/>
@@ -279,6 +280,7 @@
                                              <div class="showTizerPopup">
                                                 <div class="popup-overlay"></div>
                                                 <div class="popup-content">
+                                                    <div class="popup-loader"><span></span></div>
                                                     <button class="popup-close" aria-label="بستن">
                                                         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                         <circle cx="10" cy="10" r="10" fill="#FDB913"/>
@@ -322,35 +324,6 @@
                 <?php endif; wp_reset_postdata(); ?>
             </div>
         </div>
-
-
-
-        <!-- <?php if ( have_posts() ) : ?>
-            <div class="services-grid">
-                <?php while ( have_posts() ) : the_post(); ?>
-                    <article id="post-<?php the_ID(); ?>" <?php post_class('service-item'); ?>>
-                        <a href="<?php the_permalink(); ?>">
-                            <?php if ( has_post_thumbnail() ) : ?>
-                                <div class="service-thumb">
-                                    <?php the_post_thumbnail('medium'); ?>
-                                </div>
-                            <?php endif; ?>
-                            <h2 class="service-title"><?php the_title(); ?></h2>
-                        </a>
-                        <div class="service-excerpt">
-                            <?php the_excerpt(); ?>
-                        </div>
-                    </article>
-                <?php endwhile; ?>
-            </div>
-
-            <div class="pagination">
-                <?php the_posts_pagination(); ?>
-            </div>
-
-        <?php else : ?>
-            <p>No services found.</p>
-        <?php endif; ?> -->
     </div>
 </main>
 

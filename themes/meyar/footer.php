@@ -170,7 +170,6 @@
     <script>
         document.addEventListener("DOMContentLoaded", function () {
 
-            // باز کردن پاپ‌آپ
             document.querySelectorAll(".iconbox-img a").forEach(function (btn) {
                 btn.addEventListener("click", function (e) {
                     e.preventDefault();
@@ -178,27 +177,42 @@
                     const popup = this.closest(".services-item-card-left")
                                     .querySelector(".showTizerPopup");
 
-                    if (popup) {
-                        popup.classList.add("active");
+                    if (!popup) return;
+
+                    const iframe = popup.querySelector("iframe");
+                    const loader = popup.querySelector(".popup-loader");
+
+                    // فعال‌سازی loader
+                    if (loader) loader.classList.add("active");
+
+                    // ذخیره src فقط یکبار
+                    if (iframe && !iframe.dataset.src) {
+                        iframe.dataset.src = iframe.src;
                     }
+
+                    // set src (شروع لود)
+                    if (iframe && iframe.dataset.src) {
+                        iframe.src = iframe.dataset.src;
+                    }
+
+                    // وقتی ویدیو لود شد
+                    iframe.onload = function () {
+                        if (loader) loader.classList.remove("active");
+                    };
+
+                    popup.classList.add("active");
                 });
             });
 
-            // بستن پاپ‌آپ (overlay یا دکمه ×)
             document.querySelectorAll(".showTizerPopup").forEach(function (popup) {
 
                 popup.addEventListener("click", function (e) {
-
-                    // کلیک روی overlay
-                    if (e.target.classList.contains("popup-overlay")) {
+                    if (
+                        e.target.classList.contains("popup-overlay") ||
+                        e.target.closest(".popup-close")
+                    ) {
                         closePopup(popup);
                     }
-
-                    // کلیک روی دکمه ضربدر (یا SVG داخلش)
-                    if (e.target.closest(".popup-close")) {
-                        closePopup(popup);
-                    }
-
                 });
 
             });
@@ -206,13 +220,17 @@
             function closePopup(popup) {
                 popup.classList.remove("active");
 
-                // توقف ویدیو
                 const iframe = popup.querySelector("iframe");
-                if (iframe) iframe.src = iframe.src;
+                const loader = popup.querySelector(".popup-loader");
+
+                if (iframe) iframe.src = "";
+                if (loader) loader.classList.add("active"); // ریست برای دفعه بعد
             }
 
         });
     </script>
+
+
 
 
 </body>
