@@ -312,39 +312,60 @@
         <div class="customerSection-slider">
         <div class="customerSection-slide-track">
             <?php for ($i = 0; $i < 2; $i++): ?>
-            <div class="customerSection-slide">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/C1.png" alt="">
-            </div>
-            <div class="customerSection-slide">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/C2.png" alt="">
-            </div>
-            <div class="customerSection-slide">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/C3.png" alt="">
-            </div>
-            <div class="customerSection-slide">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/C4.png" alt="">
-            </div>
-            <div class="customerSection-slide">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/C6.png" alt="">
-            </div>
-            <div class="customerSection-slide">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/C7.png" alt="">
-            </div>
-            <div class="customerSection-slide">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/C8.png" alt="">
-            </div>
-            <div class="customerSection-slide">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/C9.png" alt="">
-            </div>
-            <div class="customerSection-slide">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/C10.png" alt="">
-            </div>
-            <div class="customerSection-slide">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/C11.png" alt="">
-            </div>
-            <div class="customerSection-slide">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/C12.png" alt="">
-            </div>
+                 <?php
+                $args = array(
+                    'post_type'      => 'customers',  // MUST be lowercase
+                    'posts_per_page' =>  -1,          // get all posts
+                    'orderby'        => 'menu_order', // uses page-attributes
+                    'order'          => 'ASC'
+                );
+
+                $customers_query = new WP_Query($args);
+
+                if ( $customers_query->have_posts() ) :
+                ?>
+                    <?php while ( $customers_query->have_posts() ) : $customers_query->the_post(); ?>
+                        <div class="customerSection-slide">
+                            <?php if ( get_field('customerheroimage') ) : ?>
+                                <img src="<?php echo get_field('customerheroimage')['url']; ?>" alt="">
+                            <?php endif; ?> 
+                        </div>
+                    <?php endwhile; ?>
+                <?php endif; wp_reset_postdata(); ?>
+
+                <!-- <div class="customerSection-slide">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/C1.png" alt="">
+                </div>
+                <div class="customerSection-slide">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/C2.png" alt="">
+                </div>
+                <div class="customerSection-slide">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/C3.png" alt="">
+                </div>
+                <div class="customerSection-slide">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/C4.png" alt="">
+                </div>
+                <div class="customerSection-slide">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/C6.png" alt="">
+                </div>
+                <div class="customerSection-slide">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/C7.png" alt="">
+                </div>
+                <div class="customerSection-slide">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/C8.png" alt="">
+                </div>
+                <div class="customerSection-slide">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/C9.png" alt="">
+                </div>
+                <div class="customerSection-slide">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/C10.png" alt="">
+                </div>
+                <div class="customerSection-slide">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/C11.png" alt="">
+                </div>
+                <div class="customerSection-slide">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/C12.png" alt="">
+                </div> -->
             <?php endfor; ?>  
         </div>
         </div>
