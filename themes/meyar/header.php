@@ -18,14 +18,14 @@
     <div class="">
         <div class="container">
             <div class="row header-container">
-                <div class="col-md-2 header-branding">
+                <div class="col-md-2 col-7 order-md-first header-branding">
                     <a class="site-logo" href="/">
                         <img class="site-logo-Soff" src="<?php echo get_template_directory_uri(); ?>/assets/images/LogoLight.png" alt="Mwyar">
                         <img class="site-logo-Son" src="<?php echo get_template_directory_uri(); ?>/assets/images/LogoBlue.png" alt="Mwyar">
                     </a>    
                 </div>
 
-                <nav class="col-md-8 main-navigation" id="main-navigation">
+                <nav class="col-md-8 col-2 order-first main-navigation" id="main-navigation">
                     <button class="menu-toggle" id="menu-toggle" aria-expanded="false" aria-controls="primary-menu">
                         <span class="menu-toggle-bar"></span>
                         <span class="menu-toggle-bar"></span>
@@ -55,7 +55,7 @@
                     ?>
                 </nav>
 
-                <div class="col-md-2 d-flex justify-content-end">
+                <div class="col-md-2 col-3 order-md-last order-last d-flex justify-content-end">
                     <a href="<?php echo get_permalink( get_page_by_path( 'contact-us' ) ); ?>"  class="buttonTroy Dana-Bold" >تماس با ما</a>
                 </div>
             </div>

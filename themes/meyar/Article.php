@@ -51,9 +51,7 @@ get_header(); ?>
                                         <h1 class="Dana-Black basePages-card-title"><?php the_title(); ?></h1>
                                         <p class="Dana-Regular basePages-card-des">
                                             <?php if ( get_field('articlesummary') ) : ?>
-                                                <?php echo get_field('articlesummary'); ?>
-                                            <?php else : ?>
-                                                no acf
+                                                <?php echo get_field('articlesummary', false, false); ?>
                                             <?php endif; ?>
                                         </p>
                                     </div>

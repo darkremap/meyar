@@ -88,6 +88,56 @@
         });
         });
     </script>
+    <!-- baraye menue mobyle -->
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // --- بخش ۱: کنترل منوی اصلی ---
+        const menuToggle = document.getElementById('menu-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+        const body = document.body;
+
+        if (menuToggle && navMenu) {
+            menuToggle.addEventListener('click', function() {
+                menuToggle.classList.toggle('active');
+                navMenu.classList.toggle('active');
+                body.classList.toggle('menu-open');
+            });
+        }
+
+        // --- بخش ۲: کنترل زیرمنوها (کد جدید) ---
+        // پیدا کردن تمام آیتم‌های منویی که فرزند (زیرمنو) دارند
+        const parentMenuItems = document.querySelectorAll('.nav-menu .menu-item-has-children');
+
+        parentMenuItems.forEach(function(item) {
+            // پیدا کردن لینک اصلی داخل آیتم منو
+            const link = item.querySelector('a');
+
+            // اضافه کردن رویداد کلیک به لینک
+            link.addEventListener('click', function(event) {
+                // جلوگیری از رفتن به صفحه لینک
+                event.preventDefault();
+
+                // پیدا کردن زیرمنوی مربوط به این آیتم
+                const subMenu = item.querySelector('.sub-menu, .children');
+
+                if (subMenu) {
+                    // بستن تمام زیرمنوهای دیگر برای تمیز نگه داشتن رابط کاربری
+                    parentMenuItems.forEach(function(otherItem) {
+                        if (otherItem !== item) {
+                            const otherSubMenu = otherItem.querySelector('.sub-menu, .children');
+                            if (otherSubMenu) {
+                                otherSubMenu.classList.remove('active');
+                            }
+                        }
+                    });
+
+                    // باز یا بسته کردن زیرمنوی فعلی
+                    subMenu.classList.toggle('active');
+                }
+            });
+        });
+    });
+    </script>
     <script>
         // Add scroll event listener to change header background
         window.addEventListener('scroll', function() {
