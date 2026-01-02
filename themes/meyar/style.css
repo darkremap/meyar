@@ -120,10 +120,18 @@ a{
 body {
     direction: rtl;
 }
+.mobile{
+    display: none;
+}
 
 /* Responsive design */
 @media (max-width: 768px) {
-
+    .mobile{
+        display: flex;
+    }
+    .dec{
+        display: none;
+    }
 }
 
 /* Basic reset and styles-----------------------------------------------------------------------------------------------Basic reset and styles */
@@ -404,14 +412,11 @@ body {
     color: #666;
 }
 
-@media (min-width: 769px) {
+/* Improved mobile styles */
+@media (max-width: 768px) {
     .mobile-dropdown-toggle {
         display: none;
     }
-}
-
-/* Improved mobile styles */
-@media (max-width: 768px) {
     .header-container {
         min-height: 70px;
     }
@@ -493,6 +498,20 @@ body {
     margin-top: 40px;
 }
 
+/* Improved mobile styles */
+@media (max-width: 768px) {
+    .heroSection-content h1{
+        font-size: 24px;
+    }
+    .heroSection-content-btns{
+       text-align: center;
+    }
+    .heroSection-content-btns a{
+        font-size: 12px;
+        padding: 10px 20px;
+    }
+}
+
 /* whySection------------------------------------------------------------------WhySection */
 .whySection{
     background-color: var(--White);
@@ -508,11 +527,6 @@ body {
     margin-bottom: 25px;
 }
 
-.whyCards-container{
-    /* display: grid; */
-    /* grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); */
-    /* gap: 25px; */
-}
 
 .whyCard-dot{
   height: 160px;
@@ -600,7 +614,20 @@ body {
     display: none;
 }
 
-
+/* Improved mobile styles */
+@media (max-width: 768px) {
+    .whySection{
+        padding-inline: 20px;
+        border-radius: 20px;
+    }
+    .whyCard-Icon{
+        height: 170px;
+        padding-inline: 0;
+    }   
+    .whyCard-title{
+        font-size: 14px;
+    }
+}
 
 
 
@@ -659,6 +686,7 @@ body {
 .serviseContent h5{
     color: var(--White);
     z-index: 10;
+    text-align: center;
 }
 
 .serviseCard:hover .serviseCard-image-n{
@@ -666,7 +694,26 @@ body {
 }
 
 .serviseCard:hover .serviseTitle{
-       text-shadow: 0px 0px 20px #0c0c0c, 0 0 1em blue, 0 0 0.2em blue;
+    text-shadow: 0px 0px 20px #0c0c0c, 0 0 1em blue, 0 0 0.2em blue;
+}
+
+/* Improved mobile styles */
+@media (max-width: 768px) {
+    .serviseSection-Items{
+        padding-inline: 0;
+    }
+    .serviseContent h5{
+        font-size: 12px;
+    }
+    .serviseContent img{
+        width: 100px;
+        height: 100px;
+        padding: 5px 5px 20px 5px;
+    }
+    .serviseContent{
+        padding: 10px;
+        border-radius: 15px;
+    }
 }
 
 /* newsSection ---------------------------------------------------------------------------------------------------------newsSection */
@@ -676,7 +723,7 @@ body {
     margin-top: -85px;
     border-radius: 50px;
     z-index: 10000;
-    background: linear-gradient(0deg,rgba(214, 214, 214, 1) 0%, rgba(228, 228, 228, 1) 25%, rgba(255, 255, 255, 1) 57%);
+    background: linear-gradient(180deg, #FFFFFF 0%, #E4E4E4 24.6%, #D6D6D6 57%);
 }
 .newsSection-event-card{
     padding: 50px 0 50px 20px;
@@ -694,9 +741,7 @@ body {
     border-bottom: 1px solid var(--Merlot);
     padding-bottom: 30px;
 }
-.newsSection-Event-items{
 
-}
 .newsSection-Event-item{
     display: flex;
     flex-direction: row;
@@ -711,9 +756,6 @@ body {
 .newsSection-Event-item-title p{
     color: var(--LightMerlot);
 }
-.newsSection-Event-item-icon{
-
-}
 .newsSection-navTable{
     padding-block: 50px;
 }
@@ -727,7 +769,6 @@ body {
 }
 .tab{
     cursor: pointer;
-    padding:10px 20px;
     margin:0px 2px;
     background:var(--White);
     display:inline-block;
@@ -799,6 +840,42 @@ body {
     margin-top: 30px;
     font-size: 16px;
     color: var(--Zodiac);
+}
+
+/* Improved mobile styles */
+@media (max-width: 768px) {
+    .newsSection-event-card{
+        padding: 50px 0 0 0;
+        margin-inline: 30px;
+    }
+    .newsSection-Event {
+        border-radius: 20px;
+        padding: 30px;
+    }
+    .newsSection{
+        border-radius: 20px;
+    }
+    .newsSection-Event h2{
+        font-size: 20px;
+        text-align: center;
+    }
+    .newsSection-Event-item-title h4{
+        font-size: 18px;
+    }
+    .newsSection-Event-item-title p{
+        font-size: 15px;
+    }
+    .tab {
+        width: 110px;
+        padding:10px 20px;
+        border-radius: 15px 15px 0 0;
+    }
+    .newsSection-navTable label {
+        font-size: 15px;
+    }
+    .panels {
+        border-radius: 20px;
+    }
 }
 
 
@@ -922,7 +999,9 @@ body {
 
 /* Mobile Styles */
 @media (max-width: 768px) {
-
+    .customerSection{
+        border-radius: 20px;
+    }
 }
 
 
@@ -1003,7 +1082,29 @@ body {
     margin-top: auto;
     padding-block: 30px;
 }
-
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .footer-right{
+        padding-left: 10px;
+    }
+    .footer-right p {
+        padding-bottom: 40px;
+        border-bottom: 1px solid var(--Tory);
+    }
+    .footer-midel {
+        padding-block: 40px;
+        border-bottom: 1px solid var(--Tory);
+    }
+    .footer-left {
+        padding-right: 20px;
+    }
+    .site-footer li {
+        margin-bottom: 30px;
+    }
+    .footer-left-media {
+        margin-top: 10px;
+    }
+}
 
 /* about Us ------------------------------------------------------------------------------------- ablut Us */
 .about{
