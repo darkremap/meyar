@@ -19,7 +19,7 @@ get_header(); ?>
                 </div>
                 <div class="col-5 about-hero-left">
                     <img class="about-hero-left-dec" src="<?php echo get_template_directory_uri(); ?>/assets/images/about01.png" alt="">
-                    <img class="about-hero-left-mobile" src="<?php echo get_template_directory_uri(); ?>/assets/images/about01Mobile.png" alt="">
+                    <!-- <img class="about-hero-left-mobile" src="<?php echo get_template_directory_uri(); ?>/assets/images/about01Mobile.png" alt=""> -->
                 </div>  
             </div>
         </div>
@@ -28,12 +28,12 @@ get_header(); ?>
     <section class="about-why">
         <div class="container">
             <div class="row">
-                <div class="col-md-8 col-5">
+                <div class="col-md-7 col-5">
                     <div class="about-why-right">
                         <img src="<?php echo get_template_directory_uri(); ?>/assets/images/about02.png" alt="">
                     </div>
                 </div>
-                <div class="cpl-md-4 col-7 about-why-left">
+                <div class="col-md-5 col-7 about-why-left">
                     <div class="about-why-left-item">
                         <p class="pointer"></p> 
                         <h3 class="Dana-ExtraBold">یکپارچگی خدمات</h3>

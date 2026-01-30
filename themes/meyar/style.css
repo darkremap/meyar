@@ -825,7 +825,7 @@ body {
 #four:checked ~ .tabs #four-tab,
 #five:checked ~ .tabs #five-tab{
   background:#fffffff6;
-  color: var(--PastelBlue);
+  color: var(--Zodiac);
   position: relative;
   z-index: 3;
   text-align: center;
@@ -1569,7 +1569,7 @@ body {
 }
 .services-items-line{
     position: absolute;
-    top: 133px;
+    top: 7%;
     bottom: 135px;
     right: 50%;
     width: 2px;
@@ -1606,7 +1606,7 @@ body {
 }
 
 .services-item-card-right{
-    padding: 45px 60px;
+    padding: 45px 35px;
     z-index: 10;
     border-radius: 10px;
     display: flex;
@@ -1616,6 +1616,7 @@ body {
     color: var(--Merlot);
     text-align: center;
     clip-path: ellipse(100% 85% at 100% 50%);
+    height: 100%;
 }
 .services-item-card-right h1{
     border-bottom: 5px solid var(--Merlot);
@@ -1624,7 +1625,7 @@ body {
 }
 .services-item-card-right h2{
     font-size: 24px;
-    width: 100px;
+    width: 140px;
 }
 
 
@@ -1645,7 +1646,7 @@ body {
     height: 115px;
     padding-inline: 8px;
     overflow-y: auto;
-    margin-block: 0;
+    margin-bottom: 24px;
 }
 .services-item-card-left-icons{
     display: flex;
@@ -1674,6 +1675,7 @@ body {
 .leftSide-card .services-item-card-right{
     clip-path: ellipse(100% 85% at 0 50%);
     border-left: none;
+    height: unset;
 }
 
 .leftSide-card .services-item-card{
@@ -1720,17 +1722,18 @@ body {
         padding-bottom: 10px;
     }
     .services-item-card-right h2 {
-        font-size: 14px;
+        font-size: 10px;
         width: 100%;
         margin: 10px;
     }
     .services-item-card-left p{
         height: 80px;
         font-size: 8px;
+        margin-bottom: 0;
     }
     .services-item-point{
-        right: 103%;
-        top: 47px;
+        right: 102%;
+        top: 55px;
         width: 16px;
         height: 16px;
     }
@@ -1742,9 +1745,9 @@ body {
         width: 100%;
     }
     .services-item-line {
-        /* top: 53px;
-        width: 36px;
-        right: 85%; */
+        top: 63px;
+        width: 8px;
+        right: 100%;
     }
     .services-head-right{
         padding-bottom: 5px;
@@ -1758,13 +1761,19 @@ body {
     }
     .services-item-card {
         padding-left: 0;
+        margin-top: -25px;
     }
     .services-items-line{
-        top: 60px;
+        top: 6%;
         bottom: 65px;
+        width: 1px;
     }
     .leftSide-card .services-item-point {
-        right: -12%;
+        right: unset;
+        left: 102%;
+    }
+    .services-items {
+        margin-top: 35px;
     }
 }
 
@@ -1873,6 +1882,60 @@ body {
     height: 35px;
     width: 35px;
     background-color: #FDB913;
+}
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .personalServices-contentCard {
+        padding: 20px;
+    }
+    .personalServices-contentCard-iconbox {
+        display: none;
+    }
+    .personalServices-contentCard-header {
+        padding-right: 0;
+        display: flex;
+        align-items: center;
+    }
+    .personalServices-contentCard-header h1 {
+        margin-bottom: 0;
+        text-align: center;
+        font-size: 24px;
+    }
+    .personalServices-tagCard-body img {
+        display: none;
+    }
+    .personalServices-tagCard {
+        padding: 0;
+    }
+    .personalservices-contentCard-text p {
+        padding-inline: 10px;
+    }
+    .personalServices-tagCard-body h1 {
+        font-size: 50px;
+        z-index: 20;
+    }
+    .basePosition .personalServices-tagCard::after {
+        left: 100%;
+        height: 19px;
+        width: 19px;
+        top: 75%;
+    }
+    .reversPosition .personalServices-tagCard {
+        padding-left: 0;
+    }
+    .reversPosition .personalServices-tagCard::after {
+        left: 0;
+        height: 19px;
+        width: 19px;
+        top: 75%;
+    }
+    .services-main{
+        padding-top: 150px;
+        padding-bottom: 50px;
+    }
+    .reversPosition .personalservices-contentCard-text {
+        padding-left: 0;
+    }
 }
 
 /* singlePersonalDevelopment ------------------------------------------------------------------------------ singlePersonalDevelopment */
@@ -2175,6 +2238,7 @@ body {
 .c-body{
     position: relative;
     height: 400px;
+    margin-bottom: 120px;
 }
 
 .c-body h1{
@@ -2193,14 +2257,14 @@ body {
 .c-filter-search{
     padding-bottom: 30px;
     margin-bottom: 30px;
-    border-bottom: 2px solid var(--orange);
+    /* border-bottom: 2px solid var(--orange); */
 }
 .c-filter-input-group{
     display: flex;
     background-color: white;
     flex-direction: row;
     align-items: center;
-    width: 40%;
+    width: 50%;
     justify-content: space-between;
     padding: 10px 20px;
     border-radius: 50px;
@@ -2273,6 +2337,21 @@ body {
     padding-top: 30px;
     border-top: 1px solid var(--orange);
 }
+.courses .tab{
+    width: 250px;
+    background: none;
+    color: var(--White);
+}
+.courses .panels{
+    background: transparent;
+    box-shadow: none;
+    padding: 20px 0;
+    border-radius: 0;
+}
+.courses .tabs{
+    border-bottom: 2px solid var(--White); 
+}
+   
 
 
 /* singleCourse -------------------------------------------------------------------------------------------------------------------------- singleCourse */

@@ -196,17 +196,26 @@
         document.addEventListener('DOMContentLoaded', function() {
             const searchInput = document.querySelector('.c-filter-form-control');
             const courseCards = document.querySelectorAll('.c-card');
+            const allCoursesTab = document.getElementById('five');
+            const firstTab = document.getElementById('one');
 
             if (searchInput) {
                 searchInput.addEventListener('input', function() {
                     const searchTerm = this.value.toLowerCase().trim();
 
+                    // 🔹 اگر سرچ خالی شد → برگرد به تب اول
+                    if (searchTerm.length === 0) {
+                        firstTab.checked = true;
+                    } 
+                    // 🔹 اگر چیزی تایپ شد → برو روی تب کل دوره‌ها
+                    else {
+                        allCoursesTab.checked = true;
+                    }
+
                     courseCards.forEach(card => {
-                        // Get the text content from the title and description
-                        const title = card.querySelector('.c-card-info-title h1').textContent.toLowerCase();
-                        const description = card.querySelector('.c-card-info-desc p').textContent.toLowerCase();
-                        
-                        // Check if the card's content includes the search term
+                        const title = card.querySelector('.c-card-info-title h1')?.textContent.toLowerCase() || '';
+                        const description = card.querySelector('.c-card-info-desc p')?.textContent.toLowerCase() || '';
+
                         if (title.includes(searchTerm) || description.includes(searchTerm)) {
                             card.classList.remove('hidden');
                         } else {
@@ -217,6 +226,7 @@
             }
         });
     </script>
+
     <script>
         document.addEventListener("DOMContentLoaded", function () {
 
