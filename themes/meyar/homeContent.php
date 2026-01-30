@@ -8,18 +8,18 @@
 <section class="heroSection">
     <div class="container">
     <div class="row">
-        <div class="col-md-4 heroSection-content">
-        <h1 class="Dana-ExtraBold">
-            <?php if ( get_field('homepagetitele') ) : ?>
-                <?php echo get_field('homepagetitele'); ?>
-            <?php else : ?>
-                (توسعــــــه انســانی تعــــــــالی سازمانی)
-            <?php endif; ?>
-        </h1>
-        <div class="heroSection-content-btns">
-            <a class="buttonTroy Dana-Bold meyar-yello-btn" href="#">درخواست دمو</a>
-            <a class="mx-3 buttonTroy Dana-Bold meyar-white-btn" href="#">دریافت کاتالوگ</a>
-        </div>
+        <div class="col-md-4 order-md-first order-last heroSection-content">
+            <h1 class="Dana-ExtraBold">
+                <?php if ( get_field('homepagetitele') ) : ?>
+                    <?php echo get_field('homepagetitele'); ?>
+                <?php else : ?>
+                    (توسعــــــه انســانی تعــــــــالی سازمانی)
+                <?php endif; ?>
+            </h1>
+            <div class="heroSection-content-btns">
+                <a class="buttonTroy Dana-Bold meyar-yello-btn" href="#">درخواست دمو</a>
+                <a class="mx-3 buttonTroy Dana-Bold meyar-white-btn" href="#">دریافت کاتالوگ</a>
+            </div>
         </div>
         <div class="col-md-8 d-flex justify-content-center">
             <?php 
@@ -56,7 +56,7 @@
             if ( $why_query->have_posts() ) :
             ?>
                 <?php while ( $why_query->have_posts() ) : $why_query->the_post(); ?>
-                    <div class="col-md-2 whyCard">
+                    <div class="col-md-2 col-4 whyCard">
                         <div class="whyCard-content">
                             <div class="whyCard-Icon">
                                 <!-- ACF Fields -->
@@ -81,17 +81,23 @@
     <div class="container">
         <div class="row serviseSection-Items">
          <?php
-            $args = array(
-                'post_type'      => 'service',  // MUST be lowercase
-                'posts_per_page' => 12,          // get all posts
-                'orderby'        => 'menu_order', // uses page-attributes
-                'order'          => 'ASC'
+           $args = array(
+                'post_type' => array('service', 'personal_development'),
+                'posts_per_page' => -1,
+                'orderby'        => 'rand',
+                'tax_query' => array(
+                    array(
+                        'taxonomy' => 'post_tag',
+                        'field'    => 'slug',
+                        'terms'    => 'home',
+                    ),
+                ),
             );
             $services_query = new WP_Query($args);
             if ( $services_query->have_posts() ) :
             ?>
                 <?php while ( $services_query->have_posts() ) : $services_query->the_post(); ?>
-                    <div class="col-md-3">
+                    <div class="col-md-3 col-4">
                         <div class="serviseCard">
                             <a href="<?php the_permalink(); ?>">
                                 <div class="serviseContent">
@@ -176,100 +182,190 @@
             </div>
             <div class="panels">
             <div class="panel" id="one-panel">
-            <div class="panel-title">
-                <div class="row">
-                    <?php
-                        $args = array(
-                            'post_type'      => 'course',  // MUST be lowercase
-                            'posts_per_page' => 3,          // get all posts
-                            'orderby'        => 'menu_order', // uses page-attributes
-                            'order'          => 'ASC'
-                        );
-                        $services_query = new WP_Query($args);
-                        if ( $services_query->have_posts() ) :
-                        ?>
-                            <?php while ( $services_query->have_posts() ) : $services_query->the_post(); ?>
-                                <div class="col-4">
-                                    <div class="panelCard">
-                                        <a href="<?php the_permalink(); ?>">
-                                            <div class="panelContent">
-                                                <!-- ACF Fields -->
-                                                <?php if ( get_field('coursesheroimage') ) : ?>
-                                                    <img src="<?php echo get_field('coursesheroimage')['url']; ?>" alt="">
-                                                <?php endif; ?>          
-                                                <h5 class="panelTitle Dana-ExtraBold"><?php the_title(); ?></h5>
-                                            </div>
-                                        </a>
+                <div class="panel-title dec">
+                    <div class="row">
+                        <?php
+                            $args = array(
+                                'post_type'      => 'course',  // MUST be lowercase
+                                'posts_per_page' => 3,          // get all posts
+                                'orderby'        => 'menu_order', // uses page-attributes
+                                'order'          => 'ASC'
+                            );
+                            $services_query = new WP_Query($args);
+                            if ( $services_query->have_posts() ) :
+                            ?>
+                                <?php while ( $services_query->have_posts() ) : $services_query->the_post(); ?>
+                                    <div class="col-4">
+                                        <div class="panelCard">
+                                            <a href="<?php the_permalink(); ?>">
+                                                <div class="panelContent">
+                                                    <!-- ACF Fields -->
+                                                    <?php if ( get_field('coursesheroimage') ) : ?>
+                                                        <img src="<?php echo get_field('coursesheroimage')['url']; ?>" alt="">
+                                                    <?php endif; ?>          
+                                                    <h5 class="panelTitle Dana-ExtraBold"><?php the_title(); ?></h5>
+                                                </div>
+                                            </a>
+                                        </div>
                                     </div>
-                                </div>
-                            <?php endwhile; ?>
-                        <?php endif; wp_reset_postdata(); ?>
+                                <?php endwhile; ?>
+                            <?php endif; wp_reset_postdata(); ?>
+                    </div>
                 </div>
-            </div>
+                <div class="panel-title mobile">
+                    <div class="row">
+                        <?php
+                            $args = array(
+                                'post_type'      => 'course',  // MUST be lowercase
+                                'posts_per_page' => 2,          // get all posts
+                                'orderby'        => 'menu_order', // uses page-attributes
+                                'order'          => 'ASC'
+                            );
+                            $services_query = new WP_Query($args);
+                            if ( $services_query->have_posts() ) :
+                            ?>
+                                <?php while ( $services_query->have_posts() ) : $services_query->the_post(); ?>
+                                    <div class="col-6">
+                                        <div class="panelCard">
+                                            <a href="<?php the_permalink(); ?>">
+                                                <div class="panelContent">
+                                                    <!-- ACF Fields -->
+                                                    <?php if ( get_field('coursesheroimage') ) : ?>
+                                                        <img src="<?php echo get_field('coursesheroimage')['url']; ?>" alt="">
+                                                    <?php endif; ?>          
+                                                    <h5 class="panelTitle Dana-ExtraBold"><?php the_title(); ?></h5>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                <?php endwhile; ?>
+                            <?php endif; wp_reset_postdata(); ?>
+                    </div>
+                </div>
             </div>
             <div class="panel" id="two-panel">
-            <div class="panel-title">
-                <div class="row">
-                    <?php
-                        $args = array(
-                            'post_type'      => 'news',  // MUST be lowercase
-                            'posts_per_page' => 3,          // get all posts
-                            'orderby'        => 'menu_order', // uses page-attributes
-                            'order'          => 'ASC'
-                        );
-                        $services_query = new WP_Query($args);
-                        if ( $services_query->have_posts() ) :
-                        ?>
-                            <?php while ( $services_query->have_posts() ) : $services_query->the_post(); ?>
-                                <div class="col-4">
-                                    <div class="panelCard">
-                                        <a href="<?php the_permalink(); ?>">
-                                            <div class="panelContent">
-                                                <!-- ACF Fields -->
-                                                <?php if ( get_field('newsheroimage') ) : ?>
-                                                    <img src="<?php echo get_field('newsheroimage')['url']; ?>" alt="">
-                                                <?php endif; ?>          
-                                                <h5 class="panelTitle Dana-ExtraBold"><?php the_title(); ?></h5>
-                                            </div>
-                                        </a>
+                <div class="panel-title dec">
+                    <div class="row">
+                        <?php
+                            $args = array(
+                                'post_type'      => 'news',  // MUST be lowercase
+                                'posts_per_page' => 3,          // get all posts
+                                'orderby'        => 'menu_order', // uses page-attributes
+                                'order'          => 'ASC'
+                            );
+                            $services_query = new WP_Query($args);
+                            if ( $services_query->have_posts() ) :
+                            ?>
+                                <?php while ( $services_query->have_posts() ) : $services_query->the_post(); ?>
+                                    <div class="col-4">
+                                        <div class="panelCard">
+                                            <a href="<?php the_permalink(); ?>">
+                                                <div class="panelContent">
+                                                    <!-- ACF Fields -->
+                                                    <?php if ( get_field('newsheroimage') ) : ?>
+                                                        <img src="<?php echo get_field('newsheroimage')['url']; ?>" alt="">
+                                                    <?php endif; ?>          
+                                                    <h5 class="panelTitle Dana-ExtraBold"><?php the_title(); ?></h5>
+                                                </div>
+                                            </a>
+                                        </div>
                                     </div>
-                                </div>
-                            <?php endwhile; ?>
-                        <?php endif; wp_reset_postdata(); ?>
+                                <?php endwhile; ?>
+                            <?php endif; wp_reset_postdata(); ?>
+                    </div>
                 </div>
-            </div>
+                <div class="panel-title mobile">
+                    <div class="row">
+                        <?php
+                            $args = array(
+                                'post_type'      => 'news',  // MUST be lowercase
+                                'posts_per_page' => 2,          // get all posts
+                                'orderby'        => 'menu_order', // uses page-attributes
+                                'order'          => 'ASC'
+                            );
+                            $services_query = new WP_Query($args);
+                            if ( $services_query->have_posts() ) :
+                            ?>
+                                <?php while ( $services_query->have_posts() ) : $services_query->the_post(); ?>
+                                    <div class="col-6">
+                                        <div class="panelCard">
+                                            <a href="<?php the_permalink(); ?>">
+                                                <div class="panelContent">
+                                                    <!-- ACF Fields -->
+                                                    <?php if ( get_field('newsheroimage') ) : ?>
+                                                        <img src="<?php echo get_field('newsheroimage')['url']; ?>" alt="">
+                                                    <?php endif; ?>          
+                                                    <h5 class="panelTitle Dana-ExtraBold"><?php the_title(); ?></h5>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                <?php endwhile; ?>
+                            <?php endif; wp_reset_postdata(); ?>
+                    </div>
+                </div>
             </div>
             <div class="panel" id="three-panel">
-            <div class="panel-title">
-                <div class="row">
-                    <?php
-                        $args = array(
-                            'post_type'      => 'Article',  // MUST be lowercase
-                            'posts_per_page' => 3,          // get all posts
-                            'orderby'        => 'menu_order', // uses page-attributes
-                            'order'          => 'ASC'
-                        );
-                        $services_query = new WP_Query($args);
-                        if ( $services_query->have_posts() ) :
-                        ?>
-                            <?php while ( $services_query->have_posts() ) : $services_query->the_post(); ?>
-                                <div class="col-4">
-                                    <div class="panelCard">
-                                        <a href="<?php the_permalink(); ?>">
-                                            <div class="panelContent">
-                                                <!-- ACF Fields -->
-                                                <?php if ( get_field('articleheroimage') ) : ?>
-                                                    <img src="<?php echo get_field('articleheroimage')['url']; ?>" alt="">
-                                                <?php endif; ?>          
-                                                <h5 class="panelTitle Dana-ExtraBold"><?php the_title(); ?></h5>
-                                            </div>
-                                        </a>
+                <div class="panel-title dec">
+                    <div class="row">
+                        <?php
+                            $args = array(
+                                'post_type'      => 'Article',  // MUST be lowercase
+                                'posts_per_page' => 3,          // get all posts
+                                'orderby'        => 'menu_order', // uses page-attributes
+                                'order'          => 'ASC'
+                            );
+                            $services_query = new WP_Query($args);
+                            if ( $services_query->have_posts() ) :
+                            ?>
+                                <?php while ( $services_query->have_posts() ) : $services_query->the_post(); ?>
+                                    <div class="col-4">
+                                        <div class="panelCard">
+                                            <a href="<?php the_permalink(); ?>">
+                                                <div class="panelContent">
+                                                    <!-- ACF Fields -->
+                                                    <?php if ( get_field('articleheroimage') ) : ?>
+                                                        <img src="<?php echo get_field('articleheroimage')['url']; ?>" alt="">
+                                                    <?php endif; ?>          
+                                                    <h5 class="panelTitle Dana-ExtraBold"><?php the_title(); ?></h5>
+                                                </div>
+                                            </a>
+                                        </div>
                                     </div>
-                                </div>
-                            <?php endwhile; ?>
-                        <?php endif; wp_reset_postdata(); ?>
+                                <?php endwhile; ?>
+                            <?php endif; wp_reset_postdata(); ?>
+                    </div>
                 </div>
-            </div>
+                <div class="panel-title mobile">
+                    <div class="row">
+                        <?php
+                            $args = array(
+                                'post_type'      => 'Article',  // MUST be lowercase
+                                'posts_per_page' =>  2,          // get all posts
+                                'orderby'        => 'menu_order', // uses page-attributes
+                                'order'          => 'ASC'
+                            );
+                            $services_query = new WP_Query($args);
+                            if ( $services_query->have_posts() ) :
+                            ?>
+                                <?php while ( $services_query->have_posts() ) : $services_query->the_post(); ?>
+                                    <div class="col-6">
+                                        <div class="panelCard">
+                                            <a href="<?php the_permalink(); ?>">
+                                                <div class="panelContent">
+                                                    <!-- ACF Fields -->
+                                                    <?php if ( get_field('articleheroimage') ) : ?>
+                                                        <img src="<?php echo get_field('articleheroimage')['url']; ?>" alt="">
+                                                    <?php endif; ?>          
+                                                    <h5 class="panelTitle Dana-ExtraBold"><?php the_title(); ?></h5>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                <?php endwhile; ?>
+                            <?php endif; wp_reset_postdata(); ?>
+                    </div>
+                </div>
             </div>
             </div>
         </div>
@@ -294,9 +390,9 @@
         if ( $faq_query->have_posts() ) :
         ?>
             <?php while ( $faq_query->have_posts() ) : $faq_query->the_post(); ?>
-            <div class="FAQSection-item Dana-DemiBold">
-                <h4 class="FAQSection-item-question"><?php the_title(); ?></h4>
-                <div class="FAQSection-item-answer">
+            <div class="FAQSection-item">
+                <h4 class="FAQSection-item-question Dana-Bold"><?php the_title(); ?></h4>
+                <div class="FAQSection-item-answer Dana-Medium">
                     <p><?php the_excerpt(); ?></p>
                 </div>
             </div>
@@ -312,39 +408,26 @@
         <div class="customerSection-slider">
         <div class="customerSection-slide-track">
             <?php for ($i = 0; $i < 2; $i++): ?>
-            <div class="customerSection-slide">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/C1.png" alt="">
-            </div>
-            <div class="customerSection-slide">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/C2.png" alt="">
-            </div>
-            <div class="customerSection-slide">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/C3.png" alt="">
-            </div>
-            <div class="customerSection-slide">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/C4.png" alt="">
-            </div>
-            <div class="customerSection-slide">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/C6.png" alt="">
-            </div>
-            <div class="customerSection-slide">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/C7.png" alt="">
-            </div>
-            <div class="customerSection-slide">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/C8.png" alt="">
-            </div>
-            <div class="customerSection-slide">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/C9.png" alt="">
-            </div>
-            <div class="customerSection-slide">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/C10.png" alt="">
-            </div>
-            <div class="customerSection-slide">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/C11.png" alt="">
-            </div>
-            <div class="customerSection-slide">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/C12.png" alt="">
-            </div>
+                 <?php
+                $args = array(
+                    'post_type'      => 'customers',  // MUST be lowercase
+                    'posts_per_page' =>  -1,          // get all posts
+                    'orderby'        => 'menu_order', // uses page-attributes
+                    'order'          => 'ASC'
+                );
+
+                $customers_query = new WP_Query($args);
+
+                if ( $customers_query->have_posts() ) :
+                ?>
+                    <?php while ( $customers_query->have_posts() ) : $customers_query->the_post(); ?>
+                        <div class="customerSection-slide">
+                            <?php if ( get_field('customerheroimage') ) : ?>
+                                <img src="<?php echo get_field('customerheroimage')['url']; ?>" alt="">
+                            <?php endif; ?> 
+                        </div>
+                    <?php endwhile; ?>
+                <?php endif; wp_reset_postdata(); ?>
             <?php endfor; ?>  
         </div>
         </div>

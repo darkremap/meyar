@@ -23,7 +23,7 @@ get_header(); ?>
                 </h2>
             </div>
             <!-- bayad matn bashad ba ghabliyat text ya list ya ... -->
-            <p class="Dana-Medium"> <?php the_excerpt(); ?></p>
+            <p class="Dana-Medium"> <?php the_content(); ?></p>
         </div>
     </section>
     <section class="container spd-parts">
@@ -66,7 +66,7 @@ get_header(); ?>
                 <div class="spd-parts-items-body">
                     <!-- bayad matn bashad ba ghabliyat text ya list ya ... -->
                     <div class="Dana-Medium spd-parts-items-content">
-                       <?php echo esc_html( get_the_excerpt($level2->ID) ); ?>
+                       <?php echo esc_html(  the_content($level2->ID) ); ?>
                     </div>
                     <div class="spd-parts-item">
                         <div class="row">

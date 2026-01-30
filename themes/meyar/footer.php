@@ -75,7 +75,7 @@
 
     
     <?php wp_footer(); ?>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script> -->
     <script>
         document.querySelectorAll('.FAQSection-item').forEach(item => {
         item.addEventListener('click', () => {
@@ -87,6 +87,56 @@
             item.classList.toggle('active');
         });
         });
+    </script>
+    <!-- baraye menue mobyle -->
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // --- بخش ۱: کنترل منوی اصلی ---
+        const menuToggle = document.getElementById('menu-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+        const body = document.body;
+
+        if (menuToggle && navMenu) {
+            menuToggle.addEventListener('click', function() {
+                menuToggle.classList.toggle('active');
+                navMenu.classList.toggle('active');
+                body.classList.toggle('menu-open');
+            });
+        }
+
+        // --- بخش ۲: کنترل زیرمنوها (کد جدید) ---
+        // پیدا کردن تمام آیتم‌های منویی که فرزند (زیرمنو) دارند
+        const parentMenuItems = document.querySelectorAll('.nav-menu .menu-item-has-children');
+
+        parentMenuItems.forEach(function(item) {
+            // پیدا کردن لینک اصلی داخل آیتم منو
+            const link = item.querySelector('a');
+
+            // اضافه کردن رویداد کلیک به لینک
+            link.addEventListener('click', function(event) {
+                // جلوگیری از رفتن به صفحه لینک
+                event.preventDefault();
+
+                // پیدا کردن زیرمنوی مربوط به این آیتم
+                const subMenu = item.querySelector('.sub-menu, .children');
+
+                if (subMenu) {
+                    // بستن تمام زیرمنوهای دیگر برای تمیز نگه داشتن رابط کاربری
+                    parentMenuItems.forEach(function(otherItem) {
+                        if (otherItem !== item) {
+                            const otherSubMenu = otherItem.querySelector('.sub-menu, .children');
+                            if (otherSubMenu) {
+                                otherSubMenu.classList.remove('active');
+                            }
+                        }
+                    });
+
+                    // باز یا بسته کردن زیرمنوی فعلی
+                    subMenu.classList.toggle('active');
+                }
+            });
+        });
+    });
     </script>
     <script>
         // Add scroll event listener to change header background
@@ -146,17 +196,26 @@
         document.addEventListener('DOMContentLoaded', function() {
             const searchInput = document.querySelector('.c-filter-form-control');
             const courseCards = document.querySelectorAll('.c-card');
+            const allCoursesTab = document.getElementById('five');
+            const firstTab = document.getElementById('one');
 
             if (searchInput) {
                 searchInput.addEventListener('input', function() {
                     const searchTerm = this.value.toLowerCase().trim();
 
+                    // 🔹 اگر سرچ خالی شد → برگرد به تب اول
+                    if (searchTerm.length === 0) {
+                        firstTab.checked = true;
+                    } 
+                    // 🔹 اگر چیزی تایپ شد → برو روی تب کل دوره‌ها
+                    else {
+                        allCoursesTab.checked = true;
+                    }
+
                     courseCards.forEach(card => {
-                        // Get the text content from the title and description
-                        const title = card.querySelector('.c-card-info-title h1').textContent.toLowerCase();
-                        const description = card.querySelector('.c-card-info-desc p').textContent.toLowerCase();
-                        
-                        // Check if the card's content includes the search term
+                        const title = card.querySelector('.c-card-info-title h1')?.textContent.toLowerCase() || '';
+                        const description = card.querySelector('.c-card-info-desc p')?.textContent.toLowerCase() || '';
+
                         if (title.includes(searchTerm) || description.includes(searchTerm)) {
                             card.classList.remove('hidden');
                         } else {
@@ -167,6 +226,7 @@
             }
         });
     </script>
+
     <script>
         document.addEventListener("DOMContentLoaded", function () {
 

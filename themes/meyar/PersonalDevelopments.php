@@ -11,11 +11,11 @@ get_header();
     <div class="services-main">
         <section class="services-head container">
             <div class="row services-head-right align-items-center">
-                <div class="col-md-5">
+                <div class="col-md-5 col-6">
                     <h1 class="Dana-Black">توسعه فردی و ســازمــانـی</h1>
                     <h2 class="Dana-Regular">Personal and Organizational Development</h2>
                 </div>
-                <div class="col-md-7">
+                <div class="col-md-7 col-6">
                     <!-- فضای خالی برای طرح‌بندی -->
                 </div>
             </div>
@@ -43,9 +43,9 @@ get_header();
                         
                         if ($i % 2 == 0):
                 ?>
-                            <!-- حالت زوج -->
+                            <!-- حالت فرد -->
                             <div class="row personalServices-items basePosition">
-                                <div class="col-md-9 personalServices-contentItem">
+                                <div class="col-9 personalServices-contentItem">
                                     <div class="personalServices-contentCard">
                                         <div class="personalServices-contentCard-iconbox">  
                                             <!-- SVG اول -->
@@ -84,7 +84,7 @@ get_header();
                                             </a>
                                         </div>
                                         <div class="personalServices-contentCard-header">
-                                            <h1 class="Bana-ExtraBold"><?php the_title(); ?></h1>
+                                            <h1 class="Dana-ExtraBlack"><?php the_title(); ?></h1>
                                             <div class="personalservices-contentCard-text">
                                                 <?php if (get_field('personaldevelopmentssummary')) : ?>
                                                     <p class="m-0 Dana-Regular">
@@ -95,35 +95,39 @@ get_header();
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-md-3 personalServices-tagItem">
-                                    <div class="personalServices-tagCard">
-                                        <div class="personalServices-tagCard-body" style="background-color: <?php echo $color; ?>">
-                                            <h1 class="Dana-Medium"><?php echo $item_number; ?></h1>
-                                            <?php if (get_field('personaldevelopmentsicone')) : ?>
-                                                <img src="<?php echo get_field('personaldevelopmentsicone')['url']; ?>" alt="<?php the_title(); ?>">
-                                            <?php endif; ?>
+                                <div class="col-3 personalServices-tagItem">
+                                    <a href="<?php the_permalink(); ?>">
+                                        <div class="personalServices-tagCard">
+                                            <div class="personalServices-tagCard-body" style="background-color: <?php echo $color; ?>">
+                                                <h1 class="Dana-Medium"><?php echo $item_number; ?></h1>
+                                                <?php if (get_field('personaldevelopmentsicone')) : ?>
+                                                    <img src="<?php echo get_field('personaldevelopmentsicone')['url']; ?>" alt="<?php the_title(); ?>">
+                                                <?php endif; ?>
+                                            </div>
                                         </div>
-                                    </div>
+                                    </a>
                                 </div>
                             </div>
                             
                         <?php else: ?>
-                            <!-- حالت فرد -->
+                            <!-- حالت زوج -->
                             <div class="row personalServices-items reversPosition">
-                                <div class="col-md-3 personalServices-tagItem">
-                                    <div class="personalServices-tagCard">
-                                        <div class="personalServices-tagCard-body" style="background-color: <?php echo $color; ?>">
-                                            <h1 class="Dana-Medium"><?php echo $item_number; ?></h1>
-                                            <?php if (get_field('personaldevelopmentsicone')) : ?>
-                                                <img src="<?php echo get_field('personaldevelopmentsicone')['url']; ?>" alt="<?php the_title(); ?>">
-                                            <?php endif; ?>
+                                <div class="col-3 personalServices-tagItem">
+                                    <a href="<?php the_permalink(); ?>">
+                                        <div class="personalServices-tagCard">
+                                            <div class="personalServices-tagCard-body" style="background-color: <?php echo $color; ?>">
+                                                <h1 class="Dana-Medium"><?php echo $item_number; ?></h1>
+                                                <?php if (get_field('personaldevelopmentsicone')) : ?>
+                                                    <img src="<?php echo get_field('personaldevelopmentsicone')['url']; ?>" alt="<?php the_title(); ?>">
+                                                <?php endif; ?>
+                                            </div>
                                         </div>
-                                    </div>
+                                    </a>
                                 </div>
-                                <div class="col-md-9 personalServices-contentItem">
+                                <div class="col-9 personalServices-contentItem">
                                     <div class="personalServices-contentCard">
                                         <div class="personalServices-contentCard-header">
-                                            <h1 class="Bana-ExtraBold"><?php the_title(); ?></h1>
+                                            <h1 class="Dana-ExtraBlack"><?php the_title(); ?></h1>
                                             <div class="personalservices-contentCard-text">
                                                 <?php if (get_field('personaldevelopmentssummary')) : ?>
                                                     <p class="m-0 Dana-Regular">

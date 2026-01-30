@@ -38,7 +38,7 @@
     </section>
     <?php if ( get_field('servicetizer') ) : ?>  
     <section class="container singleService-tizer">
-        <div class="container singleService-tizer-header">
+        <div class="singleService-tizer-header">
             <div class="singleService-header-title">
                 <span></span>
                 <h1 class="Dana-Black">تیز معرفی سرویس</h1>
