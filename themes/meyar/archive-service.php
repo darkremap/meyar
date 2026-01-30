@@ -6,13 +6,15 @@
         <div class="services-head">
             <div class="container">
                  <div class="row services-head-right">
-                    <div class="col-md-6">
+                    <div class="col-md-6 col-7">
                         <h1 class="Dana-Black">فرآیندهای سازمانی</h1>
                         <h2 class="Dana-Regular">organizational processes</h1>
                     </div>
                 </div>
             </div>
-            <div class="services-heroImage"></div>
+            <div class="services-heroImage">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/ServicesHeroImage.png" alt="">
+            </div>
         </div>
 
         <div class="services-items">
@@ -31,7 +33,7 @@
                     <?php $i = 0; // Initialize counter ?>
                     <?php while ( $services_query->have_posts() ) : $services_query->the_post(); ?>
                     <div class="row margin-mines">
-                        <div class="col-md-6">
+                        <div class="col-6">
                             <?php if ($i % 2 == 0) { ?>
                                 <div class="services-item">
                                     <span class="services-item-line"></span>
@@ -175,7 +177,7 @@
                                 </div>  
                             <?php } ?>
                         </div>
-                        <div class="col-md-6">
+                        <div class="col-6">
                             <?php if ($i % 2 != 0) { ?>
                                 <div class="services-item leftSide-card">
                                     <span class="services-item-line"></span>

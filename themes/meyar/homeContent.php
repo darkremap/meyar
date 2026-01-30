@@ -274,7 +274,7 @@
                             <?php endif; wp_reset_postdata(); ?>
                     </div>
                 </div>
-                <div class="panel-title molile">
+                <div class="panel-title mobile">
                     <div class="row">
                         <?php
                             $args = array(
@@ -336,7 +336,7 @@
                             <?php endif; wp_reset_postdata(); ?>
                     </div>
                 </div>
-                <div class="panel-title molie">
+                <div class="panel-title mobile">
                     <div class="row">
                         <?php
                             $args = array(
