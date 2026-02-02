@@ -1509,10 +1509,6 @@ body {
     padding-block: 150px;
 }
 
-.services-head{
-
-}
-
 .services-heroImage{
     /* background-image: url(assets/images/ServicesHeroImage.png); */
     background-repeat: no-repeat;
@@ -1525,6 +1521,9 @@ body {
 
 .services-head-right{
     padding-bottom: 180px;
+}
+.services-head-right img{
+    width: 100%;
 }
 
 .services-head-right h1{
@@ -1551,6 +1550,11 @@ body {
     .services-head-right h2 {
         font-size: 22px;
     }
+    
+    .services-head{
+        margin-bottom: 50px;
+    }
+
 }
 
 
@@ -2473,6 +2477,18 @@ body {
 .contactUs-location{
 
 }
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .contactUs-header img{
+        width: 100%;
+    }
+    .contactUs-header {
+        margin-bottom: 50px;
+    }
+    .contactUs-title h1 {
+        font-size: 36px;
+    }
+}
 
 
 /* basePages ---------------------------------------------------------------------- */
@@ -2540,6 +2556,19 @@ body {
     margin: 3px;
     border-radius: 50px;
 }
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .basePages-card-shadow {
+        left: 6px;
+    }
+    .basePages-card {
+        width: 95%;
+    }
+    .basePages {
+        padding-bottom: 50px;
+    }
+}
+
 
 
 /* Events  --------------------------------------------------------------------------------------------------- */
@@ -2592,7 +2621,31 @@ body {
     width: 100%;
     height: 100%;
 }
-
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .events .contactUs-image {
+        top: 70px;
+        width: 100%;
+    }
+    .events-items{
+        margin-top: 140px;
+    }
+    .events-card {
+        padding: 15px;
+        height: 250px;
+    }
+    .events-card h1 {
+        margin-bottom: 10px;
+    }
+    .events-card-summary{
+        height: 183px;
+        overflow-y: auto;
+    }
+    .futureHero {
+        left: 0;
+        width: 100%;
+    }
+}
 
 /* showTizerPopup ------------------------------------------------------------------------------- showTizerPopup */
 .showTizerPopup {

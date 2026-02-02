@@ -12,7 +12,7 @@ get_header(); ?>
                 <h1 class="Dana-Black">اخبار سازمانی</h1>
                 <h2 class="Dana-Regular">News</h2>
             </div>
-            <div class="col-md-8 ">
+            <div class="col-md-8">
                 <img  src="<?php echo get_template_directory_uri(); ?>/assets/images/newsHeroImage.png" alt="">
             </div>
         </div>

@@ -16,7 +16,7 @@ get_header();
                     <h2 class="Dana-Regular">Personal and Organizational Development</h2>
                 </div>
                 <div class="col-md-7 col-6">
-                    <!-- فضای خالی برای طرح‌بندی -->
+                    <img  src="<?php echo get_template_directory_uri(); ?>/assets/images/PersonalAndOrganizationalDevelopmentHero.png" alt="">
                 </div>
             </div>
         </section>
