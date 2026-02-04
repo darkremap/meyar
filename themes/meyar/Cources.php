@@ -62,7 +62,7 @@ get_header(); ?>
                             <?php while ( $services_query->have_posts() ) : $services_query->the_post(); ?>
                                 <div class="c-card">
                                     <div class="row">
-                                        <div class="col-md-9 c-card-info">
+                                        <div class="col-md-9 col-8 c-card-info">
                                             <div class="c-card-info-title">
                                                 <h1 class="Dana-Black"><?php the_title(); ?></h1>
                                                 <div class="c-card-actions">
@@ -84,7 +84,7 @@ get_header(); ?>
                                                 </p>
                                             </div>
                                         </div>
-                                        <div class="col-md-3 c-card-image">
+                                        <div class="col-md-3 col-4 c-card-image">
                                             <?php if ( get_field('coursesheroimage') ) : ?>
                                                 <img src="<?php echo get_field('coursesheroimage')['url']; ?>" alt="">
                                             <?php endif; ?>   
@@ -109,7 +109,7 @@ get_header(); ?>
                             <?php while ( $services_query->have_posts() ) : $services_query->the_post(); ?>
                                 <div class="c-card">
                                     <div class="row">
-                                        <div class="col-md-9 c-card-info">
+                                        <div class="col-md-9 col-8 c-card-info">
                                             <div class="c-card-info-title">
                                                 <h1 class="Dana-Black"><?php the_title(); ?></h1>
                                                 <div class="c-card-actions">
@@ -131,7 +131,7 @@ get_header(); ?>
                                                 </p>
                                             </div>
                                         </div>
-                                        <div class="col-md-3 c-card-image">
+                                        <div class="col-md-3 col-4 c-card-image">
                                             <?php if ( get_field('coursesheroimage') ) : ?>
                                                 <img src="<?php echo get_field('coursesheroimage')['url']; ?>" alt="">
                                             <?php endif; ?>   
@@ -156,7 +156,7 @@ get_header(); ?>
                             <?php while ( $services_query->have_posts() ) : $services_query->the_post(); ?>
                                 <div class="c-card">
                                     <div class="row">
-                                        <div class="col-md-9 c-card-info">
+                                        <div class="col-md-9 col-8 c-card-info">
                                             <div class="c-card-info-title">
                                                 <h1 class="Dana-Black"><?php the_title(); ?></h1>
                                                 <div class="c-card-actions">
@@ -178,7 +178,7 @@ get_header(); ?>
                                                 </p>
                                             </div>
                                         </div>
-                                        <div class="col-md-3 c-card-image">
+                                        <div class="col-md-3 col-4 c-card-image">
                                             <?php if ( get_field('coursesheroimage') ) : ?>
                                                 <img src="<?php echo get_field('coursesheroimage')['url']; ?>" alt="">
                                             <?php endif; ?>   
@@ -203,7 +203,7 @@ get_header(); ?>
                             <?php while ( $services_query->have_posts() ) : $services_query->the_post(); ?>
                                 <div class="c-card">
                                     <div class="row">
-                                        <div class="col-md-9 c-card-info">
+                                        <div class="col-md-9 col-8 c-card-info">
                                             <div class="c-card-info-title">
                                                 <h1 class="Dana-Black"><?php the_title(); ?></h1>
                                                 <div class="c-card-actions">
@@ -225,7 +225,7 @@ get_header(); ?>
                                                 </p>
                                             </div>
                                         </div>
-                                        <div class="col-md-3 c-card-image">
+                                        <div class="col-md-3 col-4 c-card-image">
                                             <?php if ( get_field('coursesheroimage') ) : ?>
                                                 <img src="<?php echo get_field('coursesheroimage')['url']; ?>" alt="">
                                             <?php endif; ?>   
@@ -249,7 +249,7 @@ get_header(); ?>
                             <?php while ( $services_query->have_posts() ) : $services_query->the_post(); ?>
                                 <div class="c-card">
                                     <div class="row">
-                                        <div class="col-md-9 c-card-info">
+                                        <div class="col-md-9 col-8 c-card-info">
                                             <div class="c-card-info-title">
                                                 <h1 class="Dana-Black"><?php the_title(); ?></h1>
                                                 <div class="c-card-actions">
@@ -271,7 +271,7 @@ get_header(); ?>
                                                 </p>
                                             </div>
                                         </div>
-                                        <div class="col-md-3 c-card-image">
+                                        <div class="col-md-3 col-4 c-card-image">
                                             <?php if ( get_field('coursesheroimage') ) : ?>
                                                 <img src="<?php echo get_field('coursesheroimage')['url']; ?>" alt="">
                                             <?php endif; ?>   

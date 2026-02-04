@@ -132,6 +132,9 @@ body {
     .dec{
         display: none;
     }
+    .sectionTitle{
+        font-size: 16px;
+    }
 }
 
 /* Basic reset and styles-----------------------------------------------------------------------------------------------Basic reset and styles */
@@ -930,10 +933,11 @@ body {
         border-radius: 20px;
     }
     .FAQSection-item-question{
-        font-size: 18px;
+        font-size: 12px;
     }
     .FAQSection-item-answer{
         margin-top: 15px;
+        font-size: 12px;
     }
 }
 
@@ -2355,6 +2359,73 @@ body {
 .courses .tabs{
     border-bottom: 2px solid var(--White); 
 }
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .c-body-image {
+        width: 100%;
+        top: -30px;
+        left: 0;
+    }
+    .c-body-image img{
+        width: 100%;
+    }
+    .c-body{
+        height: unset;
+    }
+    .courses {
+        padding-top: 100px;
+        padding-bottom: 50px;
+    }
+    .c-filter-search {
+        margin-block: 0;
+        padding-block: 30px;
+    }
+    .c-filter-input-group {
+        width: 100%;
+        padding: 5px 20px;
+    }
+    .courses .tab {
+        width: 18%;
+        padding: 10px;
+        font-size: 10px;
+        display: flex;
+        align-items: center;
+    }
+    .courses .tabs {
+        display: flex;
+    }
+    .c-body h1 {
+        font-size: 20px;
+        line-height: 32px;
+    }
+    .c-card {
+        padding: 15px;
+        border-radius: 15px;
+    }
+    .c-card-info-title h1 {
+        font-size: 12px;
+        margin: 0;
+    }
+    .c-card-actions .meyar-orange-btn {
+        padding: 5px 12px;
+        font-size: 12px;
+    }
+    .c-card-info-thicher h2 {
+        font-size: 11px;
+        margin: 0;
+    }
+    .c-card-info-title {
+        margin-bottom: 5px;
+    }
+    .c-card-info-desc {
+        height: 120px;
+        overflow-y: auto;
+        font-size: 12px;
+    }
+    .c-card-image img {
+        border-radius: 15px;
+    }
+}
    
 
 
@@ -2426,6 +2497,58 @@ body {
     margin-top: 0;
     background: none;
     padding: 40px 0;
+}
+.singleCourse .singleService-pointTitle{
+    gap: 15px;
+}
+.singleCourse .otherService .singleService-pointTitle{
+    justify-content: start;
+}
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .singleCourse{
+        padding-top: 100px;
+        padding-bottom: 50px;
+    }
+    .singleCourse .c-body{
+        padding-bottom: 30px;
+    }
+    .singleCourse-body-title-techer h2 {
+        font-size: 12px;
+    }
+    .singleCourse-body-content-text {
+        font-size: 12px;
+        line-height: 24px;
+    }
+    .singleCourse-body-content-image {
+        padding-block: 0;
+    }
+    .singleCourse-index {
+        padding-block: 20px;
+        margin-bottom: 20px;
+    }
+    .singleCourse-index .tab {
+        width: 18%;
+        padding: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 14px;
+    }
+    .singleCourse-index .tabs {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        width: 100%;
+    }
+    .singleCourse-index .panels {
+        font-size: 12px;
+        padding: 20px;
+        border-radius: 15px;
+    }
+    .singleCourse-faq .FAQSection {
+        padding: 0;
+    }
 }
 
 
