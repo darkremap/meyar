@@ -12,7 +12,7 @@ get_header(); ?>
         </div>
         <div class="collaboration-cards">
             <div class="row">
-                <div class="col-6 collaboration-item-right">
+                <div class="col-6 collaboration-item-right" id="c-117">
                     <div class="line"></div>
                     <span class="Dana-Bold">01</span>
                     <div class="collaboration-card">
@@ -27,7 +27,7 @@ get_header(); ?>
             <div class="row">
                 <div class="col-6 collaboration-item-right">
                 </div>
-                <div class="col-6 collaboration-item-left">
+                <div class="col-6 collaboration-item-left" id="c-118">
                     <div class="line"></div>
                     <span class="Dana-Bold">02</span>
                     <div class="collaboration-card">
@@ -37,7 +37,7 @@ get_header(); ?>
                 </div>
             </div>
             <div class="row">
-                <div class="col-6 collaboration-item-right">
+                <div class="col-6 collaboration-item-right" id="c-119">
                     <div class="line"></div>
                     <span class="Dana-Bold">03</span>
                     <div class="collaboration-card">
@@ -52,7 +52,7 @@ get_header(); ?>
             <div class="row">
                 <div class="col-6 collaboration-item-right">
                 </div>
-                <div class="col-6 collaboration-item-left">
+                <div class="col-6 collaboration-item-left" id="c-120">
                     <div class="line"></div>
                     <span class="Dana-Bold">04</span>
                     <div class="collaboration-card">
@@ -67,8 +67,36 @@ get_header(); ?>
         <img  src="<?php echo get_template_directory_uri(); ?>/assets/images/cloud.png" alt="">
     </div>
     <div class="collaboration-form">
-        <div class="container collaboration-form-card">
-                <h1 class="Dana-ExtraBold">همکاری آموزشی</h1>
+        <div class="container Dana-ExtraBold collaboration-form-card">
+            <h1 class="Dana-ExtraBold">همکاری آموزشی</h1>
+            <div class="collaboration-form-card-content" id="f-117">
+                <?php
+                if ( function_exists( 'wpforms_display' ) ) {
+                    wpforms_display( 117 );
+                }
+                ?>
+            </div>
+            <div class="collaboration-form-card-content" id="f-118">
+                <?php
+                if ( function_exists( 'wpforms_display' ) ) {
+                    wpforms_display( 118 );
+                }
+                ?>
+            </div>
+            <div class="collaboration-form-card-content" id="f-119">
+                <?php
+                if ( function_exists( 'wpforms_display' ) ) {
+                    wpforms_display( 119 );
+                }
+                ?>
+            </div>
+            <div class="collaboration-form-card-content" id="f-120">
+                <?php
+                if ( function_exists( 'wpforms_display' ) ) {
+                    wpforms_display( 120 );
+                }
+                ?>
+            </div>
         </div>
     </div>
 </section>

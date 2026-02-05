@@ -3007,7 +3007,7 @@ body {
     background: var(--White);
 }
 .collaboration-cloud-image{
-    margin-top: -190px;
+    margin-top: -300px;
     z-index: 1;
     position: relative;
 }
@@ -3032,6 +3032,17 @@ body {
     font-size: 32px;
     text-align: center;
     padding-bottom: 20px;
+}
+.collaboration-form-card .wpforms-container{
+    padding-inline: 30px !important;
+}
+
+.collaboration-form-card-content {
+    display: none;
+}
+
+.collaboration-form-card-content.active {
+    display: block;
 }
 
 

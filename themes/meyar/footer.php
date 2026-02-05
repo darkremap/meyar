@@ -290,6 +290,44 @@
         });
     </script>
 
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+
+            const cards = document.querySelectorAll('[id^="c-"]');
+            const forms = document.querySelectorAll('[id^="f-"]');
+            const formSection = document.querySelector('.collaboration-form');
+
+            function hideAllForms() {
+                forms.forEach(form => form.classList.remove('active'));
+            }
+
+            // فرم پیش‌فرض در لود اول
+            hideAllForms();
+            document.getElementById('f-117').classList.add('active');
+
+            cards.forEach(card => {
+                card.addEventListener('click', function () {
+
+                    const id = this.id.replace('c-', 'f-');
+
+                    hideAllForms();
+                    const targetForm = document.getElementById(id);
+
+                    if (targetForm) {
+                        targetForm.classList.add('active');
+
+                        // اسکرول نرم به ابتدای فرم‌ها
+                        formSection.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+
+        });
+    </script>
+
 
 
 
