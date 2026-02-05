@@ -2919,9 +2919,9 @@ body {
 .collaboration{
     background: radial-gradient(140.03% 136.72% at 51.53% -14.13%, #20C4F4 0%, #1B3281 56.73%, #20C4F4 99.56%);
     margin-top: -100px;
-    padding-block: 150px;
+    padding-top: 150px;
+    padding-bottom: 30px;
     position: relative;
-    height: 300vh;
 }
 .collaboration-bace-image{
     position: absolute;
@@ -3013,6 +3013,25 @@ body {
 }
 .collaboration-cloud-image img{
     width: 100%;
+}
+.collaboration-form{
+    background: radial-gradient(140.03% 136.72% at 51.53% -14.13%, #20C4F4 0%, #1B3281 56.73%, #20C4F4 99.56%);
+    position: relative;
+    margin-top: -311px;
+    padding-block: 80px;
+    z-index: 20;
+    border-radius: 20px 20px 0 0;
+}
+.collaboration-form-card{
+    background-color: var(--White);
+    border-radius: 20px;
+    padding: 30px;
+}
+.collaboration-form-card h1{
+    color: var(--PastelBlue);
+    font-size: 32px;
+    text-align: center;
+    padding-bottom: 20px;
 }
 
 

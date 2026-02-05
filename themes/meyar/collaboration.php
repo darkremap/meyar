@@ -66,6 +66,11 @@ get_header(); ?>
     <div class="collaboration-cloud-image">
         <img  src="<?php echo get_template_directory_uri(); ?>/assets/images/cloud.png" alt="">
     </div>
+    <div class="collaboration-form">
+        <div class="container collaboration-form-card">
+                <h1 class="Dana-ExtraBold">همکاری آموزشی</h1>
+        </div>
+    </div>
 </section>
 
 <?php get_footer(); ?>
