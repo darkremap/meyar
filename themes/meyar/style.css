@@ -2893,6 +2893,25 @@ body {
     letter-spacing: 0.03em;
 }
 
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .singleArticle-image img{
+        height: unset;
+    }
+    .contactUs-image {
+       height: unset; 
+    }
+    .singleArticle {
+        padding: 20px;
+    }
+    .singleArticle h1 {
+        font-size: 16px;
+    }
+    .article-content {
+        width: 100%;
+        overflow-x: auto;
+    }
+}
 
 
 
