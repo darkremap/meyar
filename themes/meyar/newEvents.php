@@ -34,15 +34,17 @@ get_header(); ?>
             <?php while ( $newEvents_query->have_posts() ) : $newEvents_query->the_post(); ?>
                 <div class="events-card">
                     <div class="row">
-                        <div class="col-md-2">
+                        <div class="col-md-2 col-4">
                             <!-- ACF Fields -->
                             <?php if ( get_field('eventsimage') ) : ?>
                                 <img  src="<?php echo get_field('eventsimage')['url']; ?>" alt="">
                             <?php endif; ?>
                         </div>
-                        <div class="col-md-10">
+                        <div class="col-md-10 col-8">
                             <h1 class="Dana-Black"><?php the_title(); ?></h1>
-                            <p class="Dana-Regular"><?php the_excerpt(); ?></p>
+                            <div class="events-card-summary">
+                                <p class="Dana-Regular"><?php the_excerpt(); ?></p>
+                            </div>
                         </div>
                     </div>
                 </div>

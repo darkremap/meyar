@@ -132,6 +132,9 @@ body {
     .dec{
         display: none;
     }
+    .sectionTitle{
+        font-size: 16px;
+    }
 }
 
 /* Basic reset and styles-----------------------------------------------------------------------------------------------Basic reset and styles */
@@ -930,10 +933,11 @@ body {
         border-radius: 20px;
     }
     .FAQSection-item-question{
-        font-size: 18px;
+        font-size: 12px;
     }
     .FAQSection-item-answer{
         margin-top: 15px;
+        font-size: 12px;
     }
 }
 
@@ -1509,10 +1513,6 @@ body {
     padding-block: 150px;
 }
 
-.services-head{
-
-}
-
 .services-heroImage{
     /* background-image: url(assets/images/ServicesHeroImage.png); */
     background-repeat: no-repeat;
@@ -1525,6 +1525,9 @@ body {
 
 .services-head-right{
     padding-bottom: 180px;
+}
+.services-head-right img{
+    width: 100%;
 }
 
 .services-head-right h1{
@@ -1551,6 +1554,11 @@ body {
     .services-head-right h2 {
         font-size: 22px;
     }
+    
+    .services-head{
+        margin-bottom: 50px;
+    }
+
 }
 
 
@@ -2351,6 +2359,73 @@ body {
 .courses .tabs{
     border-bottom: 2px solid var(--White); 
 }
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .c-body-image {
+        width: 100%;
+        top: -30px;
+        left: 0;
+    }
+    .c-body-image img{
+        width: 100%;
+    }
+    .c-body{
+        height: unset;
+    }
+    .courses {
+        padding-top: 100px;
+        padding-bottom: 50px;
+    }
+    .c-filter-search {
+        margin-block: 0;
+        padding-block: 30px;
+    }
+    .c-filter-input-group {
+        width: 100%;
+        padding: 5px 20px;
+    }
+    .courses .tab {
+        width: 18%;
+        padding: 10px;
+        font-size: 10px;
+        display: flex;
+        align-items: center;
+    }
+    .courses .tabs {
+        display: flex;
+    }
+    .c-body h1 {
+        font-size: 20px;
+        line-height: 32px;
+    }
+    .c-card {
+        padding: 15px;
+        border-radius: 15px;
+    }
+    .c-card-info-title h1 {
+        font-size: 12px;
+        margin: 0;
+    }
+    .c-card-actions .meyar-orange-btn {
+        padding: 5px 12px;
+        font-size: 12px;
+    }
+    .c-card-info-thicher h2 {
+        font-size: 11px;
+        margin: 0;
+    }
+    .c-card-info-title {
+        margin-bottom: 5px;
+    }
+    .c-card-info-desc {
+        height: 120px;
+        overflow-y: auto;
+        font-size: 12px;
+    }
+    .c-card-image img {
+        border-radius: 15px;
+    }
+}
    
 
 
@@ -2423,6 +2498,58 @@ body {
     background: none;
     padding: 40px 0;
 }
+.singleCourse .singleService-pointTitle{
+    gap: 15px;
+}
+.singleCourse .otherService .singleService-pointTitle{
+    justify-content: start;
+}
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .singleCourse{
+        padding-top: 100px;
+        padding-bottom: 50px;
+    }
+    .singleCourse .c-body{
+        padding-bottom: 30px;
+    }
+    .singleCourse-body-title-techer h2 {
+        font-size: 12px;
+    }
+    .singleCourse-body-content-text {
+        font-size: 12px;
+        line-height: 24px;
+    }
+    .singleCourse-body-content-image {
+        padding-block: 0;
+    }
+    .singleCourse-index {
+        padding-block: 20px;
+        margin-bottom: 20px;
+    }
+    .singleCourse-index .tab {
+        width: 18%;
+        padding: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 14px;
+    }
+    .singleCourse-index .tabs {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        width: 100%;
+    }
+    .singleCourse-index .panels {
+        font-size: 12px;
+        padding: 20px;
+        border-radius: 15px;
+    }
+    .singleCourse-faq .FAQSection {
+        padding: 0;
+    }
+}
 
 
 /* contactUs ----------------------------------------------------------------------- */
@@ -2470,7 +2597,32 @@ body {
     line-height: 216.07%;
 }
 
-.contactUs-location{
+.contactUs-location img{
+    width: 100%;
+    border-radius: 15px;
+}
+.contactUs-addressinfo{
+    padding-bottom: 30px;
+    border-bottom: 1px solid var(--orange);
+}
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .contactUs-header img{
+        width: 100%;
+    }
+    .contactUs-header {
+        margin-bottom: 50px;
+    }
+    .contactUs-title h1 {
+        font-size: 36px;
+    }
+    .contactUs {
+        padding-top: 100px;
+        padding-bottom: 50px;
+    }
+    .contactUs-address h4 {
+        font-size: 16px;
+    }
 
 }
 
@@ -2540,6 +2692,19 @@ body {
     margin: 3px;
     border-radius: 50px;
 }
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .basePages-card-shadow {
+        left: 6px;
+    }
+    .basePages-card {
+        width: 95%;
+    }
+    .basePages {
+        padding-bottom: 50px;
+    }
+}
+
 
 
 /* Events  --------------------------------------------------------------------------------------------------- */
@@ -2592,7 +2757,31 @@ body {
     width: 100%;
     height: 100%;
 }
-
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .events .contactUs-image {
+        top: 70px;
+        width: 100%;
+    }
+    .events-items{
+        margin-top: 140px;
+    }
+    .events-card {
+        padding: 15px;
+        height: 250px;
+    }
+    .events-card h1 {
+        margin-bottom: 10px;
+    }
+    .events-card-summary{
+        height: 183px;
+        overflow-y: auto;
+    }
+    .futureHero {
+        left: 0;
+        width: 100%;
+    }
+}
 
 /* showTizerPopup ------------------------------------------------------------------------------- showTizerPopup */
 .showTizerPopup {
@@ -2704,6 +2893,25 @@ body {
     letter-spacing: 0.03em;
 }
 
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .singleArticle-image img{
+        height: unset;
+    }
+    .contactUs-image {
+       height: unset; 
+    }
+    .singleArticle {
+        padding: 20px;
+    }
+    .singleArticle h1 {
+        font-size: 16px;
+    }
+    .article-content {
+        width: 100%;
+        overflow-x: auto;
+    }
+}
 
 
 
