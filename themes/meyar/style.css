@@ -2597,8 +2597,13 @@ body {
     line-height: 216.07%;
 }
 
-.contactUs-location{
-
+.contactUs-location img{
+    width: 100%;
+    border-radius: 15px;
+}
+.contactUs-addressinfo{
+    padding-bottom: 30px;
+    border-bottom: 1px solid var(--orange);
 }
 /* Mobile Styles */
 @media (max-width: 768px) {
@@ -2611,6 +2616,14 @@ body {
     .contactUs-title h1 {
         font-size: 36px;
     }
+    .contactUs {
+        padding-top: 100px;
+        padding-bottom: 50px;
+    }
+    .contactUs-address h4 {
+        font-size: 16px;
+    }
+
 }
 
 
