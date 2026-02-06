@@ -56,7 +56,7 @@ get_header(); ?>
                     <div class="line"></div>
                     <span class="Dana-Bold">04</span>
                     <div class="collaboration-card">
-                        <h1 class="Dana-ExtraBold">فرصتهای ضغلی</h1>
+                        <h1 class="Dana-ExtraBold">فرصتهای شغلی</h1>
                         <p class="Dana-DemiBold">اشخاص حقیقی که درخواست همکاری بـا معیـار را دارنـد بـا تکمیـل ایـن فـرم، رزومه خود را ارسال نمایند.</p>
                     </div>
                 </div>
@@ -68,7 +68,7 @@ get_header(); ?>
     </div>
     <div class="collaboration-form">
         <div class="container Dana-ExtraBold collaboration-form-card">
-            <h1 class="Dana-ExtraBold">همکاری آموزشی</h1>
+            <h1 class="Dana-ExtraBold" id="form-title">همکاری آموزشی</h1>
             <div class="collaboration-form-card-content" id="f-117">
                 <?php
                 if ( function_exists( 'wpforms_display' ) ) {
