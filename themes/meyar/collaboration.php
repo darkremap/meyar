@@ -56,7 +56,7 @@ get_header(); ?>
                     <div class="line"></div>
                     <span class="Dana-Bold">04</span>
                     <div class="collaboration-card">
-                        <h1 class="Dana-ExtraBold">هـم‌افـزایـی و مشـارکـت</h1>
+                        <h1 class="Dana-ExtraBold">فرصتهای ضغلی</h1>
                         <p class="Dana-DemiBold">اشخاص حقیقی که درخواست همکاری بـا معیـار را دارنـد بـا تکمیـل ایـن فـرم، رزومه خود را ارسال نمایند.</p>
                     </div>
                 </div>
@@ -86,14 +86,14 @@ get_header(); ?>
             <div class="collaboration-form-card-content" id="f-119">
                 <?php
                 if ( function_exists( 'wpforms_display' ) ) {
-                    wpforms_display( 119 );
+                    wpforms_display( 523 );
                 }
                 ?>
             </div>
             <div class="collaboration-form-card-content" id="f-120">
                 <?php
                 if ( function_exists( 'wpforms_display' ) ) {
-                    wpforms_display( 120 );
+                    wpforms_display( 529 );
                 }
                 ?>
             </div>
