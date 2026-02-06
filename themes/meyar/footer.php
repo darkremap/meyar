@@ -290,6 +290,51 @@
         });
     </script>
 
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+
+            const cards = document.querySelectorAll('[id^="c-"]');
+            const forms = document.querySelectorAll('[id^="f-"]');
+            const formSection = document.querySelector('.collaboration-form');
+            const formTitle = document.getElementById('form-title');
+
+            function hideAllForms() {
+                forms.forEach(form => form.classList.remove('active'));
+            }
+
+            // حالت پیش‌فرض
+            hideAllForms();
+            document.getElementById('f-117').classList.add('active');
+
+            cards.forEach(card => {
+                card.addEventListener('click', function () {
+
+                    const formId = this.id.replace('c-', 'f-');
+                    const cardTitle = this.querySelector('.collaboration-card h1').innerText;
+
+                    hideAllForms();
+
+                    const targetForm = document.getElementById(formId);
+                    if (targetForm) {
+                        targetForm.classList.add('active');
+                    }
+
+                    // تغییر عنوان فرم
+                    if (formTitle && cardTitle) {
+                        formTitle.innerText = cardTitle;
+                    }
+
+                    // اسکرول نرم
+                    formSection.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                });
+            });
+
+        });
+    </script>
+
 
 
 

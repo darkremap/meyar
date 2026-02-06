@@ -41,12 +41,12 @@ get_header(); ?>
                         <div class="basePages-card">
                             <div class="basePages-card-body">
                                 <div class="row">
-                                    <div class="col-2">
+                                    <div class="col-md-2 col-4">
                                         <?php if ( get_field('newsheroimage') ) : ?>
                                             <img src="<?php echo get_field('newsheroimage')['url']; ?>" alt="">
                                         <?php endif; ?>
                                     </div>
-                                    <div class="col-10 basePages-card-content">
+                                    <div class="col-md-10 col-8 basePages-card-content">
                                         <h1 class="Dana-Black basePages-card-title"><?php the_title(); ?></h1>
                                         <p class="Dana-Regular basePages-card-des">
                                             <?php if ( get_field('articlesummary') ) : ?>
