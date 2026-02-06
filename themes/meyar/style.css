@@ -2937,6 +2937,7 @@ body {
     background-color: var(--Zodiac);
     position: relative;
     z-index: 100;
+    cursor: pointer;
 }
 .collaboration-card h1{
     font-size: 24px;

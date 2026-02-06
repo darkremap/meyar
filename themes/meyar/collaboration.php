@@ -79,7 +79,7 @@ get_header(); ?>
             <div class="collaboration-form-card-content" id="f-118">
                 <?php
                 if ( function_exists( 'wpforms_display' ) ) {
-                    wpforms_display( 118 );
+                    wpforms_display( 508 );
                 }
                 ?>
             </div>
