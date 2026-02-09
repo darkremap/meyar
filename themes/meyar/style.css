@@ -3045,6 +3045,71 @@ body {
 .collaboration-form-card-content.active {
     display: block;
 }
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .collaboration-bace-image {
+        top: 100px;
+        width: 120px;
+    }
+    .collaboration-bace-image img{
+        width: 100%;
+    }
+    .collaboration-form {
+        margin-top: -220px;
+    }
+    .collaboration-cloud-image {
+        width: 100%;
+        overflow-x: hidden;
+        margin-top: -145px;
+    }
+    .collaboration-cloud-image img {
+        width: unset;
+        zoom: 0.7;
+        text-align: center;
+    }
+    .collaboration-item-right {
+        padding-left: 40px !important;
+        margin-top: -40px !important;
+    }
+    .collaboration-item-left {
+        padding-right: 40px !important;
+        margin-top: -40px !important;
+    }
+    
+    .collaboration-card h1 {
+        font-size: 12px;
+        padding-bottom: 10px;
+    }
+    .collaboration-card p {
+        font-size: 10px;
+        margin: 0;
+    }
+    .collaboration-item-right span {
+        width: 35px;
+        height: 35px;
+        left: -11px;
+        top: 33px;
+    }
+    .collaboration-item-right .line {
+        left: 15px;
+    }
+    .collaboration-item-left span {
+        width: 35px;
+        height: 35px;
+        top: 33px;
+        right: -25px;
+    }    
+    .collaboration-cards {
+        margin-top: 40%;
+    }
+    .collaboration-form {
+        padding-block: 30px;
+    }
+    .collaboration-form-card h1 {
+        font-size: 18px;
+        padding-bottom: 0;
+    }
+}
 
 
 /* bootstrap ------------------------------------------------------------------------------------- */

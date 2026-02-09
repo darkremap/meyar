@@ -97,18 +97,32 @@
             if ( $services_query->have_posts() ) :
             ?>
                 <?php while ( $services_query->have_posts() ) : $services_query->the_post(); ?>
+                    <?php
+                        $post_type = get_post_type();
+
+                        if ( $post_type === 'personal_development' ) {
+                            $bg_image = get_field('personaldevelopmentsbackground');
+                            $icon     = get_field('personaldevelopmentsicone');
+                        } else {
+                            $bg_image = get_field('servicesbackimage');
+                            $icon     = get_field('servicesicon');
+                        }
+                    ?>
                     <div class="col-md-3 col-4">
                         <div class="serviseCard">
                             <a href="<?php the_permalink(); ?>">
                                 <div class="serviseContent">
-                                    <!-- ACF Fields -->
-                                    <?php if ( get_field('servicesbackimage') ) : ?>
-                                        <img class="serviseCard-image-n" src="<?php echo get_field('servicesbackimage')['url']; ?>" alt="">
+
+                                    <?php if ( $bg_image ) : ?>
+                                        <img class="serviseCard-image-n" src="<?php echo esc_url($bg_image['url']); ?>" alt="">
                                     <?php endif; ?>
-                                    <?php if ( get_field('servicesicon') ) : ?>
-                                        <img class="serviseCard-image-f" src="<?php echo get_field('servicesicon')['url']; ?>" alt="">
-                                    <?php endif; ?>            
+
+                                    <?php if ( $icon ) : ?>
+                                        <img class="serviseCard-image-f" src="<?php echo esc_url($icon['url']); ?>" alt="">
+                                    <?php endif; ?>
+
                                     <h5 class="serviseTitle Dana-ExtraBold"><?php the_title(); ?></h5>
+
                                 </div>
                             </a>
                         </div>
