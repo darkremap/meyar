@@ -48,13 +48,9 @@ get_header(); ?>
                                     </div>
                                     <div class="col-md-10 col-8 basePages-card-content">
                                         <h1 class="Dana-Black basePages-card-title"><?php the_title(); ?></h1>
-                                        <p class="Dana-Regular basePages-card-des">
-                                            <?php if ( get_field('articlesummary') ) : ?>
-                                                <?php echo get_field('articlesummary'); ?>
-                                            <?php else : ?>
-                                                no acf
-                                            <?php endif; ?>
-                                        </p>
+                                        <div class="Dana-Regular basePages-card-des">
+                                            <?php the_content(); ?>
+                                        </div>
                                     </div>
                                 </div>
                             </div>

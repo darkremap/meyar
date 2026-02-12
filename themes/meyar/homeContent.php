@@ -18,7 +18,7 @@
             </h1>
             <div class="heroSection-content-btns">
                 <a class="buttonTroy Dana-Bold meyar-yello-btn" href="#">درخواست دمو</a>
-                <a class="mx-3 buttonTroy Dana-Bold meyar-white-btn" href="#">دریافت کاتالوگ</a>
+                <a class="mx-3 buttonTroy Dana-Bold meyar-white-btn"    href="/wp-content/uploads/catalog.pdf"download>دریافت کاتالوگ</a>
             </div>
         </div>
         <div class="col-md-8 d-flex justify-content-center">
