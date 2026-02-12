@@ -18,7 +18,7 @@
             </h1>
             <div class="heroSection-content-btns">
                 <a class="buttonTroy Dana-Bold meyar-yello-btn" href="#">درخواست دمو</a>
-                <a class="mx-3 buttonTroy Dana-Bold meyar-white-btn" href="#">دریافت کاتالوگ</a>
+                <a class="mx-3 buttonTroy Dana-Bold meyar-white-btn" href="<?php echo get_template_directory_uri(); ?>/assets/Files/c.pdf"download>دریافت کاتالوگ</a>
             </div>
         </div>
         <div class="col-md-8 d-flex justify-content-center">
@@ -84,7 +84,8 @@
            $args = array(
                 'post_type' => array('service', 'personal_development'),
                 'posts_per_page' => -1,
-                'orderby'        => 'rand',
+                'orderby'        => 'menu_order',
+                'order'          => 'ASC',
                 'tax_query' => array(
                     array(
                         'taxonomy' => 'post_tag',
@@ -97,18 +98,32 @@
             if ( $services_query->have_posts() ) :
             ?>
                 <?php while ( $services_query->have_posts() ) : $services_query->the_post(); ?>
+                    <?php
+                        $post_type = get_post_type();
+
+                        if ( $post_type === 'personal_development' ) {
+                            $bg_image = get_field('personaldevelopmentsbackground');
+                            $icon     = get_field('personaldevelopmentsicone');
+                        } else {
+                            $bg_image = get_field('servicesbackimage');
+                            $icon     = get_field('servicesicon');
+                        }
+                    ?>
                     <div class="col-md-3 col-4">
                         <div class="serviseCard">
                             <a href="<?php the_permalink(); ?>">
                                 <div class="serviseContent">
-                                    <!-- ACF Fields -->
-                                    <?php if ( get_field('servicesbackimage') ) : ?>
-                                        <img class="serviseCard-image-n" src="<?php echo get_field('servicesbackimage')['url']; ?>" alt="">
+
+                                    <?php if ( $bg_image ) : ?>
+                                        <img class="serviseCard-image-n" src="<?php echo esc_url($bg_image['url']); ?>" alt="">
                                     <?php endif; ?>
-                                    <?php if ( get_field('servicesicon') ) : ?>
-                                        <img class="serviseCard-image-f" src="<?php echo get_field('servicesicon')['url']; ?>" alt="">
-                                    <?php endif; ?>            
+
+                                    <?php if ( $icon ) : ?>
+                                        <img class="serviseCard-image-f" src="<?php echo esc_url($icon['url']); ?>" alt="">
+                                    <?php endif; ?>
+
                                     <h5 class="serviseTitle Dana-ExtraBold"><?php the_title(); ?></h5>
+
                                 </div>
                             </a>
                         </div>
@@ -393,7 +408,7 @@
             <div class="FAQSection-item">
                 <h4 class="FAQSection-item-question Dana-Bold"><?php the_title(); ?></h4>
                 <div class="FAQSection-item-answer Dana-Medium">
-                    <p><?php the_excerpt(); ?></p>
+                    <?php the_content(); ?>
                 </div>
             </div>
             <?php endwhile; ?>

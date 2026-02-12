@@ -77,11 +77,9 @@ get_header(); ?>
                                                 </h2>
                                             </div>
                                             <div class="c-card-info-desc">
-                                                <p class="Dana-Regular">
                                                     <?php if ( get_field('coursessummary') ) : ?>
                                                         <?php echo get_field('coursessummary')?>
                                                     <?php endif; ?> 
-                                                </p>
                                             </div>
                                         </div>
                                         <div class="col-md-3 col-4 c-card-image">

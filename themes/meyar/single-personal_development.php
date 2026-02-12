@@ -23,7 +23,7 @@ get_header(); ?>
                 </h2>
             </div>
             <!-- bayad matn bashad ba ghabliyat text ya list ya ... -->
-            <p class="Dana-Medium"> <?php the_content(); ?></p>
+            <?php the_content(); ?>
         </div>
     </section>
     <section class="container spd-parts">
@@ -116,7 +116,7 @@ get_header(); ?>
         ?>
     </section>
 
-    <?php if ( get_field('servicetizer') ) : ?>  
+    <?php if ( get_field('personaldevelopmentstizerurl') ) : ?>  
     <section class="container singleService-tizer">
         <div class="container singleService-tizer-header">
             <div class="singleService-header-title">
@@ -125,7 +125,7 @@ get_header(); ?>
             </div>
         </div>
         <?php 
-        $aparat_url =  get_field('servicetizer');
+        $aparat_url =  get_field('personaldevelopmentstizerurl');
         if ($aparat_url && preg_match('/aparat\.com\/v\/([a-zA-Z0-9]+)/', $aparat_url, $matches)) :
             $video_id = $matches[1];
         ?>

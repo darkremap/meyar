@@ -535,7 +535,7 @@ function custom_post_type_newss() {
     register_post_type( 'news', $args );
 
 }
-add_action( 'init', 'custom_post_type_customers', 0 );
+add_action( 'init', 'custom_post_type_newss', 0 );
 
 
 // Register Custom Post Type for customer
