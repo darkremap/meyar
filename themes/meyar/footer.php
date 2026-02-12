@@ -293,6 +293,76 @@
     <script>
         document.addEventListener("DOMContentLoaded", function () {
 
+            // کلیک روی آیکن پخش (SVG اول)
+            document.querySelectorAll(".personalServices-contentCard-iconbox > a:first-child").forEach(function (btn) {
+                btn.addEventListener("click", function (e) {
+                    e.preventDefault();
+
+                    const serviceItem = this.closest(".personalServices-items");
+                    if (!serviceItem) return;
+
+                    const popup = serviceItem.querySelector(".showTizerPopup");
+                    if (!popup) return;
+
+                    const iframe = popup.querySelector("iframe");
+                    const loader = popup.querySelector(".popup-loader");
+
+                    // فعال‌سازی لودر
+                    if (loader) loader.classList.add("active");
+
+                    // ذخیره src فقط یکبار
+                    if (iframe && !iframe.dataset.src) {
+                        iframe.dataset.src = iframe.src;
+                    }
+
+                    // شروع لود ویدیو
+                    if (iframe && iframe.dataset.src) {
+                        iframe.src = iframe.dataset.src;
+                    }
+
+                    // بعد از لود iframe
+                    if (iframe) {
+                        iframe.onload = function () {
+                            if (loader) loader.classList.remove("active");
+                        };
+                    }
+
+                    popup.classList.add("active");
+                });
+            });
+
+            // بستن پاپاپ
+            document.querySelectorAll(".showTizerPopup").forEach(function (popup) {
+                popup.addEventListener("click", function (e) {
+                    if (
+                        e.target.classList.contains("popup-overlay") ||
+                        e.target.closest(".popup-close")
+                    ) {
+                        closePopup(popup);
+                    }
+                });
+            });
+
+            function closePopup(popup) {
+                popup.classList.remove("active");
+
+                const iframe = popup.querySelector("iframe");
+                const loader = popup.querySelector(".popup-loader");
+
+                // توقف ویدیو
+                if (iframe) iframe.src = "";
+
+                // ریست لودر برای دفعه بعد
+                if (loader) loader.classList.add("active");
+            }
+
+        });
+    </script>
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+
             const cards = document.querySelectorAll('[id^="c-"]');
             const forms = document.querySelectorAll('[id^="f-"]');
             const formSection = document.querySelector('.collaboration-form');
