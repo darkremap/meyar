@@ -1533,12 +1533,12 @@ body {
 
 .services-head-right h1{
     color: var(--White);
-    font-size: 48px;
+    font-size: 36px;
 }
 
 .services-head-right h2{
     color: var(--green);
-    font-size: 40px !important;
+    font-size: 28px !important;
     font-style: normal;
     font-weight: 400;
     font-size: 55px;
@@ -1964,6 +1964,7 @@ body {
 }
 .spd-content-text p{
    line-height: 34px;
+   font-family: Dana-Medium , sans-serif;
 }
 .spd-content-text li{
    margin-bottom: 10px;
@@ -2149,7 +2150,7 @@ body {
         padding-bottom: 0;
     }
     .singlePersonalDevelopment .otherService{
-        padding-top: 0;
+        padding-top: 40px;
     }
 }
 
@@ -2252,7 +2253,8 @@ body {
 .c-body-image{
     position: absolute;
     top: -147px;
-    left: 350px;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .c-filter{
@@ -2323,6 +2325,9 @@ body {
 .c-card-info-desc{
     color: var(--LightMerlot);
 }
+.c-card-info-desc p{
+   font-family: Dana-Regular , sans-serif;
+}
 .c-card-image{
     height: 160px;
 }
@@ -2360,7 +2365,6 @@ body {
     .c-body-image {
         width: 100%;
         top: -30px;
-        left: 0;
     }
     .c-body-image img{
         width: 100%;
@@ -2379,6 +2383,7 @@ body {
     .c-filter-input-group {
         width: 100%;
         padding: 5px 20px;
+        margin-top: 40px;
     }
     .courses .tab {
         width: 18%;
@@ -2414,12 +2419,15 @@ body {
         margin-bottom: 5px;
     }
     .c-card-info-desc {
-        height: 120px;
+        height: 60px;
         overflow-y: auto;
         font-size: 12px;
     }
     .c-card-image img {
         border-radius: 15px;
+    }
+    .c-card-image{
+        height: 110px;
     }
 }
    

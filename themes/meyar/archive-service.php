@@ -7,8 +7,8 @@
             <div class="container">
                  <div class="row services-head-right">
                     <div class="col-md-6 col-7">
-                        <h1 class="Dana-Black">فرآیندهای سازمانی</h1>
-                        <h2 class="Dana-Regular">organizational processes</h1>
+                        <h1 class="Dana-Black">مدیریت منابع انسانــی و بهبود سازمانــی</h1>
+                        <h2 class="Dana-Regular">Human resource managment and organizational improvement</h1>
                     </div>
                 </div>
             </div>
