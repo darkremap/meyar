@@ -18,7 +18,7 @@
             </h1>
             <div class="heroSection-content-btns">
                 <a class="buttonTroy Dana-Bold meyar-yello-btn" href="#">درخواست دمو</a>
-                <a class="mx-3 buttonTroy Dana-Bold meyar-white-btn"    href="/wp-content/uploads/catalog.pdf"download>دریافت کاتالوگ</a>
+                <a class="mx-3 buttonTroy Dana-Bold meyar-white-btn" href="<?php echo get_template_directory_uri(); ?>/assets/Files/c.pdf"download>دریافت کاتالوگ</a>
             </div>
         </div>
         <div class="col-md-8 d-flex justify-content-center">
@@ -84,7 +84,8 @@
            $args = array(
                 'post_type' => array('service', 'personal_development'),
                 'posts_per_page' => -1,
-                'orderby'        => 'rand',
+                'orderby'        => 'menu_order',
+                'order'          => 'ASC',
                 'tax_query' => array(
                     array(
                         'taxonomy' => 'post_tag',
@@ -407,7 +408,7 @@
             <div class="FAQSection-item">
                 <h4 class="FAQSection-item-question Dana-Bold"><?php the_title(); ?></h4>
                 <div class="FAQSection-item-answer Dana-Medium">
-                    <p><?php the_excerpt(); ?></p>
+                    <?php the_content(); ?>
                 </div>
             </div>
             <?php endwhile; ?>

@@ -51,16 +51,16 @@
                             <img  src="<?php echo get_template_directory_uri(); ?>/assets/images/InstagramLogo.png" alt="">
                         </a>
                         <a href="#">
-                            <img  src="<?php echo get_template_directory_uri(); ?>/assets/images/InstagramLogo.png" alt="">
+                            <img  src="<?php echo get_template_directory_uri(); ?>/assets/images/youtube.png" alt="">
                         </a>
                         <a href="#">
-                            <img  src="<?php echo get_template_directory_uri(); ?>/assets/images/InstagramLogo.png" alt="">
+                            <img  src="<?php echo get_template_directory_uri(); ?>/assets/images/telegram.png" alt="">
                         </a>
                         <a href="#">
-                            <img  src="<?php echo get_template_directory_uri(); ?>/assets/images/InstagramLogo.png" alt="">
+                            <img  src="<?php echo get_template_directory_uri(); ?>/assets/images/wharsapp.png" alt="">
                         </a>
                         <a href="#">
-                            <img  src="<?php echo get_template_directory_uri(); ?>/assets/images/InstagramLogo.png" alt="">
+                            <img  src="<?php echo get_template_directory_uri(); ?>/assets/images/linkedin.png" alt="">
                         </a>
                     </div>
                 </div>
